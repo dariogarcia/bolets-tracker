@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rovelló Tracker</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <h1>🍄 Rovelló Tracker</h1>
+    <p class="tagline" data-i18n-html="tagline"></p>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" data-lang="ca">CA</button>
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <button type="button" id="info-btn" class="info-btn" data-i18n="infoBtn"></button>
+    </div>
+  </header>
+
+  <section class="search-panel">
+    <form id="search-form">
+      <div class="field">
+        <label for="date" data-i18n="dateLabel"></label>
+        <input type="date" id="date" name="date" />
+      </div>
+      <div class="field grow">
+        <label for="place" data-i18n="placeLabel"></label>
+        <input type="text" id="place" autocomplete="off" data-i18n-ph="placePh" />
+        <div id="place-suggestions" class="suggestions hidden"></div>
+      </div>
+      <button type="submit" id="search-btn" data-i18n="searchBtn"></button>
+    </form>
+    <div class="mushroom-bar">
+      <span class="mushroom-label" data-i18n="mushroomLabel"></span>
+      <div id="mushroom-chips" class="mushroom-chips" role="group" aria-label="Mushroom"></div>
+    </div>
+  </section>
+
+  <details class="weights-panel" id="weights-panel">
+    <summary>⚖ <span data-i18n="weightsTitle"></span></summary>
+    <div class="weights-body">
+      <p class="weights-intro" data-i18n="weightsIntro"></p>
+      <div id="weights-rows"></div>
+      <div class="weights-actions">
+        <button type="button" class="wbtn" id="w-preset-balanced" data-i18n="presetBalanced"></button>
+        <button type="button" class="wbtn" id="w-preset-conditions" data-i18n="presetConditions"></button>
+        <button type="button" class="wbtn" id="w-preset-nearby" data-i18n="presetNearby"></button>
+      </div>
+    </div>
+  </details>
+
+  <div id="status" class="status hidden"></div>
+
+  <main class="layout">
+    <section id="results" class="results">
+      <p class="placeholder" data-i18n="intro"></p>
+    </section>
+    <section class="map-wrap">
+      <div id="map"></div>
+      <button type="button" id="fit-all" class="fit-all" data-i18n="fitAll"></button>
+      <div id="legend" class="legend">
+        <span class="lg"><i style="background:#2e7d32"></i>80+</span>
+        <span class="lg"><i style="background:#7cb342"></i>65–79</span>
+        <span class="lg"><i style="background:#f9a825"></i>50–64</span>
+        <span class="lg"><i style="background:#e64a19"></i>&lt;50</span>
+      </div>
+    </section>
+  </main>
+
+  <div id="methodology" class="methodology hidden" role="dialog" aria-modal="true">
+    <div class="method-panel">
+      <button type="button" id="method-close" class="method-close" aria-label="Close">✕</button>
+      <div id="method-body" class="method-body"></div>
+    </div>
+  </div>
+
+  <footer>
+    <span data-i18n="footerData"></span> <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> ·
+    <span data-i18n="footerRouting"></span> <a href="https://project-osrm.org" target="_blank" rel="noopener">OSRM</a> ·
+    <span data-i18n="footerMap"></span> <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/static/methodology.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

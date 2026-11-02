@@ -1,0 +1,171 @@
+# 🍄 Rovelló Tracker
+
+Web service that recommends the most promising spots in Catalonia for collecting
+**rovellons** (*Lactarius deliciosus*), given a target date and a starting point.
+It combines live weather history/forecasts, real driving routes and a curated
+dataset of 844 mountain sectors grouped in 384 areas, and ranks every sector
+across 8 explainable axes.
+
+Each recommendation is a **mountain sector**, not a whole town: an exact staging
+point (coordinates), access instructions (where to park and which track to take),
+walking time from the car, and the sector's own slope characteristics (aspect,
+elevation, forest type, cover). Neighbouring sectors of the same mountain get
+different scores, so the ranking genuinely picks the best side of each massif —
+the shady north-facing obaga over the dry south-facing solà, the quiet west
+flank over the picked-over classic. Every card and map marker carries an
+OpenStreetMap directions link from your starting point to the staging point.
+
+## Run
+
+```bash
+cd bolets-tracker
+uv run uvicorn app.main:app
+```
+
+Open http://localhost:8000 — pick a date and a starting point (type-ahead search)
+and get ranked recommendations on cards and a map.
+
+To run the service for real (systemd + nginx, upstream API limits, health
+checks), see [DEPLOY.md](DEPLOY.md).
+
+## How it works
+
+| Component | Source |
+|---|---|
+| Weather (14-day rain history + target-day forecast) | [Open-Meteo](https://open-meteo.com) forecast & ERA5 archive APIs, no API key |
+| Driving distance & duration | [OSRM](https://project-osrm.org) public routing table, with haversine×1.35 fallback |
+| Geocoding of starting points | [Open-Meteo geocoding](https://open-meteo.com/en/docs/geocoding-api) + built-in presets, filtered to Catalunya |
+| Sectors | Curated dataset (`app/zones.py`): 844 mountain sectors in 384 areas across 43 comarques, each with its own staging point, aspect, elevation, forest type, cover, habitat quality, picker pressure, walk time and access notes |
+
+Every sector gets a 0–100 score on each axis (hover an axis name in the UI
+for a plain-language explanation):
+
+| Axis | Model |
+|---|---|
+| **Rain** | 65% soil moisture from 14-day accumulated precipitation (ideal 40–120 mm, bonus for ≥2 mm rain days) + 35% fresh-soaking trigger from the last 7 days |
+| **Humidity** | Target-day mean relative humidity, ideal 75–90%; small bonus for rain on the day |
+| **Temperature** | Target-day max/min; ideal days 10–21 °C with mild nights 4–12 °C; frost and warm nights penalised |
+| **Shade** | Direct-sun exposure: aspect (N/NE slopes stay damp) adjusted by canopy cover (dense shade helps, open ground bakes) |
+| **Habitat** | Forest type (Scots pine classic, black pine good at altitude, Aleppo pine poorer) and static site quality |
+| **Season** | Elevation-dependent fruiting window (high: late Oct · mid: early Nov · low: late Nov), Gaussian decay |
+| **Solitude** | Inverse of local picker popularity — favours less-searched spots |
+| **Access** | Ease of reaching and searching the sector |
+| **Distance** | Drive time from the starting point (OSRM); ≤30 min perfect, >5 h zero |
+
+Composite score = weighted sum (rain 0.22, humidity 0.10, temperature 0.10,
+shade 0.08, habitat 0.12, season 0.10, solitude 0.08, access 0.04, distance 0.16).
+If live weather fails for a grid cell after retries, the affected sectors'
+weather axes degrade to a neutral 50 instead of failing the request.
+Weather is fetched once per ~10 km grid cell (sectors of the same massif share
+a cell), and the OSRM route table is fetched in batches of ≤95 destinations.
+
+Temperatures are corrected from the grid-cell elevation (returned by
+Open-Meteo) to each sector's own elevation with the standard lapse rate
+(−6.5 °C per 1000 m), so a 1700 m obaga is scored — and displayed — with
+mountain temperatures, not the valley forecast of its cell.
+
+Sector squares on the map are stylized: a 1.4 × 1 km rectangle oriented along
+the sector's aspect, drawn 500 m up-slope of the staging point. Staging points
+sit near the access references (villages, cols, tracks) named in the access
+notes, which are typically at valley or road level — so the terrain inside the
+drawn square can be a few hundred metres below the sector's stated elevation.
+The stated elevation, not the staging-point terrain, drives season windows and
+the lapse-rate temperature correction.
+
+## API
+
+| Endpoint | Description |
+|---|---|
+| `GET /api/health` | Liveness + sector count |
+| `GET /api/zones` | Full sector dataset |
+| `GET /api/zone/{id}` | Single sector |
+| `GET /api/geocode?q=` | Place autocomplete (Catalunya only) |
+| `GET /api/mushrooms?date=` | Per-species availability for a date (peak/good/early/late/quiet) plus species profiles |
+| `GET /api/recommend?date=YYYY-MM-DD&lat=&lon=` | Ranked sectors with per-axis scores, weather, route, staging point and access notes. Optional: `max_distance_km`, `limit` (default 100, max 1000), `weights`, `mushroom` |
+
+```bash
+curl "http://localhost:8000/api/recommend?date=2026-11-07&lat=41.3851&lon=2.1734&limit=5"
+# custom ranking weights (JSON object of axis multipliers, normalised server-side):
+curl "http://localhost:8000/api/recommend?lat=41.3851&lon=2.1734&weights=%7B%22rain%22%3A30%2C%22distance%22%3A10%7D"
+# rank for a different species:
+curl "http://localhost:8000/api/recommend?date=2026-12-12&lat=41.3851&lon=2.1734&mushroom=camagroc"
+```
+
+Dates are supported from the recent past (ERA5 archive) up to +15 days
+(forecast horizon); anything beyond returns HTTP 422. `weights` accepts
+any subset of the axes (`rain`, `humidity`, `temperature`, `sunlight`,
+`habitat`, `season`, `crowding`, `accessibility`, `distance`) with
+multipliers ≥ 0; invalid or all-zero payloads return HTTP 422.
+
+## Mushroom species
+
+`mushroom` selects a species profile that retunes the ranking to what the
+fungus needs — fruiting season window by elevation, ideal temperature band
+and forest affinity. The ranking weights are **not** part of the profile:
+they express how much each factor matters to *you*, and species needs are
+captured by the fit scores themselves (a cold-loving species simply scores
+differently on temperature and season, under your same weights).
+
+| id | Species | Season character |
+|---|---|---|
+| `rovello` | *Lactarius deliciosus* | The baseline: pine woods, rainy autumn, mild days |
+| `rossinyol` | *Cantharellus cibarius* | Earlier and warmer: mossy woods, September–October rains |
+| `camagroc` | *Craterellus tubaeformis* | The late one: cold and humidity, November–January |
+| `cep` | *Boletus edulis* | Storm-driven: summer storms in the mountains, October rains lowland |
+
+Unknown ids return HTTP 422. The UI selector doubles as an availability
+panel: the chips show, for the selected date, whether each species is at its
+peak, early, late or quiet anywhere in Catalonia (best elevation included).
+
+## UI
+
+- Map draws each sector as a polygon oriented to its aspect (a north-facing
+  obaga is a patch on the north side of the staging point), colored by score
+  and labelled with its rank number, so the best sectors are readable at a
+  glance without clicking. Only sectors in the current map view are rendered
+  (capped at 150, best-ranked first), so panning and the weights sliders stay
+  smooth with a large dataset; a counter shows how many of the ranked sectors
+  are in view, and a "show all" button zooms out to every result.
+- UI available in Catalan, Spanish and English (CA · ES · EN switcher in the
+  header; remembered in localStorage). Curated sector names/access/notes stay
+  in the dataset language.
+- **Mushroom selector**: chips for rovelló, rossinyol, camagroc and cep. Each
+  chip shows the species' availability for the selected date (peak / early /
+  late / quiet, from its season window across Catalonia's elevations);
+  selecting one re-ranks the sectors for what that species needs.
+- **Ranking weights panel**: sliders set the relative weight of each factor,
+  re-ranking instantly. Weights are shared across species (they are your
+  preference, not the mushroom's) and persist in localStorage; presets for
+  balanced, best conditions and nearby; hovering a slider label explains
+  the factor. The same weights can be passed to the API via the `weights`
+  parameter.
+- Hovering an axis name in a sector card explains what that axis measures.
+- **How it works tab** ("Com es calcula" button in the header): methodology
+  overlay in CA/ES/EN explaining the full data pipeline (Nominatim geocoding,
+  OSRM route tables, Open-Meteo grid cells with caching and the lapse-rate
+  temperature correction), every data source, how each of the nine axes is
+  computed with its specific thresholds, the species profiles (ideal
+  temperature bands, season peaks by elevation, forest affinities) and how
+  the weighted sum combines everything.
+
+## Tests
+
+```bash
+uv run pytest        # 123 tests: scoring, mushrooms, sectors, clients (mocked HTTP), API
+uv run ruff check .  # lint
+```
+
+## Layout
+
+```
+app/
+  main.py       FastAPI app, endpoints & weather grid dedup
+  zones.py      curated sector dataset (844 sectors in 384 areas)
+  weather.py    Open-Meteo client (forecast/archive, cache, retries)
+  routing.py    OSRM table client (batched) + haversine fallback
+  geocoding.py  geocoder + preset towns
+  scoring.py    per-axis scoring & weighted composite
+  models.py     pydantic models
+static/         single-page UI (Leaflet map with sector polygons + rank labels, trilingual CA/ES/EN)
+tests/          pytest suite
+```
