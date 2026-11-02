@@ -16,6 +16,48 @@ const WEIGHT_PRESETS = {
   nearby: { rain: 15, humidity: 8, temperature: 8, sunlight: 6, habitat: 10, season: 8, crowding: 8, accessibility: 6, distance: 31 },
 };
 
+/* Dual-mode data layer: talk to the FastAPI backend when the page is served
+   by it, or fall back to the bundled client-side engine (GitHub Pages build,
+   where /api/* does not exist). The probe is done once and cached. */
+const API = {
+  engineMode: null,
+  async useEngine() {
+    if (this.engineMode === null) {
+      try {
+        const resp = await fetch("/api/health", { method: "HEAD" });
+        this.engineMode = !resp.ok;
+      } catch {
+        this.engineMode = true;
+      }
+    }
+    return this.engineMode;
+  },
+  async mushrooms(dateVal) {
+    if (await this.useEngine()) return window.BoletsEngine.mushrooms(dateVal);
+    const resp = await fetch(`/api/mushrooms?date=${dateVal}`);
+    if (!resp.ok) return null;
+    return resp.json();
+  },
+  async recommend(params) {
+    if (await this.useEngine()) {
+      const data = await window.BoletsEngine.recommend(params);
+      if (data && data.detail) throw new Error(data.detail);
+      return data;
+    }
+    const resp = await fetch(`/api/recommend?${new URLSearchParams(params)}`);
+    if (!resp.ok) {
+      const err = await resp.json().catch(() => ({ detail: resp.statusText }));
+      throw new Error(err.detail || `request failed (${resp.status})`);
+    }
+    return resp.json();
+  },
+  async geocode(q) {
+    if (await this.useEngine()) return window.BoletsEngine.geocode(q);
+    const resp = await fetch(`/api/geocode?q=${encodeURIComponent(q)}`);
+    return resp.json();
+  },
+};
+
 const $ = (sel) => document.querySelector(sel);
 
 const I18N = {
@@ -323,9 +365,8 @@ function renderMushroomChips() {
 async function loadMushroomChips() {
   const dateVal = $("#date").value || new Date().toISOString().slice(0, 10);
   try {
-    const resp = await fetch(`/api/mushrooms?date=${dateVal}`);
-    if (!resp.ok) return;
-    const data = await resp.json();
+    const data = await API.mushrooms(dateVal);
+    if (!data || !data.mushrooms) return;
     state.mushrooms = data.mushrooms;
     renderMushroomChips();
   } catch {
@@ -646,19 +687,14 @@ async function search() {
   btn.disabled = true;
   showStatus(t("consulting"), false);
   try {
-    const params = new URLSearchParams({
+    const params = {
       lat: String(state.place.lat),
       lon: String(state.place.lon),
       limit: "1000",
       mushroom: state.mushroom,
-    });
-    if (dateVal) params.set("date", dateVal);
-    const resp = await fetch(`/api/recommend?${params}`);
-    if (!resp.ok) {
-      const err = await resp.json().catch(() => ({ detail: resp.statusText }));
-      throw new Error(err.detail || `request failed (${resp.status})`);
-    }
-    const data = await resp.json();
+    };
+    if (dateVal) params.date = dateVal;
+    const data = await API.recommend(params);
     hideStatus();
     applyWeights(data);
     state.lastData = data;
@@ -687,8 +723,7 @@ async function autocomplete() {
     return;
   }
   try {
-    const resp = await fetch(`/api/geocode?q=${encodeURIComponent(q)}`);
-    const data = await resp.json();
+    const data = await API.geocode(q);
     box.innerHTML = "";
     if (!data.results.length) {
       box.classList.add("hidden");

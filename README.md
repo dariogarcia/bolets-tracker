@@ -25,6 +25,12 @@ uv run uvicorn app.main:app
 Open http://localhost:8000 — pick a date and a starting point (type-ahead search)
 and get ranked recommendations on cards and a map.
 
+A **live static demo** runs on GitHub Pages — https://dariogarcia.github.io/bolets-tracker/ —
+with the exact same UI and scoring model. There the browser runs the engine
+directly against Open-Meteo, the public OSRM server and the Open-Meteo
+geocoder (all keyless and CORS-enabled); no backend is involved. See
+[DEPLOY.md](DEPLOY.md) for how the two modes coexist.
+
 To run the service for real (systemd + nginx, upstream API limits, health
 checks), see [DEPLOY.md](DEPLOY.md).
 
@@ -167,5 +173,14 @@ app/
   scoring.py    per-axis scoring & weighted composite
   models.py     pydantic models
 static/         single-page UI (Leaflet map with sector polygons + rank labels, trilingual CA/ES/EN)
+  engine.js       client-side port of the backend (GitHub Pages mode)
+  data/zones.json zone dataset export for the engine (scripts/export_static_data.py)
+scripts/        maintenance scripts (zone-dataset export)
 tests/          pytest suite
 ```
+
+The UI is **dual-mode**: it probes `/api/health` once on load and, when the
+FastAPI backend is not there (GitHub Pages), it computes recommendations in
+the browser through `static/engine.js` — a JavaScript port of the same
+scoring, weather, routing and geocoding logic, kept in parity with the Python
+backend.

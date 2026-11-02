@@ -128,3 +128,35 @@ Zones are plain data: append `sector(...)` entries to `SECTORS` in
 `app/zones.py`, then `uv run pytest` — the suite validates IDs,
 coordinates, aspects per area and dataset size thresholds. Restart the
 service afterwards (dataset is loaded at import time).
+
+## GitHub Pages (static demo)
+
+The UI is dual-mode: on load it probes `GET /api/health`. Served by the
+FastAPI backend it uses the JSON API; on a static host (GitHub Pages) the
+probe 404s and the browser computes everything itself through
+`static/engine.js`, a JavaScript port of the scoring/weather/routing/
+geocoding logic talking directly to Open-Meteo, the public OSRM server and
+the Open-Meteo geocoder (all keyless, CORS-enabled). The zone dataset ships
+as `static/data/zones.json` (regenerate with
+`uv run python scripts/export_static_data.py` after touching `app/zones.py`).
+
+The demo is served from the `gh-pages` branch of
+`dariogarcia/bolets-tracker` (an orphan branch containing `index.html`,
+`static/` and a `.nojekyll` marker). To republish after changes:
+
+```bash
+# from a checkout of the main branch
+git checkout --orphan gh-pages
+git rm -rq --cached .
+rm -rf app tests scripts pyproject.toml uv.lock .python-version
+cp static/index.html .          # the page must sit at the site root
+printf '.nojekyll\n' > .nojekyll
+git add -A
+git commit -m "Rebuild GitHub Pages site"
+git push -f origin gh-pages
+git checkout main
+```
+
+A search in Pages mode costs the browser ~10 requests (weather grid cells
+are batched 50 locations per request) plus one OSRM table batch per 94
+sectors, comfortably inside the public APIs' limits.
