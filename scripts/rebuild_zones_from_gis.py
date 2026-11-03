@@ -26,7 +26,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from app.habitat import (  # noqa: E402
+from app.habitat import (
     GROUPS,
     classify_soil,
     derive_cover,
@@ -34,7 +34,7 @@ from app.habitat import (  # noqa: E402
     derive_habitat_quality,
     pine_composition,
 )
-from app.zones import ZONES  # noqa: E402
+from app.zones import ZONES
 
 GIS_FILE = ROOT / "data" / "habitat_gis.json"
 ZONES_FILE = ROOT / "app" / "zones.py"

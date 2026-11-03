@@ -91,8 +91,6 @@ class TestProfiles:
         assert not any(f.name == "weights" for m in MUSHROOMS.values() for f in dataclasses.fields(m))
 
     def test_forest_and_soil_factors_cover_dataset(self):
-        from app.habitat import GROUPS
-
         groups = {g for z in ZONES for g in z.forest_shares}
         soils = {z.soil for z in ZONES}
         for m in MUSHROOMS.values():

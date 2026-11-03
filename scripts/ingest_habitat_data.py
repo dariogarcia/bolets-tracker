@@ -77,7 +77,6 @@ def ingest_mfe(gis_dir: Path, zones) -> dict[str, dict]:
     import pandas as pd
 
     all_polys = pd.concat(frames, ignore_index=True)
-    tree_geoms = all_polys.geometry.values
     sidx = all_polys.sindex
 
     has_trees = (all_polys["TFCCARB"].fillna(0) > 0) & all_polys["SP1"].fillna(0) > 0
@@ -170,10 +169,8 @@ def fetch_geology(zone, cache: dict) -> dict | None:
 def ingest_geology(zones, cache: dict) -> dict:
     missing = [z for z in zones if z.id not in cache]
     print(f"  geology: {len(cache)} cached, {len(missing)} to fetch")
-    fetched = 0
-    for zone in missing:
+    for fetched, zone in enumerate(missing, start=1):
         cache[zone.id] = fetch_geology(zone, cache)
-        fetched += 1
         if fetched % 100 == 0:
             print(f"    {fetched}/{len(missing)}")
         time.sleep(0.15)

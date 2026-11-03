@@ -98,7 +98,9 @@ const I18N = {
       late: "late",
       out: "quiet",
     },
-    inViewCount: "Showing {n} of {total} ranked sectors in view — pan or zoom the map to see others.",
+    inViewCount: "Top {n} sectors in the current map view (of {total} ranked) — pan or zoom to re-rank.",
+    viewRankTip: "Rank among the sectors in view — #{rank} in the full ranking",
+    overallRank: "overall",
     fitAll: "Show all",
     weightsTitle: "Ranking weights",
     weightsIntro:
@@ -166,7 +168,9 @@ const I18N = {
       late: "tardío",
       out: "flojo",
     },
-    inViewCount: "Mostrando {n} de {total} sectores ordenados en vista — desplaza o acerca el mapa para ver otros.",
+    inViewCount: "Los {n} mejores sectores en la vista actual del mapa (de {total} clasificados) — desplaza o acerca el mapa para reordenar.",
+    viewRankTip: "Puesto entre los sectores en vista — #{rank} en la clasificación completa",
+    overallRank: "global",
     fitAll: "Ver todo",
     weightsTitle: "Pesos de clasificación",
     weightsIntro:
@@ -234,7 +238,9 @@ const I18N = {
       late: "tardà",
       out: "fluix",
     },
-    inViewCount: "Mostrant {n} de {total} sectors ordenats a la vista — mou o acosta el mapa per veure-ne d'altres.",
+    inViewCount: "Els {n} millors sectors a la vista actual del mapa (de {total} d'ordenats) — mou o acosta el mapa per reordenar.",
+    viewRankTip: "Posició entre els sectors a la vista — #{rank} en l'ordenació completa",
+    overallRank: "global",
     fitAll: "Veure-ho tot",
     weightsTitle: "Pesos d'ordenació",
     weightsIntro:
@@ -512,7 +518,7 @@ function osmDirectionsUrl(lat, lon) {
 
 function renderCard(rec) {
   const card = document.createElement("article");
-  card.className = "card" + (rec.rank === 1 ? " rank-1" : "");
+  card.className = "card" + (rec.viewRank === 1 ? " rank-1" : "");
   card.dataset.zoneId = rec.zone.id;
   const w = rec.weather;
   const z = rec.zone;
@@ -526,7 +532,7 @@ function renderCard(rec) {
   ].join("");
   card.innerHTML = `
     <div class="card-head">
-      <div class="rank">${rec.rank}</div>
+      <div class="rank" title="${t("viewRankTip").replace("{rank}", rec.rank)}">${rec.viewRank}</div>
       <div class="card-title">
         <h3>${z.name}</h3>
         <div class="meta">${z.area} · ${z.comarca} · ${z.elevation_m} m · ${trAspect(z.aspect)} · ${trForest(z.forest)} · <span class="soil-badge soil-${z.soil}">${trSoil(z.soil)}</span></div>
@@ -574,6 +580,10 @@ function renderResults(data, opts = {}) {
   results.innerHTML = "";
   state.origin = data.origin;
   const visible = resultsInMapView(data);
+  // Re-rank within the viewport: the best visible sector is #1 on cards and map.
+  visible.forEach((rec, i) => {
+    rec.viewRank = i + 1;
+  });
   const head = document.createElement("p");
   head.className = "results-count";
   head.textContent = t("inViewCount").replace("{n}", visible.length).replace("{total}", data.results.length);
@@ -643,17 +653,17 @@ function paintMap(data, visible) {
   for (const rec of visible ?? resultsInMapView(data)) {
     const poly = L.polygon(sectorPolygon(rec.zone), {
       color: "#10141a",
-      weight: rec.rank === 1 ? 3 : 1.5,
+      weight: rec.viewRank === 1 ? 3 : 1.5,
       fillColor: scoreColor(rec.scores.overall),
       fillOpacity: 0.45,
     }).addTo(map);
-    poly.bindTooltip(String(rec.rank), {
+    poly.bindTooltip(String(rec.viewRank), {
       permanent: true,
       direction: "center",
       className: "rank-label",
     });
     poly.bindPopup(
-      `<b>#${rec.rank} ${rec.zone.name}</b><br>${rec.zone.area} · ${t("scoreWord")} ${rec.scores.overall}<br>` +
+      `<b>#${rec.viewRank} ${rec.zone.name}</b> (${t("overallRank")} #${rec.rank})<br>${rec.zone.area} · ${t("scoreWord")} ${rec.scores.overall}<br>` +
         `${rec.route.distance_km} km · ${fmtDuration(rec.route.duration_min)} ${t("drive")}<br>` +
         `🚶 ${rec.zone.walk_min} ${t("minWalk")} · <a href="${osmDirectionsUrl(rec.zone.lat, rec.zone.lon)}" ` +
         `target="_blank" rel="noopener">${t("directions")}</a>`
