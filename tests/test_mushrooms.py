@@ -90,10 +90,14 @@ class TestProfiles:
         # dataclass has no weights field and compute_scores shares WEIGHTS.
         assert not any(f.name == "weights" for m in MUSHROOMS.values() for f in dataclasses.fields(m))
 
-    def test_forest_factors_cover_dataset(self):
-        forests = {z.forest for z in ZONES}
+    def test_forest_and_soil_factors_cover_dataset(self):
+        from app.habitat import GROUPS
+
+        groups = {g for z in ZONES for g in z.forest_shares}
+        soils = {z.soil for z in ZONES}
         for m in MUSHROOMS.values():
-            assert forests <= set(m.forest_factors), m.id
+            assert groups <= set(m.forest_factors), m.id
+            assert soils <= set(m.soil_factors), m.id
 
     def test_metadata_complete(self):
         for m in MUSHROOMS.values():
@@ -147,12 +151,39 @@ class TestTemperatureWindows:
 
 class TestHabitatBySpecies:
     def test_aleppo_pine_suits_cep_more_than_camagroc(self):
-        cep = score_habitat(make_zone(forest="Aleppo pine"), MUSHROOMS["cep"].forest_factors)
-        cam = score_habitat(make_zone(forest="Aleppo pine"), MUSHROOMS["camagroc"].forest_factors)
+        cep = score_habitat(
+            make_zone(forest_shares={"aleppo": 1.0}), MUSHROOMS["cep"].forest_factors
+        )
+        cam = score_habitat(
+            make_zone(forest_shares={"aleppo": 1.0}), MUSHROOMS["camagroc"].forest_factors
+        )
         assert cep > cam
 
+    def test_broadleaf_suits_rossinyol_more_than_rovello(self):
+        ros = score_habitat(
+            make_zone(forest_shares={"broadleaf": 1.0}), MUSHROOMS["rossinyol"].forest_factors
+        )
+        rov = score_habitat(
+            make_zone(forest_shares={"broadleaf": 1.0}), MUSHROOMS["rovello"].forest_factors
+        )
+        assert ros > rov
+
+    def test_soil_chemistry_shifts_rovello(self):
+        acidic = score_habitat(
+            make_zone(forest_shares={"scots": 1.0}, soil="acidic"),
+            MUSHROOMS["rovello"].forest_factors,
+            MUSHROOMS["rovello"].soil_factors,
+        )
+        basic = score_habitat(
+            make_zone(forest_shares={"scots": 1.0}, soil="basic"),
+            MUSHROOMS["rovello"].forest_factors,
+            MUSHROOMS["rovello"].soil_factors,
+        )
+        assert acidic > basic
+
     def test_default_factors_unchanged(self):
-        assert score_habitat(make_zone()) >= 90
+        zone = make_zone(forest_shares={"scots": 1.0}, soil="acidic")
+        assert score_habitat(zone) == 100.0
 
 
 class TestComputeScores:

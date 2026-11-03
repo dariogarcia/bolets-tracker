@@ -13,7 +13,6 @@
  */
 const BoletsEngine = (() => {
   // ---------- small helpers ----------
-  const round1 = (x) => Math.round(x * 10) / 10;
   const clamp = (x, lo, hi) => Math.min(hi, Math.max(lo, x));
   // Python's round() rounds halves to the nearest even integer; JS Math.round
   // rounds half up. The weather-cell keys must match the backend exactly or a
@@ -24,6 +23,31 @@ const BoletsEngine = (() => {
     if (diff > 0.5) return floor + 1;
     if (diff < 0.5) return floor;
     return floor % 2 === 0 ? floor : floor + 1;
+  }
+  // Python's round(x, 1) rounds the double's exact binary value, halves to
+  // even. JS Math.round(x * 10) can differ because the binary multiply may
+  // land exactly on .5 when the true product is slightly below (8.85 * 10
+  // === 88.5, yet Python rounds 8.849999999... down to 8.8). Compare in
+  // decimal string space so the engine matches the backend bit-for-bit.
+  function round1(x) {
+    if (!Number.isFinite(x)) return x;
+    if (Math.abs(x) >= 1e15) return x;
+    const s = Math.abs(x).toPrecision(20);
+    if (s.indexOf("e") !== -1) return 0;
+    const dot = s.indexOf(".");
+    const intPart = dot === -1 ? s : s.slice(0, dot);
+    const fracRaw = dot === -1 ? "" : s.slice(dot + 1);
+    const frac = (fracRaw + "00000000000000000000").slice(0, 19);
+    const d = frac.charCodeAt(0) - 48;
+    const rest = frac.slice(1).replace(/0+$/, "");
+    let up = false;
+    if (rest) {
+      const first = rest.charCodeAt(0) - 48;
+      up = first > 5 || (first === 5 && rest.length > 1);
+    }
+    if (rest === "5") up = d % 2 === 1;
+    const out = Number(intPart) + (d + (up ? 1 : 0)) / 10;
+    return x < 0 ? -out : out;
   }
 
   function parseISO(iso) {
@@ -85,14 +109,13 @@ const BoletsEngine = (() => {
       emoji: "🟠",
       temp_ideal: [10, 21],
       forest_factors: {
-        "Scots pine": 1.0,
-        "Scots & black pine": 0.95,
-        "Black & scots pine": 0.95,
-        "Scots & Aleppo pine": 0.95,
-        "Aleppo & scots pine": 0.9,
-        "Black pine": 0.85,
-        "Aleppo pine": 0.8,
+        scots: 1.0,
+        black: 0.85,
+        aleppo: 0.8,
+        coastal: 0.8,
+        broadleaf: 0.5,
       },
+      soil_factors: { acidic: 1.0, neutral: 0.7, basic: 0.4 },
       season_windows: { high: [293, 24], mid: [309, 28], low: [324, 26] },
       note: {
         ca: "Pi roig en sòl àcid; tardor plujosa i dies suaus. El clàssic de novembre.",
@@ -107,14 +130,13 @@ const BoletsEngine = (() => {
       emoji: "🍯",
       temp_ideal: [14, 24],
       forest_factors: {
-        "Scots pine": 0.95,
-        "Scots & black pine": 0.95,
-        "Black & scots pine": 0.9,
-        "Scots & Aleppo pine": 0.85,
-        "Aleppo & scots pine": 0.8,
-        "Black pine": 0.85,
-        "Aleppo pine": 0.65,
+        scots: 0.7,
+        black: 0.6,
+        aleppo: 0.5,
+        coastal: 0.55,
+        broadleaf: 0.9,
       },
+      soil_factors: { acidic: 1.0, neutral: 0.75, basic: 0.5 },
       season_windows: { high: [268, 22], mid: [283, 24], low: [298, 26] },
       note: {
         ca: "Boscos moscosos i dies humits i tebis; surt amb les pluges de setembre i octubre.",
@@ -129,14 +151,13 @@ const BoletsEngine = (() => {
       emoji: "🟡",
       temp_ideal: [6, 16],
       forest_factors: {
-        "Scots pine": 0.9,
-        "Scots & black pine": 0.9,
-        "Black & scots pine": 0.9,
-        "Scots & Aleppo pine": 0.8,
-        "Aleppo & scots pine": 0.75,
-        "Black pine": 0.9,
-        "Aleppo pine": 0.6,
+        scots: 0.95,
+        black: 0.9,
+        aleppo: 0.6,
+        coastal: 0.6,
+        broadleaf: 0.85,
       },
+      soil_factors: { acidic: 1.0, neutral: 0.8, basic: 0.6 },
       season_windows: { high: [318, 22], mid: [342, 26], low: [354, 28] },
       note: {
         ca: "Molsa i fred; allarga la temporada de novembre a gener quan la resta s'ha acabat.",
@@ -151,14 +172,13 @@ const BoletsEngine = (() => {
       emoji: "🟤",
       temp_ideal: [12, 22],
       forest_factors: {
-        "Scots pine": 1.0,
-        "Scots & black pine": 0.95,
-        "Black & scots pine": 0.95,
-        "Scots & Aleppo pine": 0.9,
-        "Aleppo & scots pine": 0.85,
-        "Black pine": 0.9,
-        "Aleppo pine": 0.8,
+        scots: 1.0,
+        black: 0.9,
+        aleppo: 0.8,
+        coastal: 0.75,
+        broadleaf: 0.95,
       },
+      soil_factors: { acidic: 0.95, neutral: 1.0, basic: 0.85 },
       season_windows: { high: [248, 20], mid: [263, 24], low: [293, 28] },
       note: {
         ca: "Tormentes d'estiu a muntanya i pluges d'octubre a la plana; respon molt a la pluja recent.",
@@ -306,11 +326,21 @@ const BoletsEngine = (() => {
     return round1(clamp(base, 5, 100));
   }
 
-  function scoreHabitat(zone, forestFactors = null) {
+  function scoreHabitat(zone, forestFactors = null, soilFactors = null) {
     const factors = forestFactors ?? MUSHROOMS.rovello.forest_factors;
-    const forest = factors[zone.forest] ?? 0.75;
+    const soils = soilFactors ?? MUSHROOMS.rovello.soil_factors;
+    let forest;
+    if (zone.forest_shares && Object.keys(zone.forest_shares).length) {
+      forest = 0;
+      for (const [group, share] of Object.entries(zone.forest_shares)) {
+        forest += share * (factors[group] ?? 0.75);
+      }
+    } else {
+      forest = factors[zone.forest] ?? 0.75;
+    }
     const quality = zone.habitat_quality / 5;
-    return round1(100 * (0.6 * quality + 0.4 * forest));
+    const soil = soils[zone.soil] ?? 0.8;
+    return round1(100 * (0.45 * quality + 0.35 * forest + 0.2 * soil));
   }
 
   function scoreSeason(target, elevationM, windows = null) {
@@ -341,7 +371,7 @@ const BoletsEngine = (() => {
       humidity: scoreHumidity(w.rh_mean_pct, w.precip_target_mm),
       temperature: scoreTemperature(w.temp_max_c, w.temp_min_c, profile.temp_ideal),
       sunlight: scoreSunlight(zone),
-      habitat: scoreHabitat(zone, profile.forest_factors),
+      habitat: scoreHabitat(zone, profile.forest_factors, profile.soil_factors),
       season: scoreSeason(target, zone.elevation_m, profile.season_windows),
       crowding: scoreCrowding(zone.popularity),
       accessibility: scoreAccessibility(zone.accessibility),

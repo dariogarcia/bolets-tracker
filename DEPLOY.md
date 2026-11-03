@@ -25,7 +25,7 @@ Open http://localhost:8000 — the UI, map tiles and API are all served
 by the one process. Run the test suite before serving traffic:
 
 ```bash
-uv run pytest            # 91 tests, no network needed
+uv run pytest            # 152 tests, no network needed
 uv run ruff check .      # lint
 ```
 
@@ -103,7 +103,7 @@ Put HTTPS in front with `certbot --nginx`.
 
 The app already reduces load on all three:
 
-- weather lookups are deduplicated per ~0.1° grid cell across the 844 sectors
+- weather lookups are deduplicated per ~0.1° grid cell across the 819 sectors
 - forecast responses are cached 30 min, archive responses 24 h
 - route lookups are batched through OSRM's table service
 
@@ -124,10 +124,21 @@ Logs go to stdout/journald (`journalctl -u bolets -f`).
 
 ## Updating the zone dataset
 
-Zones are plain data: append `sector(...)` entries to `SECTORS` in
-`app/zones.py`, then `uv run pytest` — the suite validates IDs,
-coordinates, aspects per area and dataset size thresholds. Restart the
-service afterwards (dataset is loaded at import time).
+The dataset mixes curated and measured data. Staging points, aspects,
+access notes, picker pressure and walk times are hand-curated; forest
+composition, canopy cover, habitat quality and soil class are derived
+from the MFE50 forest map and ICGC geology via
+`data/habitat_gis.json`. The workflow:
+
+1. Edit the curated fields in the `sector(...)` entries of `app/zones.py`
+   (or add new sectors — a zone with no MFE50 stand is dropped).
+2. `uv run python scripts/rebuild_zones_from_gis.py` to regenerate the
+   measured fields in place.
+3. `uv run pytest` — the suite validates IDs, coordinates, aspects per
+   area and dataset size thresholds.
+4. `uv run python scripts/export_static_data.py` to refresh
+   `static/data/zones.json` for the static demo.
+5. Restart the service (dataset is loaded at import time).
 
 ## GitHub Pages (static demo)
 

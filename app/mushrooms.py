@@ -39,7 +39,13 @@ class MushroomProfile:
     scientific: str
     emoji: str
     temp_ideal: tuple[float, float]
+    # Tree-group affinity, keyed by the MFE50-derived mixture groups
+    # (scots / black / aleppo / coastal pine, broadleaf). Applied to the
+    # measured stand composition, not to a category label.
     forest_factors: dict[str, float]
+    # Bedrock-chemistry affinity (acidic / neutral / basic) from the ICGC
+    # lithological unit at the zone centroid.
+    soil_factors: dict[str, float]
     season_windows: dict[str, tuple[int, float]]
     note: dict[str, str] = field(default_factory=dict)
 
@@ -53,14 +59,13 @@ MUSHROOMS: dict[str, MushroomProfile] = {
         emoji="🟠",
         temp_ideal=(10, 21),
         forest_factors={
-            "Scots pine": 1.00,
-            "Scots & black pine": 0.95,
-            "Black & scots pine": 0.95,
-            "Scots & Aleppo pine": 0.95,
-            "Aleppo & scots pine": 0.90,
-            "Black pine": 0.85,
-            "Aleppo pine": 0.80,
+            "scots": 1.00,
+            "black": 0.85,
+            "aleppo": 0.80,
+            "coastal": 0.80,
+            "broadleaf": 0.50,
         },
+        soil_factors={"acidic": 1.00, "neutral": 0.70, "basic": 0.40},
         # High zones peak ~Oct 20, low zones ~Nov 20.
         season_windows={"high": (293, 24), "mid": (309, 28), "low": (324, 26)},
         note={
@@ -77,14 +82,13 @@ MUSHROOMS: dict[str, MushroomProfile] = {
         emoji="🍯",
         temp_ideal=(14, 24),
         forest_factors={
-            "Scots pine": 0.95,
-            "Scots & black pine": 0.95,
-            "Black & scots pine": 0.90,
-            "Scots & Aleppo pine": 0.85,
-            "Aleppo & scots pine": 0.80,
-            "Black pine": 0.85,
-            "Aleppo pine": 0.65,
+            "scots": 0.70,
+            "black": 0.60,
+            "aleppo": 0.50,
+            "coastal": 0.55,
+            "broadleaf": 0.90,
         },
+        soil_factors={"acidic": 1.00, "neutral": 0.75, "basic": 0.50},
         # Starts with the first autumn rains; peaks late Sep-Oct, earlier than rovellons.
         season_windows={"high": (268, 22), "mid": (283, 24), "low": (298, 26)},
         note={
@@ -101,14 +105,13 @@ MUSHROOMS: dict[str, MushroomProfile] = {
         emoji="🟡",
         temp_ideal=(6, 16),
         forest_factors={
-            "Scots pine": 0.90,
-            "Scots & black pine": 0.90,
-            "Black & scots pine": 0.90,
-            "Scots & Aleppo pine": 0.80,
-            "Aleppo & scots pine": 0.75,
-            "Black pine": 0.90,
-            "Aleppo pine": 0.60,
+            "scots": 0.95,
+            "black": 0.90,
+            "aleppo": 0.60,
+            "coastal": 0.60,
+            "broadleaf": 0.85,
         },
+        soil_factors={"acidic": 1.00, "neutral": 0.80, "basic": 0.60},
         # Fruits into early winter; avoids hot lowland pine and summer heat.
         season_windows={"high": (318, 22), "mid": (342, 26), "low": (354, 28)},
         note={
@@ -125,14 +128,13 @@ MUSHROOMS: dict[str, MushroomProfile] = {
         emoji="🟤",
         temp_ideal=(12, 22),
         forest_factors={
-            "Scots pine": 1.00,
-            "Scots & black pine": 0.95,
-            "Black & scots pine": 0.95,
-            "Scots & Aleppo pine": 0.90,
-            "Aleppo & scots pine": 0.85,
-            "Black pine": 0.90,
-            "Aleppo pine": 0.80,
+            "scots": 1.00,
+            "black": 0.90,
+            "aleppo": 0.80,
+            "coastal": 0.75,
+            "broadleaf": 0.95,
         },
+        soil_factors={"acidic": 0.95, "neutral": 1.00, "basic": 0.85},
         # Mountain ceps after the summer storms; lowland ceps with the October rains.
         season_windows={"high": (248, 20), "mid": (263, 24), "low": (293, 28)},
         note={

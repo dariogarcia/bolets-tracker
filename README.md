@@ -2,14 +2,15 @@
 
 Web service that recommends the most promising spots in Catalonia for collecting
 **rovellons** (*Lactarius deliciosus*), given a target date and a starting point.
-It combines live weather history/forecasts, real driving routes and a curated
-dataset of 844 mountain sectors grouped in 384 areas, and ranks every sector
+It combines live weather history/forecasts, real driving routes and a dataset of
+819 mountain sectors grouped in 375 areas, with forest composition and soil
+chemistry measured from official GIS sources, and ranks every sector
 across 8 explainable axes.
 
 Each recommendation is a **mountain sector**, not a whole town: an exact staging
 point (coordinates), access instructions (where to park and which track to take),
 walking time from the car, and the sector's own slope characteristics (aspect,
-elevation, forest type, cover). Neighbouring sectors of the same mountain get
+elevation, forest composition, canopy cover, soil pH class). Neighbouring sectors of the same mountain get
 different scores, so the ranking genuinely picks the best side of each massif —
 the shady north-facing obaga over the dry south-facing solà, the quiet west
 flank over the picked-over classic. Every card and map marker carries an
@@ -41,7 +42,7 @@ checks), see [DEPLOY.md](DEPLOY.md).
 | Weather (14-day rain history + target-day forecast) | [Open-Meteo](https://open-meteo.com) forecast & ERA5 archive APIs, no API key |
 | Driving distance & duration | [OSRM](https://project-osrm.org) public routing table, with haversine×1.35 fallback |
 | Geocoding of starting points | [Open-Meteo geocoding](https://open-meteo.com/en/docs/geocoding-api) + built-in presets, filtered to Catalunya |
-| Sectors | Curated dataset (`app/zones.py`): 844 mountain sectors in 384 areas across 43 comarques, each with its own staging point, aspect, elevation, forest type, cover, habitat quality, picker pressure, walk time and access notes |
+| Sectors | Curated core (`app/zones.py`, regenerated from GIS): 819 mountain sectors in 375 areas across 42 comarques, each with its own staging point, aspect, elevation, access notes, picker pressure and walk time. Forest composition, canopy cover, habitat quality and soil class are **measured**, derived from the [MFE50](https://agricultura.gencat.cat/ca/ambits/medi-natural/forest-bosc/mapa-forestal-de-catalunya/) forest stand map and [ICGC](https://www.icgc.cat/) 1:50 000 geology (see `data/habitat_gis.json`, `app/habitat.py`) |
 
 Every sector gets a 0–100 score on each axis (hover an axis name in the UI
 for a plain-language explanation):
@@ -52,7 +53,7 @@ for a plain-language explanation):
 | **Humidity** | Target-day mean relative humidity, ideal 75–90%; small bonus for rain on the day |
 | **Temperature** | Target-day max/min; ideal days 10–21 °C with mild nights 4–12 °C; frost and warm nights penalised |
 | **Shade** | Direct-sun exposure: aspect (N/NE slopes stay damp) adjusted by canopy cover (dense shade helps, open ground bakes) |
-| **Habitat** | Forest type (Scots pine classic, black pine good at altitude, Aleppo pine poorer) and static site quality |
+| **Habitat** | Forest composition (per-group mixture from MFE50: Scots pine classic, black pine good at altitude, Aleppo pine poorer) 35%, site quality 45%, soil chemistry from ICGC geology (acidic silicate soils best for rovellons) 20% |
 | **Season** | Elevation-dependent fruiting window (high: late Oct · mid: early Nov · low: late Nov), Gaussian decay |
 | **Solitude** | Inverse of local picker popularity — favours less-searched spots |
 | **Access** | Ease of reaching and searching the sector |
@@ -157,7 +158,7 @@ peak, early, late or quiet anywhere in Catalonia (best elevation included).
 ## Tests
 
 ```bash
-uv run pytest        # 123 tests: scoring, mushrooms, sectors, clients (mocked HTTP), API
+uv run pytest        # 152 tests: scoring, habitat, mushrooms, sectors, clients (mocked HTTP), API
 uv run ruff check .  # lint
 ```
 
@@ -166,18 +167,32 @@ uv run ruff check .  # lint
 ```
 app/
   main.py       FastAPI app, endpoints & weather grid dedup
-  zones.py      curated sector dataset (844 sectors in 384 areas)
+  zones.py      sector dataset (819 sectors in 375 areas) — GENERATED, see below
+  habitat.py    forest/soil derivation from MFE50 + ICGC geology
   weather.py    Open-Meteo client (forecast/archive, cache, retries)
   routing.py    OSRM table client (batched) + haversine fallback
   geocoding.py  geocoder + preset towns
+  mushrooms.py  species profiles (forest-group + soil factors)
   scoring.py    per-axis scoring & weighted composite
   models.py     pydantic models
+data/
+  habitat_gis.json  measured MFE50 forest stands + ICGC geology per sector
 static/         single-page UI (Leaflet map with sector polygons + rank labels, trilingual CA/ES/EN)
   engine.js       client-side port of the backend (GitHub Pages mode)
   data/zones.json zone dataset export for the engine (scripts/export_static_data.py)
-scripts/        maintenance scripts (zone-dataset export)
+scripts/        maintenance scripts (GIS ingestion, zone regeneration, static export, engine parity)
 tests/          pytest suite
 ```
+
+The zone dataset is generated: `scripts/ingest_habitat_data.py` builds
+`data/habitat_gis.json` from the MFE50 forest map and ICGC geology;
+`uv run python scripts/rebuild_zones_from_gis.py` then regenerates
+`app/zones.py`, merging the measured forest composition, canopy cover,
+habitat quality and soil class into the curated staging/access data (which is
+preserved verbatim). Re-run the export script and parity check after
+regenerating:
+`uv run python scripts/export_static_data.py` and
+`node scripts/verify-engine-parity.js <forecast-date> <archive-date>`.
 
 The UI is **dual-mode**: it probes `/api/health` once on load and, when the
 FastAPI backend is not there (GitHub Pages), it computes recommendations in

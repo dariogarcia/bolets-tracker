@@ -122,7 +122,7 @@ const I18N = {
       humidity: "Humidity — mean relative humidity of recent days. Rovellons want damp air: ideal 75–90%.",
       temperature: "Temperature — fruiting happens on cool autumn days (10–21 °C) with mild nights; frost and heat stop the flush.",
       shade: "Direct sunlight — rovellons fruit on shaded ground: north faces and dense canopy keep the soil damp. High bar = shady slope.",
-      habitat: "Habitat — forest type and site productivity. Scots pine on acidic soil is the classic rovelló forest.",
+      habitat: "Habitat — measured forest composition (MFE50), canopy cover and bedrock chemistry (ICGC). Scots pine on acidic soil is the classic rovelló forest.",
       season: "Season — timing against the fruiting peak for this elevation (high zones mid-October, low zones late November).",
       crowding: "Solitude — picker pressure from local reputation. High bar = quiet woods.",
       accessibility: "Access — how easy the staging point is to reach (road quality, forest tracks).",
@@ -190,7 +190,7 @@ const I18N = {
       humidity: "Humedad — humedad relativa media de los últimos días. El rovellón quiere aire húmedo: ideal 75–90%.",
       temperature: "Temperatura — la fructificación llega con días frescos de otoño (10–21 °C) y noches suaves; las heladas y el calor la detienen.",
       shade: "Sol directo — el rovellón fructifica en suelo sombreado: las umbrías y el bosque denso conservan la humedad. Barra alta = umbría.",
-      habitat: "Hábitat — tipo de bosque y productividad del sitio. El pino rojo en suelo ácido es el bosque clásico del rovellón.",
+      habitat: "Hábitat — composición forestal medida (MFE50), cobertura de copa y química del sustrato (ICGC). El pino rojo en suelo ácido es el bosque clásico del rovellón.",
       season: "Temporada — encaje con el pico de fructificación de esta altitud (zonas altas a mediados de octubre, bajas a finales de noviembre).",
       crowding: "Soledad — presión de recolectores según reputación local. Barra alta = bosque tranquilo.",
       accessibility: "Acceso — facilidad para llegar al punto de inicio (estado de carreteras y pistas).",
@@ -258,7 +258,7 @@ const I18N = {
       humidity: "Humitat — humitat relativa mitjana dels últims dies. El rovelló vol aire humit: ideal 75–90%.",
       temperature: "Temperatura — la fructificació arriba amb dies frescos de tardor (10–21 °C) i nits suaus; les glaçades i la calor l'aturen.",
       shade: "Sol directe — el rovelló fructifica en sòl ombrívol: les obagues i el bosc dens conserven la humitat. Barra alta = obaga.",
-      habitat: "Hàbitat — tipus de bosc i productivitat del lloc. El pi roig en sòl àcid és el bosc clàssic del rovelló.",
+      habitat: "Hàbitat — composició forestal mesurada (MFE50), coberta de capçada i química del substrat (ICGC). El pi roig en sòl àcid és el bosc clàssic del rovelló.",
       season: "Temporada — encaix amb el pic de fructificació d'aquesta altitud (zones altes a mitjan octubre, baixes a finals de novembre).",
       crowding: "Solitud — pressió de recol·lectors segons reputació local. Barra alta = bosc tranquil.",
       accessibility: "Accés — facilitat per arribar al punt d'inici (estat de carreteres i pistes).",
@@ -273,20 +273,38 @@ const FOREST_I18N = {
     "Scots pine": "pino rojo",
     "Black pine": "pino negro",
     "Aleppo pine": "pino carrasco",
+    "Coastal pine": "pino litoral",
+    "Broadleaf woods": "bosque de frondosas",
     "Aleppo & scots pine": "pinos carrasco y rojo",
+    "Aleppo & coastal pine": "pinos carrasco y litoral",
     "Black & scots pine": "pinos negro y rojo",
+    "Black & aleppo pine": "pinos negro y carrasco",
     "Scots & Aleppo pine": "pinos rojo y carrasco",
     "Scots & black pine": "pinos rojo y negro",
+    "Coastal & black pine": "pinos litoral y negro",
+    "Coastal & aleppo pine": "pinos litoral y carrasco",
   },
   ca: {
     "Scots pine": "pi roig",
     "Black pine": "pi negre",
     "Aleppo pine": "pi blanc",
+    "Coastal pine": "pi litoral",
+    "Broadleaf woods": "bosc de frondoses",
     "Aleppo & scots pine": "pi blanc i roig",
+    "Aleppo & coastal pine": "pi blanc i litoral",
     "Black & scots pine": "pi negre i roig",
+    "Black & aleppo pine": "pi negre i blanc",
     "Scots & Aleppo pine": "pi roig i blanc",
     "Scots & black pine": "pi roig i negre",
+    "Coastal & black pine": "pi litoral i negre",
+    "Coastal & aleppo pine": "pi litoral i blanc",
   },
+};
+
+const SOIL_I18N = {
+  en: { acidic: "acidic soil", neutral: "neutral soil", basic: "calcareous soil" },
+  es: { acidic: "suelo ácido", neutral: "suelo neutro", basic: "suelo calcáreo" },
+  ca: { acidic: "sòl àcid", neutral: "sòl neutre", basic: "sòl calcari" },
 };
 
 function t(key) {
@@ -303,6 +321,10 @@ function tAxTips() {
 
 function trForest(forest) {
   return FOREST_I18N[state.lang]?.[forest] ?? forest;
+}
+
+function trSoil(soil) {
+  return SOIL_I18N[state.lang]?.[soil] ?? SOIL_I18N.en[soil] ?? soil;
 }
 
 function trAspect(aspect) {
@@ -507,7 +529,7 @@ function renderCard(rec) {
       <div class="rank">${rec.rank}</div>
       <div class="card-title">
         <h3>${z.name}</h3>
-        <div class="meta">${z.area} · ${z.comarca} · ${z.elevation_m} m · ${trAspect(z.aspect)} · ${trForest(z.forest)}</div>
+        <div class="meta">${z.area} · ${z.comarca} · ${z.elevation_m} m · ${trAspect(z.aspect)} · ${trForest(z.forest)} · <span class="soil-badge soil-${z.soil}">${trSoil(z.soil)}</span></div>
       </div>
       <div class="score-box">
         <div class="score-big" style="color:${scoreColor(rec.scores.overall)}">${rec.scores.overall}</div>
@@ -538,6 +560,7 @@ function renderCard(rec) {
       </div>
       <p class="access-text">${z.access}</p>
     </div>
+    ${z.geology ? `<p class="geol-line">🪨 ${z.geology}${z.forest_desc ? ` · 🌲 ${z.forest_desc} (MFE50)` : ""}</p>` : ""}
     <p class="notes">${z.notes}</p>`;
   card.addEventListener("click", (e) => {
     if (e.target.closest("a")) return;

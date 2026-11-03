@@ -123,18 +123,37 @@ class TestTemperature:
 
 class TestHabitat:
     def test_top_zone(self):
-        zone = make_zone()
+        zone = make_zone(soil="acidic")
         assert score_habitat(zone) >= 90
 
     def test_poor_site_lower(self):
-        assert score_habitat(make_zone(habitat_quality=2, forest="Aleppo pine")) < score_habitat(
-            make_zone()
-        )
+        assert score_habitat(
+            make_zone(habitat_quality=2, forest_shares={"aleppo": 1.0}, soil="basic")
+        ) < score_habitat(make_zone())
 
     def test_scots_beats_aleppo(self):
-        scots = score_habitat(make_zone(forest="Scots pine"))
-        aleppo = score_habitat(make_zone(forest="Aleppo pine"))
+        scots = score_habitat(make_zone(forest_shares={"scots": 1.0}))
+        aleppo = score_habitat(make_zone(forest_shares={"aleppo": 1.0}))
         assert scots > aleppo
+
+    def test_soil_chemistry_matters(self):
+        acidic = score_habitat(make_zone(soil="acidic"))
+        basic = score_habitat(make_zone(soil="basic"))
+        assert acidic > basic
+
+    def test_mixture_blends_group_affinities(self):
+        pure = score_habitat(make_zone(forest_shares={"scots": 1.0}))
+        mixed = score_habitat(make_zone(forest_shares={"scots": 0.5, "broadleaf": 0.5}))
+        assert pure > mixed
+
+    def test_perfect_measured_stand(self):
+        zone = make_zone(forest_shares={"scots": 1.0}, soil="acidic")
+        assert score_habitat(zone) == 100.0
+
+    def test_legacy_category_falls_back_to_default(self):
+        # Category labels are no longer factor keys; unmapped stands use the
+        # neutral default affinity instead of crashing.
+        assert score_habitat(make_zone()) < score_habitat(make_zone(forest_shares={"scots": 1.0}))
 
     def test_all_dataset_zones_scored(self):
         for z in ZONES:

@@ -1,17 +1,20 @@
+from app.habitat import GROUPS
 from app.zones import ZONES
 
 CATALONIA_BBOX = {"lat_min": 40.4, "lat_max": 42.9, "lon_min": 0.1, "lon_max": 3.4}
 VALID_ASPECTS = {"N", "NE", "NW", "E", "W", "SE", "SW", "S"}
 VALID_COVERS = {"dense", "moderate", "open"}
+VALID_SOILS = {"acidic", "neutral", "basic"}
 
 
-def test_at_least_150_sectors():
-    assert len(ZONES) >= 830
+def test_sector_count():
+    """819 zones: the 844 curated sectors minus the 25 without an MFE50 stand."""
+    assert len(ZONES) == 819
 
 
 def test_at_least_55_areas():
     areas = {z.area for z in ZONES}
-    assert len(areas) >= 380
+    assert len(areas) >= 370
 
 
 def test_unique_ids():
@@ -46,6 +49,22 @@ def test_aspect_and_cover_valid():
     for z in ZONES:
         assert z.aspect in VALID_ASPECTS, z.id
         assert z.cover in VALID_COVERS, z.id
+
+
+def test_measured_habitat_attributes():
+    for z in ZONES:
+        assert z.soil in VALID_SOILS, z.id
+        assert set(z.forest_shares) <= set(GROUPS), z.id
+        assert abs(sum(z.forest_shares.values()) - 1.0) < 0.01, z.id
+        assert all(0.0 <= s <= 1.0 for s in z.forest_shares.values()), z.id
+        assert z.geology.strip(), z.id
+        assert z.forest_desc.strip(), z.id
+
+
+def test_soil_classes_balanced():
+    """The ICGC lithology split must cover all three bedrock chemistries."""
+    soils = {z.soil for z in ZONES}
+    assert soils == VALID_SOILS
 
 
 def test_sector_metadata_non_empty():

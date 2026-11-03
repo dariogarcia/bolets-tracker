@@ -22,6 +22,13 @@ class Zone(BaseModel):
     walk_min: int = Field(ge=0, le=180)
     access: str
     notes: str
+    # Measured attributes (MFE50 forest map + ICGC geology); defaults keep
+    # legacy constructions working. `forest`, `cover` and `habitat_quality`
+    # above are themselves derived from the same measurements.
+    soil: str = "neutral"
+    forest_shares: dict[str, float] = Field(default_factory=dict)
+    geology: str = ""
+    forest_desc: str = ""
 
 
 class ZoneWeather(BaseModel):

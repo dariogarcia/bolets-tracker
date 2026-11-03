@@ -1,7 +1,7 @@
-"""Export the curated zone dataset to static/data/zones.json.
+"""Export the zone dataset to static/data/zones.json.
 
 The client-side engine (static/engine.js) used by the GitHub Pages build
-loads the same 844-sector dataset the FastAPI backend serves from
+loads the same 819-sector dataset the FastAPI backend serves from
 app/zones.py. Run this after any change to the dataset:
 
     uv run python scripts/export_static_data.py

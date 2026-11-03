@@ -21,6 +21,11 @@ SUN_COVER_ADJ = {"dense": 8.0, "moderate": 0.0, "open": -10.0}
 
 # Forest types ranked as rovelló habitat (Scots pine on acidic soil is classic).
 FOREST_FACTORS = MUSHROOMS["rovello"].forest_factors
+SOIL_FACTORS = MUSHROOMS["rovello"].soil_factors
+
+# Fallback affinity when a profile omits a tree group or soil class.
+DEFAULT_FOREST_FACTOR = 0.75
+DEFAULT_SOIL_FACTOR = 0.80
 
 # Global ranking weights: how much each factor matters to the picker. Species
 # needs live in the fit scores (season, temperature, habitat), never here.
@@ -152,11 +157,30 @@ def score_sunlight(zone: Zone) -> float:
     return round(max(5.0, min(100.0, base)), 1)
 
 
-def score_habitat(zone: Zone, forest_factors: dict[str, float] | None = None) -> float:
+def score_habitat(
+    zone: Zone,
+    forest_factors: dict[str, float] | None = None,
+    soil_factors: dict[str, float] | None = None,
+) -> float:
+    """Habitat fit from measured stand composition, canopy and bedrock.
+
+    ``forest`` is the species-mixture term: the measured occupancy shares
+    by tree group weighted by the species' affinity for each group. Zones
+    without a measured composition (legacy data) fall back to matching
+    their display category against the factor table.
+    """
     factors = forest_factors if forest_factors is not None else FOREST_FACTORS
-    forest = factors.get(zone.forest, 0.75)
+    soils = soil_factors if soil_factors is not None else SOIL_FACTORS
+    if zone.forest_shares:
+        forest = sum(
+            share * factors.get(group, DEFAULT_FOREST_FACTOR)
+            for group, share in zone.forest_shares.items()
+        )
+    else:
+        forest = factors.get(zone.forest, DEFAULT_FOREST_FACTOR)
     quality = zone.habitat_quality / 5
-    value = 100 * (0.60 * quality + 0.40 * forest)
+    soil = soils.get(zone.soil, DEFAULT_SOIL_FACTOR)
+    value = 100 * (0.45 * quality + 0.35 * forest + 0.20 * soil)
     return round(value, 1)
 
 
@@ -207,7 +231,7 @@ def compute_scores(
     humidity = score_humidity(weather.rh_mean_pct, weather.precip_target_mm)
     temperature = score_temperature(weather.temp_max_c, weather.temp_min_c, profile.temp_ideal)
     sunlight = score_sunlight(zone)
-    habitat = score_habitat(zone, profile.forest_factors)
+    habitat = score_habitat(zone, profile.forest_factors, profile.soil_factors)
     season = score_season(target, zone.elevation_m, profile.season_windows)
     crowding = score_crowding(zone.popularity)
     accessibility = score_accessibility(zone.accessibility)

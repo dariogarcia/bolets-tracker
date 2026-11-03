@@ -337,6 +337,11 @@ button:disabled { opacity: 0.5; cursor: wait; }
 .dir-link:hover { text-decoration: underline; }
 
 .notes { margin: 12px 0 0; color: var(--muted); font-size: 0.84rem; font-style: italic; }
+.geol-line { margin: 10px 0 0; color: var(--muted); font-size: 0.78rem; }
+.soil-badge { padding: 1px 6px; border-radius: 8px; font-size: 0.74rem; white-space: nowrap; }
+.soil-acidic { background: rgba(46, 110, 84, 0.18); }
+.soil-neutral { background: rgba(120, 120, 120, 0.18); }
+.soil-basic { background: rgba(190, 150, 60, 0.20); }
 
 footer {
   padding: 14px 28px 24px;
