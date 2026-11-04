@@ -147,6 +147,138 @@ def stage_merge(args) -> None:
         del class_gdf, parts, kept
 
 
+def stage_split(args) -> None:
+    """Split regions larger than --max-area ha by recursive geometric cuts.
+
+    Mega-regions are lace meshes of stands: any stand subset disconnects,
+    so pieces are cut from the region polygon itself. Each cut halves the
+    area with a straight line perpendicular to the minimum rotated
+    rectangle's long axis (binary search on the cut position); recursion
+    stops below --max-area. Pieces tile the parent exactly and may be
+    MultiPolygons (a cut can detach mesh strands). Numbering is stable:
+    unsplit regions keep their ids (r0001…), pieces get a letter suffix
+    (r0123a…), and the stage is idempotent.
+    """
+    import geopandas as gpd
+    from shapely.geometry import MultiPolygon, Polygon
+
+    def piece_suffix(i: int) -> str:
+        letters = ""
+        i += 1
+        while i:
+            i, rem = divmod(i - 1, 26)
+            letters = chr(ord("a") + rem) + letters
+        return letters
+
+    def make_poly(geom):
+        """Keep only polygonal parts (cuts can yield degenerate slivers)."""
+        if geom is None or geom.is_empty:
+            return None
+        geoms = geom.geoms if hasattr(geom, "geoms") else [geom]
+        parts = []
+        for g in geoms:
+            if g.geom_type == "Polygon":
+                parts.append(g)
+            elif g.geom_type == "MultiPolygon":
+                parts.extend(g.geoms)
+        if not parts:
+            return None
+        return parts[0] if len(parts) == 1 else MultiPolygon(parts)
+
+    def cut_in_half(poly):
+        """Cut poly into two halves of ~equal area along its long axis."""
+        mrr = poly.minimum_rotated_rectangle
+        c = list(mrr.exterior.coords) if hasattr(mrr, "exterior") else None
+        if c is None:
+            return None
+        # rectangle corners c0..c3; pick the longer edge as the u axis
+        e1 = ((c[1][0] - c[0][0]) ** 2 + (c[1][1] - c[0][1]) ** 2) ** 0.5
+        e2 = ((c[2][0] - c[1][0]) ** 2 + (c[2][1] - c[1][1]) ** 2) ** 0.5
+        if e1 >= e2:
+            o, u, v, length = c[0], (c[1][0] - c[0][0], c[1][1] - c[0][1]), (c[3][0] - c[0][0], c[3][1] - c[0][1]), e1
+        else:
+            o, u, v, length = c[1], (c[2][0] - c[1][0], c[2][1] - c[1][1]), (c[0][0] - c[1][0], c[0][1] - c[1][1]), e2
+        ux, uy = u[0] / length, u[1] / length
+        w = ((v[0] ** 2 + v[1] ** 2) ** 0.5) * 1.5
+        vx, vy = v[0] / ((v[0] ** 2 + v[1] ** 2) ** 0.5), v[1] / ((v[0] ** 2 + v[1] ** 2) ** 0.5)
+        half = poly.area / 2
+        lo, hi = 0.05 * length, 0.95 * length
+        best = None
+        for _ in range(40):
+            t = (lo + hi) / 2
+            side = Polygon(
+                [
+                    (o[0] + ux * (t - length), o[1] + uy * (t - length)),
+                    (o[0] + ux * t, o[1] + uy * t),
+                    (o[0] + ux * t + vx * w, o[1] + uy * t + vy * w),
+                    (o[0] + ux * (t - length) + vx * w, o[1] + uy * (t - length) + vy * w),
+                ]
+            )
+            a = make_poly(poly.intersection(side))
+            if a is None or a.area == 0:
+                lo = t
+                continue
+            best = (a, make_poly(poly.difference(side)))
+            if abs(a.area - half) < 0.005 * poly.area:
+                break
+            if a.area < half:
+                lo = t
+            else:
+                hi = t
+        if best is None or best[1] is None or best[1].area == 0:
+            return None
+        return best
+
+    def split_poly(poly, depth=0):
+        if poly.area / 1e4 <= args.max_area or poly.is_empty or depth >= 10:
+            return [poly]
+        halves = cut_in_half(poly)
+        if halves is None:
+            return [poly]
+        a, b = halves
+        if max(a.area, b.area) > 0.98 * poly.area:
+            return [poly]
+        return split_poly(a, depth + 1) + split_poly(b, depth + 1)
+
+    offset = 0
+    for comp_class in args.classes:
+        gdf = gpd.read_file(WORK_DIR / f"regions_{comp_class}.geojson")
+        had_base_id = "base_id" in gdf.columns
+        if not had_base_id:
+            gdf["base_id"] = [f"r{offset + i + 1:04d}" for i in range(len(gdf))]
+        # advance by parent count: split files hold pieces sharing a prefix
+        offset += gdf["base_id"].str.slice(0, 5).nunique()
+        mega = gdf[gdf.geometry.area / 1e4 > args.max_area]
+        if len(mega) == 0:
+            if not had_base_id:
+                gdf.to_file(WORK_DIR / f"regions_{comp_class}.geojson", driver="GeoJSON")
+            print(f"class {comp_class}: no regions > {args.max_area:g} ha", flush=True)
+            continue
+        rows = []
+        replaced = 0
+        for _, row in gdf.iterrows():
+            if row.geometry.area / 1e4 <= args.max_area:
+                rows.append({"base_id": row["base_id"], "comp_class": comp_class, "geometry": row.geometry})
+                continue
+            replaced += 1
+            pieces = [p for p in split_poly(row.geometry) if not p.is_empty and p.area / 1e4 >= args.min_area]
+            pieces.sort(key=lambda p: (-p.area, p.centroid.x, p.centroid.y))
+            if not pieces:
+                rows.append({"base_id": row["base_id"], "comp_class": comp_class, "geometry": row.geometry})
+                continue
+            for i, p in enumerate(pieces):
+                rows.append(
+                    {"base_id": f"{row['base_id']}{piece_suffix(i)}", "comp_class": comp_class, "geometry": p}
+                )
+        out = gpd.GeoDataFrame(rows, crs=MFE_CRS)
+        out.to_file(WORK_DIR / f"regions_{comp_class}.geojson", driver="GeoJSON")
+        print(
+            f"class {comp_class}: split {replaced} regions > {args.max_area:g} ha into "
+            f"{sum(1 for r in rows if len(r['base_id']) > 5)} pieces ({len(out)} regions total)",
+            flush=True,
+        )
+
+
 def stage_finalize(args) -> None:
     import geopandas as gpd
     import pandas as pd
@@ -155,6 +287,8 @@ def stage_finalize(args) -> None:
     regions = pd.concat(region_frames, ignore_index=True)
     del region_frames
     regions = regions.reset_index(drop=True)
+    if "base_id" not in regions.columns:
+        regions["base_id"] = [f"r{i + 1:04d}" for i in range(len(regions))]
     print(f"total regions: {len(regions)}", flush=True)
 
     trees = pd.read_pickle(WORK_DIR / "stands.pkl")
@@ -195,7 +329,7 @@ def stage_finalize(args) -> None:
         out_features.append(
             {
                 "properties": {
-                    "region_id": f"r{len(out_features) + 1:04d}",
+                    "region_id": row["base_id"],
                     "comp_class": row["comp_class"],
                     "area_ha": round(row.geometry.area / 1e4, 1),
                     "tfccarb": round(tfccarb, 1),
@@ -220,8 +354,9 @@ def stage_finalize(args) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--stage", choices=("stands", "merge", "finalize"), required=True)
+    parser.add_argument("--stage", choices=("stands", "merge", "split", "finalize"), required=True)
     parser.add_argument("--min-area", type=float, default=25.0, help="minimum region area in hectares")
+    parser.add_argument("--max-area", type=float, default=5000.0, help="split regions above this area (hectares)")
     parser.add_argument("--simplify", type=float, default=25.0, help="stand simplification tolerance in metres")
     parser.add_argument("--out-simplify", type=float, default=50.0, help="region outline simplification tolerance in metres")
     parser.add_argument(
@@ -235,6 +370,8 @@ def main() -> None:
         stage_stands(args)
     elif args.stage == "merge":
         stage_merge(args)
+    elif args.stage == "split":
+        stage_split(args)
     else:
         stage_finalize(args)
 

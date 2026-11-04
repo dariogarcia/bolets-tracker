@@ -80,19 +80,23 @@ def slugify(text: str) -> str:
 
 
 def region_exterior(feature: dict) -> list[list[float]]:
-    """Exterior ring as [lat, lon] pairs."""
-    ring = feature["geometry"]["coordinates"][0]
-    return [[round(lat, 6), round(lon, 6)] for lon, lat in ring]
+    """Exterior ring of the largest polygon part as [lat, lon] pairs."""
+    from shapely.geometry import shape
+
+    geom = shape(feature["geometry"])
+    if geom.geom_type == "MultiPolygon":
+        geom = max(geom.geoms, key=lambda g: g.area)
+    return [[round(lat, 6), round(lon, 6)] for lon, lat in geom.exterior.coords]
 
 
 def stage_select(args) -> None:
-    from shapely.geometry import Polygon
+    from shapely.geometry import shape
 
     regions = load_regions()
     attrs = json.loads(ATTRS_FILE.read_text(encoding="utf-8"))
     legacy = json.loads(LEGACY_FILE.read_text(encoding="utf-8"))
 
-    polys = {f["properties"]["region_id"]: Polygon(f["geometry"]["coordinates"][0]) for f in regions}
+    polys = {f["properties"]["region_id"]: shape(f["geometry"]) for f in regions}
 
     # Legacy lore: a curated zone's staging point inside a region passes
     # its name, notes, access text and popularity on to that region.
@@ -230,7 +234,7 @@ def stage_build(args) -> None:
 
         staging = roads.get("staging")
         if not staging:
-            ring = feature["geometry"]["coordinates"][0]
+            ring = region_exterior(feature)
             staging = [sum(q[1] for q in ring) / len(ring), sum(q[0] for q in ring) / len(ring)]
 
         ring = region_exterior(feature)

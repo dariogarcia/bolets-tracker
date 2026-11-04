@@ -71,7 +71,7 @@ class TestBasics:
     def test_zone_detail(self, client):
         r = client.get("/api/zone/obaga-del-bac-broadleaf")
         assert r.status_code == 200
-        assert r.json()["comarca"] == "Garrotxa"
+        assert r.json()["comarca"] == "Ripollès"
         assert "Directions" not in r.json()["access"]
         assert r.json()["walk_min"] >= 0
 

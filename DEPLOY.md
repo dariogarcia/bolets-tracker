@@ -15,8 +15,7 @@ The app is a single FastAPI process with no database: state lives in
 ## Quick start (local)
 
 ```bash
-git clone https://github.com/dariogarcia/bolets-tracker.git
-cd bolets-tracker
+cd output/bolets-tracker
 uv sync                  # create .venv and install dependencies
 uv run uvicorn app.main:app --port 8000
 ```

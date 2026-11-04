@@ -130,25 +130,33 @@ def save_attrs(attrs: dict) -> None:
 
 
 def region_centroid_utm(feature: dict):
-    """Centroid in EPSG:25831 (mean of exterior ring vertices is fine
-    for naming and queries; the polygon itself is used for distances)."""
+    """Centroid in EPSG:25831 (mean of the largest part's exterior ring
+    vertices is fine for naming and queries; the polygon itself is used
+    for distances)."""
     from pyproj import Transformer
+    from shapely.geometry import shape
 
-    ring = feature["geometry"]["coordinates"][0]
+    geom = shape(feature["geometry"])
+    if geom.geom_type == "MultiPolygon":
+        geom = max(geom.geoms, key=lambda g: g.area)
     to_utm = Transformer.from_crs(4326, UTM, always_xy=True)
-    xs = [to_utm.transform(lon, lat)[0] for lon, lat in ring]
-    ys = [to_utm.transform(lon, lat)[1] for lon, lat in ring]
+    xs = [to_utm.transform(lon, lat)[0] for lon, lat in geom.exterior.coords]
+    ys = [to_utm.transform(lon, lat)[1] for lon, lat in geom.exterior.coords]
     return sum(xs) / len(xs), sum(ys) / len(ys)
 
 
 def region_polygon_utm(feature: dict):
     from pyproj import Transformer
-    from shapely.geometry import Polygon
+    from shapely.geometry import shape
     from shapely.ops import transform as shp_transform
 
     to_utm = Transformer.from_crs(4326, UTM, always_xy=True)
-    poly = Polygon(feature["geometry"]["coordinates"][0])
-    return shp_transform(lambda x, y, z=None: to_utm.transform(x, y), poly)
+    poly = shape(feature["geometry"])
+    poly = shp_transform(lambda x, y, z=None: to_utm.transform(x, y), poly)
+    if poly.geom_type == "MultiPolygon":
+        # anchor access to the main forest body, not far-flung mesh strands
+        poly = max(poly.geoms, key=lambda g: g.area)
+    return poly
 
 
 def utm_to_wgs(x: float, y: float) -> tuple[float, float]:
@@ -183,21 +191,15 @@ def stage_geology(args) -> None:
         }
         payload = http_json(GEOLOGY_URL, params)
         feats = payload.get("features") or []
-        entry = attrs.setdefault(rid, {})
         if feats:
             a = feats[0]["attributes"]
-            entry["geol"] = {
-                "codi": a.get("Codi"),
-                "descripcio": a.get("Descripcio"),
-                "edat": a.get("Edat"),
-            }
-        else:
-            entry["geol"] = None
-        return entry["geol"] is not None
+            return rid, {"codi": a.get("Codi"), "descripcio": a.get("Descripcio"), "edat": a.get("Edat")}
+        return rid, None
 
     done = 0
     with ThreadPoolExecutor(max_workers=3) as pool:
-        for ok in pool.map(work, todo):
+        for rid, geol in pool.map(work, todo):
+            attrs.setdefault(rid, {})["geol"] = geol
             done += 1
             if done % 200 == 0:
                 print(f"  {done}/{len(todo)}")
@@ -355,24 +357,22 @@ def stage_roads(args) -> None:
             d = poly.distance(line)
             if best is None or d < best[0]:
                 best = (d, line, f["attributes"])
-        entry = attrs.setdefault(rid, {})
         if best is None:
-            entry["roads"] = {"dist_m": None, "partial": partial}
-        else:
-            dist, line, a = best
-            staging = nearest_points(line, poly)[0]
-            entry["roads"] = {
-                "dist_m": round(dist, 1),
-                "staging": utm_to_wgs(staging.x, staging.y),
-                "tipus": a.get("tipus"),
-                "nom": (a.get("nom") or "").strip() or None,
-                "partial": partial,
-            }
-        return entry["roads"]["dist_m"] is not None
+            return rid, {"dist_m": None, "partial": partial}
+        dist, line, a = best
+        staging = nearest_points(line, poly)[0]
+        return rid, {
+            "dist_m": round(dist, 1),
+            "staging": utm_to_wgs(staging.x, staging.y),
+            "tipus": a.get("tipus"),
+            "nom": (a.get("nom") or "").strip() or None,
+            "partial": partial,
+        }
 
     done = 0
     with ThreadPoolExecutor(max_workers=3) as pool:
-        for ok in pool.map(work, todo):
+        for rid, roads in pool.map(work, todo):
+            attrs.setdefault(rid, {})["roads"] = roads
             done += 1
             if done % 100 == 0:
                 print(f"  {done}/{len(todo)}")
@@ -399,15 +399,11 @@ def stage_terrain(args) -> None:
 
     from pyproj import Transformer
 
-    to_utm = Transformer.from_crs(4326, UTM, always_xy=True)
     to_wgs = Transformer.from_crs(UTM, 4326, always_xy=True)
 
     jobs = []
     for rid, feature in todo:
-        ring = feature["geometry"]["coordinates"][0]
-        lat = sum(p[1] for p in ring) / len(ring)
-        lon = sum(p[0] for p in ring) / len(ring)
-        cx, cy = to_utm.transform(lon, lat)
+        cx, cy = region_centroid_utm(feature)
         pts = []
         for dx in (-1, 0, 1):
             for dy in (-1, 0, 1):
@@ -508,13 +504,12 @@ def stage_names(args) -> None:
             if best_d is not None:
                 candidates.append((best_d + penalty, round(best_d, 0), a.get("Toponim"), a.get("Concepte")))
         candidates.sort()
-        attrs.setdefault(rid, {})["names"] = [
-            {"t": t, "c": c, "d": d} for _, d, t, c in candidates[:5]
-        ]
+        return rid, [{"t": t, "c": c, "d": d} for _, d, t, c in candidates[:5]]
 
     done = 0
     with ThreadPoolExecutor(max_workers=3) as pool:
-        for _ in pool.map(work, todo):
+        for rid, names in pool.map(work, todo):
+            attrs.setdefault(rid, {})["names"] = names
             done += 1
             if done % 200 == 0:
                 print(f"  {done}/{len(todo)}")
