@@ -240,7 +240,7 @@ const BoletsEngine = (() => {
   }
 
   // ---------- scoring (app/scoring.py) ----------
-  const SUN_ASPECT = { N: 95, NE: 85, NW: 80, E: 60, W: 55, SE: 40, SW: 32, S: 25 };
+  const SUN_ASPECT = { N: 95, NE: 85, NW: 80, E: 60, W: 55, flat: 60, SE: 40, SW: 32, S: 25 };
   const SUN_COVER_ADJ = { dense: 8, moderate: 0, open: -10 };
   const WEIGHTS = {
     rain: 0.22,
@@ -588,6 +588,7 @@ const BoletsEngine = (() => {
   const ROAD_FACTOR = 1.35;
   const FALLBACK_SPEED_KMH = 50;
   const MAX_TABLE_SIZE = 95;
+  const ROUTE_ZONES_CAP = 1000;
 
   function haversineKm(lat1, lon1, lat2, lon2) {
     const phi1 = (lat1 * Math.PI) / 180;
@@ -611,8 +612,15 @@ const BoletsEngine = (() => {
   async function fetchRouteTable(originLat, originLon, zones) {
     const routes = {};
     const batchSize = MAX_TABLE_SIZE - 1;
+    // Live routing only for the zones nearest the origin (straight
+    // line); the rest use the haversine estimate — mirrors
+    // ROUTE_ZONES_CAP in app/routing.py.
+    const ranked = [...zones].sort(
+      (a, b) => haversineKm(originLat, originLon, a.lat, a.lon) - haversineKm(originLat, originLon, b.lat, b.lon)
+    );
+    const tableZones = ranked.slice(0, ROUTE_ZONES_CAP);
     const batches = [];
-    for (let i = 0; i < zones.length; i += batchSize) batches.push(zones.slice(i, i + batchSize));
+    for (let i = 0; i < tableZones.length; i += batchSize) batches.push(tableZones.slice(i, i + batchSize));
 
     await Promise.all(
       batches.map(async (batch) => {

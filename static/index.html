@@ -78,15 +78,25 @@
     </div>
   </div>
 
+  <div id="disclaimer" class="methodology hidden" role="dialog" aria-modal="true">
+    <div class="method-panel">
+      <button type="button" id="disclaimer-close" class="method-close" aria-label="Close">✕</button>
+      <div id="disclaimer-body" class="method-body"></div>
+    </div>
+  </div>
+
   <footer>
     <span data-i18n="footerData"></span> <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> ·
     <span data-i18n="footerRouting"></span> <a href="https://project-osrm.org" target="_blank" rel="noopener">OSRM</a> ·
     <span data-i18n="footerMap"></span> <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors
+    · <span id="footer-original-idea"></span> ·
+    <span id="footer-disclaimer"></span> <a href="#" id="disclaimer-link"></a>
   </footer>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="static/engine.js"></script>
   <script src="static/methodology.js"></script>
+  <script src="static/disclaimer.js"></script>
   <script src="static/app.js"></script>
 </body>
 </html>

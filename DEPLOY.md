@@ -103,7 +103,7 @@ Put HTTPS in front with `certbot --nginx`.
 
 The app already reduces load on all three:
 
-- weather lookups are deduplicated per ~0.1° grid cell across the 819 sectors
+- weather lookups are deduplicated per ~0.1° grid cell across the 2,000 zones
 - forecast responses are cached 30 min, archive responses 24 h
 - route lookups are batched through OSRM's table service
 
@@ -124,21 +124,18 @@ Logs go to stdout/journald (`journalctl -u bolets -f`).
 
 ## Updating the zone dataset
 
-The dataset mixes curated and measured data. Staging points, aspects,
-access notes, picker pressure and walk times are hand-curated; forest
-composition, canopy cover, habitat quality and soil class are derived
-from the MFE50 forest map and ICGC geology via
-`data/habitat_gis.json`. The workflow:
+The dataset is fully GIS-derived (see README for the three-stage pipeline:
+`build_forest_regions.py` → `enrich_regions.py` → `rebuild_zones_from_regions.py`),
+with legacy curated lore inherited where regions contain an old staging
+point. The workflow:
 
-1. Edit the curated fields in the `sector(...)` entries of `app/zones.py`
-   (or add new sectors — a zone with no MFE50 stand is dropped).
-2. `uv run python scripts/rebuild_zones_from_gis.py` to regenerate the
-   measured fields in place.
-3. `uv run pytest` — the suite validates IDs, coordinates, aspects per
-   area and dataset size thresholds.
-4. `uv run python scripts/export_static_data.py` to refresh
+1. Regenerate the dataset (all stages above) — `app/zones.py`,
+   `data/zone_polygons.json` and `data/forest_regions_attrs.json` change.
+2. `uv run pytest` — the suite validates IDs, coordinates, polygons,
+   inheritance and dataset size thresholds.
+3. `uv run python scripts/export_static_data.py` to refresh
    `static/data/zones.json` for the static demo.
-5. Restart the service (dataset is loaded at import time).
+4. Restart the service (dataset is loaded at import time).
 
 ## GitHub Pages (static demo)
 

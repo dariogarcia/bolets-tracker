@@ -89,7 +89,7 @@ const I18N = {
     footerRouting: "Routing:",
     footerMap: "Map ©",
     infoBtn: "How it works",
-    aspectFmt: (a) => `${a}-facing`,
+    aspectFmt: (a) => (a === "flat" ? "flat ground" : `${a}-facing`),
     mushroomLabel: "Mushroom",
     mushStatus: {
       peak: "peak",
@@ -159,7 +159,7 @@ const I18N = {
     footerRouting: "Rutas:",
     footerMap: "Mapa ©",
     infoBtn: "Cómo se calcula",
-    aspectFmt: (a) => `orientación ${a}`,
+    aspectFmt: (a) => (a === "flat" ? "terreno llano" : `orientación ${a}`),
     mushroomLabel: "Seta",
     mushStatus: {
       peak: "pleno",
@@ -229,7 +229,7 @@ const I18N = {
     footerRouting: "Rutes:",
     footerMap: "Mapa ©",
     infoBtn: "Com es calcula",
-    aspectFmt: (a) => `orientació ${a}`,
+    aspectFmt: (a) => (a === "flat" ? "terreny pla" : `orientació ${a}`),
     mushroomLabel: "Bolet",
     mushStatus: {
       peak: "àpex",
@@ -535,7 +535,7 @@ function renderCard(rec) {
       <div class="rank" title="${t("viewRankTip").replace("{rank}", rec.rank)}">${rec.viewRank}</div>
       <div class="card-title">
         <h3>${z.name}</h3>
-        <div class="meta">${z.area} · ${z.comarca} · ${z.elevation_m} m · ${trAspect(z.aspect)} · ${trForest(z.forest)} · <span class="soil-badge soil-${z.soil}">${trSoil(z.soil)}</span></div>
+        <div class="meta">${z.area && z.area !== z.comarca ? z.area + " · " : ""}${z.comarca} · ${z.elevation_m} m · ${trAspect(z.aspect)} · ${trForest(z.forest)} · <span class="soil-badge soil-${z.soil}">${trSoil(z.soil)}</span></div>
       </div>
       <div class="score-box">
         <div class="score-big" style="color:${scoreColor(rec.scores.overall)}">${rec.scores.overall}</div>
@@ -630,6 +630,7 @@ function destination(lat, lon, bearingDeg, distM) {
 }
 
 function sectorPolygon(zone) {
+  if (Array.isArray(zone.polygon) && zone.polygon.length > 3) return zone.polygon;
   const bearing = ASPECT_BEARING[zone.aspect] ?? 0;
   const center = destination(zone.lat, zone.lon, bearing, 500);
   const length = 1400;
@@ -796,6 +797,24 @@ function closeMethodology() {
   $("#methodology").classList.add("hidden");
 }
 
+function renderDisclaimer() {
+  $("#disclaimer-body").innerHTML = DISCLAIMER_HTML[state.lang] || DISCLAIMER_HTML.en;
+  $("#footer-disclaimer").textContent = DISCLAIMER_COMPACT[state.lang] || DISCLAIMER_COMPACT.en;
+  $("#disclaimer-link").textContent = DISCLAIMER_LINK[state.lang] || DISCLAIMER_LINK.en;
+  $("#footer-original-idea").textContent = DISCLAIMER_ORIGINAL_IDEA[state.lang] || DISCLAIMER_ORIGINAL_IDEA.en;
+}
+
+function openDisclaimer(e) {
+  if (e) e.preventDefault();
+  renderDisclaimer();
+  $("#disclaimer").classList.remove("hidden");
+  $("#disclaimer-close").focus();
+}
+
+function closeDisclaimer() {
+  $("#disclaimer").classList.add("hidden");
+}
+
 function applyI18n() {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     el.textContent = t(el.dataset.i18n);
@@ -827,7 +846,9 @@ function setLang(lang) {
   applyI18n();
   renderWeightsPanel();
   renderMushroomChips();
+  renderDisclaimer();
   if (!$("#methodology").classList.contains("hidden")) renderMethodology();
+  if (!$("#disclaimer").classList.contains("hidden")) renderDisclaimer();
   if (state.lastData) renderResults(state.lastData, { scroll: false });
 }
 
@@ -863,8 +884,16 @@ function init() {
   $("#methodology").addEventListener("click", (e) => {
     if (e.target === e.currentTarget) closeMethodology();
   });
+  $("#disclaimer-link").addEventListener("click", openDisclaimer);
+  $("#disclaimer-close").addEventListener("click", closeDisclaimer);
+  $("#disclaimer").addEventListener("click", (e) => {
+    if (e.target === e.currentTarget) closeDisclaimer();
+  });
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeMethodology();
+    if (e.key === "Escape") {
+      closeMethodology();
+      closeDisclaimer();
+    }
   });
   setLang(detectLang());
   loadMushroomChips();

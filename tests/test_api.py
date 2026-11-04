@@ -69,9 +69,9 @@ class TestBasics:
             assert field in first
 
     def test_zone_detail(self, client):
-        r = client.get("/api/zone/prades-baltasana")
+        r = client.get("/api/zone/obaga-del-bac-broadleaf")
         assert r.status_code == 200
-        assert r.json()["comarca"] == "Baix Camp"
+        assert r.json()["comarca"] == "Garrotxa"
         assert "Directions" not in r.json()["access"]
         assert r.json()["walk_min"] >= 0
 
@@ -122,10 +122,11 @@ class TestRecommend:
         )
         assert r.status_code == 200
         body = r.json()
-        assert body["count"] == len(body["results"]) == len(ZONES)
+        # the API caps results at 1000 of the 2000 ranked zones
+        assert body["count"] == len(body["results"]) == 1000
         overalls = [res["scores"]["overall"] for res in body["results"]]
         assert overalls == sorted(overalls, reverse=True)
-        assert [res["rank"] for res in body["results"]] == list(range(1, len(ZONES) + 1))
+        assert [res["rank"] for res in body["results"]] == list(range(1, 1001))
         first = body["results"][0]
         for axis in (
             "rain", "humidity", "temperature", "sunlight", "habitat",
@@ -149,7 +150,8 @@ class TestRecommend:
         monkeypatch.setattr("app.main.weather.fetch_zone_weather", counting_weather)
         r = client.get("/api/recommend", params={"lat": 41.3851, "lon": 2.1734, "limit": 1000})
         assert r.status_code == 200
-        assert r.json()["count"] == len(ZONES)
+        assert r.json()["count"] == 1000
+        # weather is deduplicated per ~0.1° cell across all 2000 zones
         assert 0 < len(calls) < len(ZONES)
         assert len({(round(lat / 0.1), round(lon / 0.1)) for lat, lon in calls}) == len(calls)
 
@@ -181,19 +183,16 @@ class TestRecommend:
         )
         assert r.status_code == 200
         by_id = {res["zone"]["id"]: res for res in r.json()["results"]}
-        low = min(ZONES, key=lambda z: z.elevation_m)
-        high = max(ZONES, key=lambda z: z.elevation_m)
+        low = min(by_id.values(), key=lambda res: res["zone"]["elevation_m"])
+        high = max(by_id.values(), key=lambda res: res["zone"]["elevation_m"])
         lapse = 0.0065
-        assert by_id[low.id]["weather"]["temp_max_c"] == pytest.approx(
-            20.0 - (low.elevation_m - 500) * lapse, abs=0.06
+        assert low["weather"]["temp_max_c"] == pytest.approx(
+            20.0 - (low["zone"]["elevation_m"] - 500) * lapse, abs=0.06
         )
-        assert by_id[high.id]["weather"]["temp_max_c"] == pytest.approx(
-            20.0 - (high.elevation_m - 500) * lapse, abs=0.06
+        assert high["weather"]["temp_max_c"] == pytest.approx(
+            20.0 - (high["zone"]["elevation_m"] - 500) * lapse, abs=0.06
         )
-        assert (
-            by_id[high.id]["weather"]["temp_max_c"]
-            < by_id[low.id]["weather"]["temp_max_c"]
-        )
+        assert high["weather"]["temp_max_c"] < low["weather"]["temp_max_c"]
 
     def test_recommend_limit(self, client):
         r = client.get("/api/recommend", params={"lat": 41.3851, "lon": 2.1734, "limit": 5})

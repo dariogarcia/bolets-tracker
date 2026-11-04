@@ -29,6 +29,9 @@ class Zone(BaseModel):
     forest_shares: dict[str, float] = Field(default_factory=dict)
     geology: str = ""
     forest_desc: str = ""
+    # Measured region outline (MFE50-derived) as [lat, lon] pairs of the
+    # exterior ring; empty for zones without GIS geometry.
+    polygon: list[list[float]] = Field(default_factory=list)
 
 
 class ZoneWeather(BaseModel):

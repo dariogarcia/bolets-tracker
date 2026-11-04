@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 import math
 
 import httpx
@@ -7,6 +8,8 @@ import httpx
 from .models import RouteInfo, Zone
 
 OSRM_TABLE_URL = "https://router.project-osrm.org/table/v1/driving/{coords}"
+# Live OSRM routing is only fetched for the zones nearest the origin.
+ROUTE_ZONES_CAP = 1000
 EARTH_RADIUS_KM = 6371.0
 ROAD_FACTOR = 1.35
 FALLBACK_SPEED_KMH = 50.0
@@ -50,10 +53,16 @@ async def fetch_route_table(
     zones: list[Zone],
 ) -> dict[str, RouteInfo]:
     routes: dict[str, RouteInfo] = {}
+    # Cap the live table to the zones nearest the origin (straight
+    # line): far zones would score poorly on distance anyway and the
+    # public OSRM table endpoint should not be hammered with thousands
+    # of destinations per search. The rest use the haversine estimate.
+    ranked = sorted(zones, key=lambda z: haversine_km(origin_lat, origin_lon, z.lat, z.lon))
+    table_zones = ranked[:ROUTE_ZONES_CAP]
     batch_size = MAX_TABLE_SIZE - 1
-    batches = [zones[i : i + batch_size] for i in range(0, len(zones), batch_size)]
+    batches = [table_zones[i : i + batch_size] for i in range(0, len(table_zones), batch_size)]
 
-    for batch in batches:
+    async def fetch_batch(batch: list[Zone]) -> dict[str, RouteInfo]:
         coords = f"{origin_lon},{origin_lat};"
         coords += ";".join(f"{z.lon},{z.lat}" for z in batch)
         url = OSRM_TABLE_URL.format(coords=coords)
@@ -63,9 +72,18 @@ async def fetch_route_table(
             payload = resp.json()
             if payload.get("code") != "Ok":
                 raise ValueError(payload.get("code", "unknown"))
-            routes.update(_parse_table(payload, [z.id for z in batch]))
+            return _parse_table(payload, [z.id for z in batch])
         except (httpx.HTTPError, ValueError, KeyError):
-            pass
+            return {}
+
+    sem = asyncio.Semaphore(6)
+
+    async def guarded(batch: list[Zone]) -> dict[str, RouteInfo]:
+        async with sem:
+            return await fetch_batch(batch)
+
+    for chunk in await asyncio.gather(*(guarded(b) for b in batches)):
+        routes.update(chunk)
 
     for z in zones:
         if z.id not in routes:

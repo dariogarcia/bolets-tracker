@@ -37,7 +37,7 @@ class TestRouteTable:
                 },
             )
 
-        zones = ZONES[:2]
+        zones = sorted(ZONES[:2], key=lambda z: routing.haversine_km(41.3851, 2.1734, z.lat, z.lon))
         async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
             routes = await routing.fetch_route_table(client, 41.3851, 2.1734, zones)
 
@@ -81,14 +81,14 @@ class TestRouteTable:
                 },
             )
 
-        zones = ZONES[:2]
+        zones = sorted(ZONES[:2], key=lambda z: routing.haversine_km(41.0, 1.0, z.lat, z.lon))
         async with httpx.AsyncClient(transport=httpx.MockTransport(handler)) as client:
             routes = await routing.fetch_route_table(client, 41.0, 1.0, zones)
 
         assert routes[zones[0].id].source == "osrm"
         assert routes[zones[1].id].source == "estimate"
 
-    async def test_all_zones_routed_when_beyond_one_batch(self):
+    async def test_live_table_capped_to_nearest_zones(self):
         calls = []
 
         def handler(request: httpx.Request) -> httpx.Response:
@@ -104,10 +104,19 @@ class TestRouteTable:
             routes = await routing.fetch_route_table(client, 41.0, 1.0, ZONES)
 
         assert len(ZONES) > routing.MAX_TABLE_SIZE
-        assert len(calls) > 1
+        assert len(ZONES) > routing.ROUTE_ZONES_CAP
+        # one batch chain for the capped, nearest ROUTE_ZONES_CAP zones only
         assert all(n <= routing.MAX_TABLE_SIZE for n in calls)
+        assert len(calls) == -(-routing.ROUTE_ZONES_CAP // (routing.MAX_TABLE_SIZE - 1))
         assert set(routes) == {z.id for z in ZONES}
-        assert all(r.source == "osrm" for r in routes.values())
+        live = [r for r in routes.values() if r.source == "osrm"]
+        assert len(live) == routing.ROUTE_ZONES_CAP
+        # the capped zones are the ones nearest the origin
+        ranked = sorted(ZONES, key=lambda z: routing.haversine_km(41.0, 1.0, z.lat, z.lon))
+        for z in ranked[: routing.ROUTE_ZONES_CAP]:
+            assert routes[z.id].source == "osrm"
+        for z in ranked[routing.ROUTE_ZONES_CAP :]:
+            assert routes[z.id].source == "estimate"
 
 
 class TestGeocoding:
