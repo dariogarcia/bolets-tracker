@@ -8,7 +8,7 @@ VALID_SOILS = {"acidic", "neutral", "basic"}
 
 
 def test_zone_count():
-    """Zones are GIS forest regions: the top-ranked 2,000 of the 4,334
+    """Zones are GIS forest regions: the top-ranked 2,000 of the 4,975
     accessible MFE50 composition regions (see scripts/rebuild_zones_from_regions.py)."""
     assert len(ZONES) == 2000
 
@@ -113,9 +113,9 @@ def test_inherited_lore_preserved():
 
 
 def test_no_mega_regions():
-    """Mega-regions are split: generated zones stay under ~5,000 ha
+    """Mega-regions are split: generated zones stay under ~1,500 ha
     (recursive area-halving cuts in scripts/build_forest_regions.py)."""
     for z in ZONES:
         first = z.notes.split(" ")[0].replace(".", "")
         if first.isdigit():
-            assert int(first) <= 5500, z.id
+            assert int(first) <= 1550, z.id

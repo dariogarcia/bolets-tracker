@@ -1,751 +1,6 @@
 {
- "r1615a": {
-  "region_id": "r1615a",
-  "legacy": {
-   "id": "dosrius-corredor",
-   "name": "Turó del Corredor",
-   "notes": "The best-known rovelló wood in the Maresme, mossy and productive, but you must be on the path by dawn on autumn Sundays.",
-   "access": "From Dosrius take the road up to the Corredor sanctuary; park in the small lot by the restaurant at the pass.",
-   "popularity": 8
-  }
- },
- "r1104a": {
-  "region_id": "r1104a",
-  "legacy": {
-   "id": "solsona-bergus",
-   "name": "Pinedes de Bergús",
-   "notes": "Lower and drier; good after wet autumns.",
-   "access": "From Solsona take the Bergús road; park at the village and take the south-west track.",
-   "popularity": 4
-  }
- },
- "r1615b": {
-  "region_id": "r1615b"
- },
- "r1104b": {
-  "region_id": "r1104b"
- },
- "r2061": {
-  "region_id": "r2061",
-  "legacy": {
-   "id": "valira-anserall-nord",
-   "name": "Obaga d'Anserall",
-   "notes": "Cool north slopes that hold moisture late into October, with moderate weekend pressure from La Seu pickers.",
-   "access": "From Anserall take the track up the left bank of the Valira towards Arcavell; park at the bend below the old bridge and follow the path into the north-facing pines.",
-   "popularity": 3
-  }
- },
- "r1615c": {
-  "region_id": "r1615c"
- },
- "r1104c": {
-  "region_id": "r1104c",
-  "legacy": {
-   "id": "coma-port-comte",
-   "name": "Obaga del Port del Comte",
-   "notes": "Higher belt; best after the mid-October cold rains.",
-   "access": "Take the Port del Comte road to the first ski-station bend; park at the lay-by and drop into the north slopes.",
-   "popularity": 5
-  }
- },
- "r1104d": {
-  "region_id": "r1104d"
- },
- "r1115": {
-  "region_id": "r1115",
-  "legacy": {
-   "id": "lles-capdelrec",
-   "name": "Cap del Rec — obaga",
-   "notes": "High refuge plateau; late-season producer that keeps fruiting into December.",
-   "access": "Forest road from Lles to the Cap del Rec refuge; park at the refuge and take the tracks north of it.",
-   "popularity": 5
-  }
- },
- "r3146": {
-  "region_id": "r3146",
-  "legacy": {
-   "id": "mura-montcau",
-   "name": "Serra del Montcau — obaga",
-   "notes": "The park's high north-west corner; cooler and later than the Mura slopes.",
-   "access": "From Talamanca take the road to the Coll d'Estenalles; park at the information centre and follow the Montcau path north.",
-   "popularity": 6
-  }
- },
- "r2121b": {
-  "region_id": "r2121b",
-  "legacy": {
-   "id": "gerri-obaga",
-   "name": "Obaga de Gerri",
-   "notes": "Shady wall above the salt-town; monastery-hamlet start to the morning.",
-   "access": "From Gerri cross the bridge and take the forest track on the right; park after the water tank and climb north.",
-   "popularity": 4
-  }
- },
- "r1105a": {
-  "region_id": "r1105a"
- },
- "r1105b": {
-  "region_id": "r1105b"
- },
- "r3883a": {
-  "region_id": "r3883a"
- },
- "r0315a": {
-  "region_id": "r0315a"
- },
- "r3883b": {
-  "region_id": "r3883b",
-  "legacy": {
-   "id": "lillet-sant-quirze",
-   "name": "Obaga de Sant Quirc de Durban",
-   "notes": "Easy family obaga with a chapel landmark; moderate pressure on Sundays.",
-   "access": "From La Pobla take the Durban road to the Sant Quirc chapel; park at the chapel and walk the track behind it.",
-   "popularity": 4
-  }
- },
- "r3883c": {
-  "region_id": "r3883c",
-  "legacy": {
-   "id": "la-quar-sant-maurici",
-   "name": "Boscos de Sant Maurici",
-   "notes": "Lower and sunnier, so it fruits early in the season and is largely finished once the obagues higher up start producing.",
-   "access": "From La Quar take the local road towards Sant Maurici and continue on the farm track; park at the turning circle by the chapel track.",
-   "popularity": 3
-  }
- },
- "r3883d": {
-  "region_id": "r3883d"
- },
- "r3883e": {
-  "region_id": "r3883e"
- },
- "r3883f": {
-  "region_id": "r3883f",
-  "legacy": {
-   "id": "castellar-riu-mirador",
-   "name": "Mirador de Castellar del Riu",
-   "notes": "Popular for the views as much as the mushrooms, so the ring within a kilometre of the car park is picked clean by mid-morning.",
-   "access": "From Castellar del Riu take the signed road to the famous viewpoint; park at the mirador car park and take either path down.",
-   "popularity": 5
-  }
- },
- "r3883g": {
-  "region_id": "r3883g",
-  "legacy": {
-   "id": "saldes-gresolet",
-   "name": "Obaga de Gresolet",
-   "notes": "Deep obaga on the Gresolet side; later fruiting than the canals and far quieter.",
-   "access": "Drive the Saldes-Gresolet road to the hamlet of Gresolet; park at the last houses and take the forest track north.",
-   "popularity": 5
-  }
- },
- "r3883h": {
-  "region_id": "r3883h"
- },
- "r0315b": {
-  "region_id": "r0315b",
-  "legacy": {
-   "id": "mediona-castell",
-   "name": "Boscos del Castell de Mediona",
-   "notes": "Deep-soil pine under the castle that holds moisture well into December.",
-   "access": "From Mediona take the track signposted to the castle; park at the fold below the castle walls.",
-   "popularity": 3
-  }
- },
- "r3883i": {
-  "region_id": "r3883i",
-  "legacy": {
-   "id": "gosol-feners",
-   "name": "Obaga de Feners",
-   "notes": "Quiet valley hamlet; the north slopes hold dew until midday.",
-   "access": "From Gósol take the road to Feners and park at the village; tracks climb into the north-facing pine belt.",
-   "popularity": 5
-  }
- },
- "r3883j": {
-  "region_id": "r3883j"
- },
- "r3883k": {
-  "region_id": "r3883k",
-  "legacy": {
-   "id": "espunyola-serra",
-   "name": "Serra de l'Espunyola",
-   "notes": "Quiet, well-mossified Scots pine on the pre-Pyrenean edge that produces steadily in wet autumns with little picking pressure.",
-   "access": "From L'Espunyola take the road towards Casserres and turn onto the serra track at the crest; park at the wide bend by the water deposit.",
-   "popularity": 3
-  }
- },
- "r3883l": {
-  "region_id": "r3883l"
- },
- "r3883m": {
-  "region_id": "r3883m"
- },
- "r3883n": {
-  "region_id": "r3883n",
-  "legacy": {
-   "id": "perafita-sant-esteve",
-   "name": "Voltants de Sant Esteve",
-   "notes": "Easy family pine around the landmark church that produces modest early crops and is picked over by village children first.",
-   "access": "From Perafita take the short road up to the church of Sant Esteve; park in the esplanade by the cemetery and follow any path down.",
-   "popularity": 2
-  }
- },
- "r3883o": {
-  "region_id": "r3883o",
-  "legacy": {
-   "id": "vansa-obaga",
-   "name": "Obaga de la Vansa",
-   "notes": "The valley nobody drives through; dense pine and some of the lowest pressure in the Alt Urgell.",
-   "access": "From the La Vansa hamlet follow the valley track toward the Port del Comte side; park at the barrier beyond the last mas.",
-   "popularity": 4
-  }
- },
- "r3883p": {
-  "region_id": "r3883p",
-  "legacy": {
-   "id": "lillet-asland",
-   "name": "Pinedes sobre Asland",
-   "notes": "South-facing and early; rings first after the September storms.",
-   "access": "Park at the old Asland cement works and climb the track above the quarry.",
-   "popularity": 4
-  }
- },
- "r0331c": {
-  "region_id": "r0331c",
-  "legacy": {
-   "id": "banyeres-serra",
-   "name": "Serra de Banyeres",
-   "notes": "Small-town pine that bursts a week after the first storms and is picked out by mid-morning on Sundays.",
-   "access": "From Banyeres del Penedès take the track up behind the sports field onto the serra; park at the water depot on the crest.",
-   "popularity": 4
-  }
- },
- "r1288a": {
-  "region_id": "r1288a"
- },
- "r4011b": {
-  "region_id": "r4011b"
- },
- "r1288b": {
-  "region_id": "r1288b",
-  "legacy": {
-   "id": "bassella-obaga-moixa",
-   "name": "Obaga Moixa",
-   "notes": "Cool dense pine on the valley's shady side that fruits reliably after the first October rains.",
-   "access": "From Bassella take the N-260 towards Organyà and turn onto the track for the Obaga Moixa; park at the track barrier.",
-   "popularity": 3
-  }
- },
- "r0193b": {
-  "region_id": "r0193b",
-  "legacy": {
-   "id": "calders-riu",
-   "name": "Riu Calders",
-   "notes": "Riverside pine that fruits early after the first rains, a convenient evening spot for Moianès locals and thus quickly picked.",
-   "access": "From Calders take the lane towards the river below the village; park at the picnic area by the old bridge.",
-   "popularity": 3
-  }
- },
- "r4162": {
-  "region_id": "r4162"
- },
- "r0145": {
-  "region_id": "r0145"
- },
- "r1560a": {
-  "region_id": "r1560a"
- },
- "r1560b": {
-  "region_id": "r1560b",
-  "legacy": {
-   "id": "santgregori-puitja",
-   "name": "Serrat de Puitjà",
-   "notes": "A north-facing bank above the Ter basin that keeps some humidity, but Girona weekenders work it hard.",
-   "access": "From Sant Gregori take the Bescanó road and turn onto the Puitjà track at the quarry bend; park at the flat below the chapel.",
-   "popularity": 6
-  }
- },
- "r1560c": {
-  "region_id": "r1560c",
-  "legacy": {
-   "id": "osor-obaga",
-   "name": "Obaga d'Osor",
-   "notes": "Deep Guilleries obaga; damp valley granite that holds water all season.",
-   "access": "From Osor take the Anglès road 2 km; park at the reservoir track and climb north into the Guilleries.",
-   "popularity": 4
-  }
- },
- "r1560d": {
-  "region_id": "r1560d",
-  "legacy": {
-   "id": "espinelves-nord",
-   "name": "Obaga d'Espinelves",
-   "notes": "Fira de l'Arbreda crowds in November; walk further in than they do.",
-   "access": "From Espinelves take the Arbreda road to the last mas; park at the track barrier.",
-   "popularity": 6
-  }
- },
- "r1560e": {
-  "region_id": "r1560e"
- },
- "r1560g": {
-  "region_id": "r1560g",
-  "legacy": {
-   "id": "arbucies-can-pla",
-   "name": "Serrat de Can Pla",
-   "notes": "East-facing slopes that dry out fast after rain, so come within two or three days of a good October soaking.",
-   "access": "From Arbúcies take the C-63 toward Sant Hilari and turn onto the Can Pla track after the last houses; park at the gate by the pasture.",
-   "popularity": 6
-  }
- },
- "r1560f": {
-  "region_id": "r1560f",
-  "legacy": {
-   "id": "camprodon-beget",
-   "name": "Obaga de Beget",
-   "notes": "Steep quiet obaga above the stone village; very low weekend pressure.",
-   "access": "From Camprodon take the Beget road to the last bend above the village; park at the bridge and follow the forest track north.",
-   "popularity": 4
-  }
- },
- "r1560h": {
-  "region_id": "r1560h",
-  "legacy": {
-   "id": "macanet-selva-sud",
-   "name": "Serra Sud de Maçanet",
-   "notes": "Open mixed pine that gives modest crops most years and is heavily worked on October Sundays.",
-   "access": "From Maçanet take the Caldes road and turn onto the serra track at the slaughterhouse bend; park at the water tank.",
-   "popularity": 5
-  }
- },
- "r1560i": {
-  "region_id": "r1560i"
- },
- "r1560j": {
-  "region_id": "r1560j",
-  "legacy": {
-   "id": "montagut-costa-llarga",
-   "name": "Costa Llarga de Montagut",
-   "notes": "Low warm pine that fruits erratically and is mostly worked by locals on Sundays.",
-   "access": "From Montagut take the road towards Oix and park at the track bend above the village; the Costa Llarga path starts there.",
-   "popularity": 4
-  }
- },
- "r1560k": {
-  "region_id": "r1560k"
- },
- "r1560l": {
-  "region_id": "r1560l",
-  "legacy": {
-   "id": "madremanya-solana",
-   "name": "Solana de Madremanya",
-   "notes": "West-facing groves that fruit early and short, worth the first week after the opening rains.",
-   "access": "From Madremanya take the track west past the last houses and follow the contour path; park at the water deposit clearing.",
-   "popularity": 4
-  }
- },
- "r1560m": {
-  "region_id": "r1560m"
- },
- "r0248b": {
-  "region_id": "r0248b",
-  "legacy": {
-   "id": "marganell-cova",
-   "name": "Cova de Marganell",
-   "notes": "Busy, dry southern slopes that produce only after abundant rain and are combed daily in season.",
-   "access": "From Marganell follow the track south past the hermitage; park at the fountain.",
-   "popularity": 8
-  }
- },
- "r1560o": {
-  "region_id": "r1560o"
- },
- "r1560p": {
-  "region_id": "r1560p",
-  "legacy": {
-   "id": "palautordera-fontmartina",
-   "name": "Obaga de Fontmartina",
-   "notes": "The west-Montseny Scots belt; the Vallès classic, busy on Sundays.",
-   "access": "From Sant Esteve de Palautordera take the Fontmartina track; park at the mas and climb north toward the Turó de l'Home belt.",
-   "popularity": 6
-  }
- },
- "r1560q": {
-  "region_id": "r1560q"
- },
- "r1560r": {
-  "region_id": "r1560r",
-  "legacy": {
-   "id": "oix-santa-barbara",
-   "name": "Santa Bàrbara de Pruneres",
-   "notes": "West-facing chapel woods with light pressure and a short but productive season after storms.",
-   "access": "From Oix take the track towards the Santa Bàrbara de Pruneres chapel; park below the chapel.",
-   "popularity": 3
-  }
- },
- "r1560s": {
-  "region_id": "r1560s",
-  "legacy": {
-   "id": "santfeliu-obaga",
-   "name": "Obaga de Sant Feliu",
-   "notes": "Southern gateway to the Garrotxa pines; quiet and family-friendly.",
-   "access": "From Sant Feliu de Pallerols take the road toward les Planes; park at the first bridge and follow the track north-east.",
-   "popularity": 4
-  }
- },
- "r1560t": {
-  "region_id": "r1560t",
-  "legacy": {
-   "id": "arbucies-sant-segimon",
-   "name": "Sant Segimon",
-   "notes": "Mossy north-face beds that hold their dew well into the morning, though the easy track means crowds sweep them early on autumn Sundays.",
-   "access": "From Arbúcies take the Sant Segimon road north past Can Pallot and continue to the end of the forest track; park at the clearing below the shrine.",
-   "popularity": 7
-  }
- },
- "r1560u": {
-  "region_id": "r1560u"
- },
- "r1560v": {
-  "region_id": "r1560v"
- },
- "r1560y": {
-  "region_id": "r1560y",
-  "legacy": {
-   "id": "bas-privat",
-   "name": "Costes de Sant Privat",
-   "notes": "West rim of the valley; afternoon shade after a morning elsewhere.",
-   "access": "From Sant Privat d'en Bas take the track behind the church; park at the bridge.",
-   "popularity": 4
-  }
- },
- "r1560x": {
-  "region_id": "r1560x",
-  "legacy": {
-   "id": "finestres-santmiquel",
-   "name": "Costa de Sant Miquel",
-   "notes": "Warmer south-west face; earliest fruiting of the zone.",
-   "access": "Continue past the castle track to the Sant Miquel fork; park at the col.",
-   "popularity": 3
-  }
- },
- "r1560z": {
-  "region_id": "r1560z"
- },
- "r1560aa": {
-  "region_id": "r1560aa",
-  "legacy": {
-   "id": "espolla-vilartoli",
-   "name": "Serrat de Vilartolí",
-   "notes": "South-facing Albera slopes that bake dry under the north wind and are best in the first mild, humid week of November.",
-   "access": "From Espolla take the lane toward Vilartolí and continue on the forest track; park at the bend above the last farmhouse.",
-   "popularity": 3
-  }
- },
- "r1560ab": {
-  "region_id": "r1560ab",
-  "legacy": {
-   "id": "santapau-bianya",
-   "name": "Costa de la Vall de Bianya",
-   "notes": "Humid valley with a pine-chestnut mix; low pressure on weekdays.",
-   "access": "From the Santa Pau-Bianya road park at Els Hostalets and take the track east.",
-   "popularity": 4
-  }
- },
- "r1560ac": {
-  "region_id": "r1560ac",
-  "legacy": {
-   "id": "finestres-castell",
-   "name": "Obaga del castell de Finestres",
-   "notes": "Finestres castle slopes; surprise producer after storms.",
-   "access": "From Sant Aniol follow the track to the Finestres castle; park below the crag and walk the north path.",
-   "popularity": 3
-  }
- },
- "r1560ad": {
-  "region_id": "r1560ad",
-  "legacy": {
-   "id": "llanars-poble-ne",
-   "name": "Slope above Llanars",
-   "notes": "Mossy mixed pine just above the village, popular with Ripollès pickers and often swept by mid-morning.",
-   "access": "From Llanars follow the track behind the sports field up the north-east slope; park at the water tank and continue on foot.",
-   "popularity": 5
-  }
- },
- "r1560af": {
-  "region_id": "r1560af",
-  "legacy": {
-   "id": "fontmartina-costa",
-   "name": "Costa de Fontmartina",
-   "notes": "Deep Montseny; track access only, worth the walk.",
-   "access": "From Montseny village take the Fontmartina road to the farmhouse; park at the track fork.",
-   "popularity": 6
-  }
- },
- "r1560ag": {
-  "region_id": "r1560ag"
- },
- "r1560ah": {
-  "region_id": "r1560ah",
-  "legacy": {
-   "id": "mieres-nord",
-   "name": "Obaga de Mieres",
-   "notes": "Warm, early zone; check the humid gullies.",
-   "access": "From Mieres take the track north past the church; park at the bend.",
-   "popularity": 3
-  }
- },
- "r1560ai": {
-  "region_id": "r1560ai",
-  "legacy": {
-   "id": "macanet-salines",
-   "name": "Obaga de les Salines",
-   "notes": "Sanctuary forest on the French border; mixed pine with a damp north face.",
-   "access": "From Maçanet take the road to the Salines sanctuary; park at the sanctuary and take the north tracks.",
-   "popularity": 4
-  }
- },
- "r1560aj": {
-  "region_id": "r1560aj"
- },
- "r1560ak": {
-  "region_id": "r1560ak",
-  "legacy": {
-   "id": "preses-bellpuig",
-   "name": "Costa de Bellpuig",
-   "notes": "South-east face above the valley floor; dries fast — go right after rain.",
-   "access": "From Les Preses follow the Bellpuig signs; park at the hermitage clearing.",
-   "popularity": 5
-  }
- },
- "r1560al": {
-  "region_id": "r1560al"
- },
- "r1560am": {
-  "region_id": "r1560am",
-  "legacy": {
-   "id": "angles-serrat-pedro",
-   "name": "Serrat del Pedró d'Anglès",
-   "notes": "Proper mossy Scots pine belt that fruits reliably after the first autumn rains and sees only local pickers.",
-   "access": "From Anglès take the GI-534 toward Sant Hilari and turn onto the Guilleries track at the Segueró bend; park at the track fork.",
-   "popularity": 4
-  }
- },
- "r1560an": {
-  "region_id": "r1560an",
-  "legacy": {
-   "id": "matagalls-ponent",
-   "name": "Matagalls Ponent",
-   "notes": "Western slopes facing Fontmartina see steady traffic, so late arrivals find only scraps.",
-   "access": "From Viladrau take the western path up from the Fontmartina side; park where the track forks below the ridge.",
-   "popularity": 7
-  }
- },
- "r1560ao": {
-  "region_id": "r1560ao",
-  "legacy": {
-   "id": "viladrau-santsebastia",
-   "name": "Sant Sebastià de Viladrau",
-   "notes": "The Montseny classic; very popular — be there at dawn.",
-   "access": "From Viladrau take the Sant Sebastià road to the hermitage; park at the spring and walk the north track.",
-   "popularity": 8
-  }
- },
- "r1560ap": {
-  "region_id": "r1560ap"
- },
- "r1560aq": {
-  "region_id": "r1560aq"
- },
- "r1560as": {
-  "region_id": "r1560as"
- },
- "r1560at": {
-  "region_id": "r1560at",
-  "legacy": {
-   "id": "sora-costa",
-   "name": "Costa de Sora",
-   "notes": "A sunny upper belt that fruits in bursts after cold-front rain, quieter than the cingles and good as an early-season backup.",
-   "access": "From Sora take the uphill track towards the eastern pastures; park at the bend by the stone shelter and work the slope below.",
-   "popularity": 3
-  }
- },
- "r1560au": {
-  "region_id": "r1560au",
-  "legacy": {
-   "id": "sora-obaga-ter",
-   "name": "Obaga del Ter",
-   "notes": "The damp heart of the gorge — long to reach but the mossy Scots pine here holds the best and least-picked rovellons of the sector.",
-   "access": "From Sora take the footpath down towards the Ter and follow the shady bank downstream; there is no parking closer than the village fountain.",
-   "popularity": 4
-  }
- },
- "r1560av": {
-  "region_id": "r1560av"
- },
- "r1560aw": {
-  "region_id": "r1560aw",
-  "legacy": {
-   "id": "sora-cingles",
-   "name": "Cingles de Sora",
-   "notes": "Cliff-top pine with sea-of-fog moisture from the gorge, giving strong mid-season flushes but a fair few pickers from Osona.",
-   "access": "From Sora take the track along the top of the Ter gorge cliffs; park at the viewpoint clearing and descend the west-facing paths.",
-   "popularity": 4
-  }
- },
- "r1560ax": {
-  "region_id": "r1560ax"
- },
- "r1560ay": {
-  "region_id": "r1560ay",
-  "legacy": {
-   "id": "sja-bac",
-   "name": "Obaga del Bac",
-   "notes": "Shady pocket valley between Sant Joan and Ogassa.",
-   "access": "Take the road toward el Bac; park at the farm and follow the shady track north.",
-   "popularity": 4
-  }
- },
- "r1560az": {
-  "region_id": "r1560az",
-  "legacy": {
-   "id": "tavertet-corneli",
-   "name": "Sant Corneli de Tavertet",
-   "notes": "Clifftop pines over the Ter; drier south faces.",
-   "access": "From Tavertet follow the Sant Corneli signs; park at the hermitage and walk the south path.",
-   "popularity": 4
-  }
- },
- "r1560ba": {
-  "region_id": "r1560ba"
- },
- "r1560bb": {
-  "region_id": "r1560bb"
- },
- "r1560bc": {
-  "region_id": "r1560bc"
- },
- "r1560bd": {
-  "region_id": "r1560bd"
- },
- "r1560be": {
-  "region_id": "r1560be",
-  "legacy": {
-   "id": "santhilari-solterra",
-   "name": "Sant Miquel de Solterra",
-   "notes": "Guilleries high ground with extensive pine tracts.",
-   "access": "From Sant Hilari take the Solterra road to the castle ruin; park at the track end.",
-   "popularity": 6
-  }
- },
- "r1560bf": {
-  "region_id": "r1560bf"
- },
- "r1560bg": {
-  "region_id": "r1560bg",
-  "legacy": {
-   "id": "santhilari-gutina",
-   "name": "La Gutina",
-   "notes": "Pass forest that catches the morning fog moisture.",
-   "access": "Take the road to the La Gutina pass; park at the pass and enter the pines east.",
-   "popularity": 6
-  }
- },
- "r1560bh": {
-  "region_id": "r1560bh"
- },
- "r1560bj": {
-  "region_id": "r1560bj"
- },
- "r1560bi": {
-  "region_id": "r1560bi",
-  "legacy": {
-   "id": "espinelves-viladrau",
-   "name": "Pinedes del camí de Viladrau",
-   "notes": "Woods straddling the Espinelves-Viladrau boundary; deep and shaded.",
-   "access": "From Espinelves take the Viladrau track; park at the mas gate and continue on foot.",
-   "popularity": 5
-  }
- },
- "r4013d": {
-  "region_id": "r4013d"
- },
- "r1560bk": {
-  "region_id": "r1560bk",
-  "legacy": {
-   "id": "vidra-ciuret",
-   "name": "Obaga de Ciuret",
-   "notes": "Border-of-three-comarques forest; dense, quiet, and famously productive.",
-   "access": "From Vidrà take the road to Ciuret; park at the hamlet and follow the track north into the pine belt.",
-   "popularity": 4
-  }
- },
- "r1560bl": {
-  "region_id": "r1560bl",
-  "legacy": {
-   "id": "santhilari-osor",
-   "name": "Vall d'Osor",
-   "notes": "West slopes above the Osor reservoir; humid and green.",
-   "access": "From Sant Hilari take the Osor road; park at the reservoir bridge and climb west.",
-   "popularity": 5
-  }
- },
- "r1806": {
-  "region_id": "r1806"
- },
- "r0202a": {
-  "region_id": "r0202a",
-  "legacy": {
-   "id": "santfruitos-fonollosa",
-   "name": "Obaga del camí de Fonollosa",
-   "notes": "Low Aleppo stands; early and late-season trickles.",
-   "access": "From Sant Fruitós take the Fonollosa road; park at the track fork after 2 km.",
-   "popularity": 4
-  }
- },
- "r3996": {
-  "region_id": "r3996",
-  "legacy": {
-   "id": "montferrer-castellbo",
-   "name": "Obaga de la Vall de Castellbò",
-   "notes": "Border valley, damp and rarely crowded.",
-   "access": "From La Seu take the Castellbò road to the village; park at the castle ruin and follow the north track.",
-   "popularity": 3
-  }
- },
- "r1066": {
-  "region_id": "r1066",
-  "legacy": {
-   "id": "meranges-obaga",
-   "name": "Obaga de Meranges",
-   "notes": "Border-valley black pine; quiet and cold, later fruiting than the Cerdanya floor.",
-   "access": "From Meranges follow the road toward the Engorgs valley; park where it turns to track and walk into the north-east pines.",
-   "popularity": 4
-  }
- },
- "r3868": {
-  "region_id": "r3868",
-  "legacy": {
-   "id": "sja-surroca",
-   "name": "Pinedes de Surroca",
-   "notes": "East-facing terraces warm up early in the season.",
-   "access": "From Sant Joan take the Surroca road; park at the old mines and walk east.",
-   "popularity": 4
-  }
- },
- "r0612a": {
-  "region_id": "r0612a",
-  "legacy": {
-   "id": "falset-serra",
-   "name": "Serra de Falset",
-   "notes": "Close enough to town for after-work picking, so the first flush after storms disappears within days.",
-   "access": "From Falset take the track that climbs the serra behind the cooperative; park at the water tank on the crest.",
-   "popularity": 4
-  }
- },
- "r2260": {
-  "region_id": "r2260",
+ "r2260a": {
+  "region_id": "r2260a",
   "legacy": {
    "id": "esterri-burgo",
    "name": "Obaga de Burgo",
@@ -755,395 +10,23 @@
   }
  },
  "r2440a": {
-  "region_id": "r2440a",
-  "legacy": {
-   "id": "bossost-solana",
-   "name": "Solana de Bossòst",
-   "notes": "A warm, early slope that gives the first rovellons of the season but bakes dry within days without rain.",
-   "access": "From Bossòst take the lane behind the church that zigzags onto the south slope; park where the tarmac ends at the cistern.",
-   "popularity": 4
-  }
- },
- "r2440b": {
-  "region_id": "r2440b",
-  "legacy": {
-   "id": "les-pineda",
-   "name": "Pineda de Les",
-   "notes": "Cool pinewood that keeps the dew until mid-morning after the Garona fog lifts, so it fruits early in the season.",
-   "access": "From Les take the signed track above the village that climbs the flank north of the N-230; park at the clearing by the water tank at the edge of the pines.",
-   "popularity": 3
-  }
- },
- "r2440c": {
-  "region_id": "r2440c"
- },
- "r2440d": {
-  "region_id": "r2440d"
- },
- "r2356b": {
-  "region_id": "r2356b",
-  "legacy": {
-   "id": "senterada-naens",
-   "name": "Obaga de Naens",
-   "notes": "Bòvida valley pines; zero crowds.",
-   "access": "From Senterada take the Naens road to the hamlet; park at the last house and climb north.",
-   "popularity": 3
-  }
- },
- "r3885a": {
-  "region_id": "r3885a",
-  "legacy": {
-   "id": "santagusti-obac",
-   "name": "Obac de Sant Agustí",
-   "notes": "A quiet, elevated obac that holds autumn dampness and fruits well into November.",
-   "access": "From Sant Agustí de Lluçanès take the track north past the last masies; park at the water deposit.",
-   "popularity": 3
-  }
- },
- "r3885b": {
-  "region_id": "r3885b"
- },
- "r1551a": {
-  "region_id": "r1551a",
-  "legacy": {
-   "id": "tossa-serra-carboner",
-   "name": "Serra de Can Carboner",
-   "notes": "Open coastal pine that needs two good rains to produce, then gives a fast, heavily contested flush.",
-   "access": "From Tossa take the old Vidreres road and climb the serra track at the second bend; park at the fire-tank clearing.",
-   "popularity": 6
-  }
- },
- "r1551b": {
-  "region_id": "r1551b",
-  "legacy": {
-   "id": "santacristina-solius",
-   "name": "Serrat de Solius",
-   "notes": "A shady north-facing bank inside the Gavarres that fruits well after sea-fog weeks and is a favourite of Aro valley pickers.",
-   "access": "From Santa Cristina d'Aro take the road up to Solius past the monastery; park at the fountain above the last houses.",
-   "popularity": 6
-  }
- },
- "r1541a": {
-  "region_id": "r1541a",
-  "legacy": {
-   "id": "corca-casses",
-   "name": "Bacs de Casses",
-   "notes": "West-facing bacs close to La Bisbal, so expect company from mid-morning onwards on holidays.",
-   "access": "From Corçà take the road toward La Bisbal and turn onto the forest track at the Kilometre 2 marker; park at the track widening.",
-   "popularity": 5
-  }
- },
- "r1551c": {
-  "region_id": "r1551c"
- },
- "r1541b": {
-  "region_id": "r1541b",
-  "legacy": {
-   "id": "corca-serra-nord",
-   "name": "Serra Nord de Corçà",
-   "notes": "North-east slopes that catch the sea damp and give reliable early crops in most autumns.",
-   "access": "From Corçà take the track up from the Rupià road toward the Gavarres; park at the bend by the water deposit.",
-   "popularity": 5
-  }
- },
- "r1541c": {
-  "region_id": "r1541c"
- },
- "r1541d": {
-  "region_id": "r1541d"
- },
- "r1541e": {
-  "region_id": "r1541e"
- },
- "r1551d": {
-  "region_id": "r1551d"
- },
- "r1541f": {
-  "region_id": "r1541f"
- },
- "r1541g": {
-  "region_id": "r1541g",
-  "legacy": {
-   "id": "calonge-romanya",
-   "name": "Costes de Romanyà",
-   "notes": "Mossy northwest slopes above the valley that hold the dew, but Romanyà's fame brings heavy weekend pressure.",
-   "access": "From Calonge take the Vall de Calonge road north and turn off at the Romanyà signs; park at the Gavarres track gate past the hamlet.",
-   "popularity": 7
-  }
- },
- "r1303": {
-  "region_id": "r1303",
-  "legacy": {
-   "id": "tirvia-sola",
-   "name": "Solà de Tírvia",
-   "notes": "An easy family slope near the village that takes heavy weekend pressure once the season opens.",
-   "access": "From Tírvia take the road up to the mirador above the village; park at the viewpoint and drop onto the sunny benches.",
-   "popularity": 4
-  }
- },
- "r1271": {
-  "region_id": "r1271",
-  "legacy": {
-   "id": "peramola-obaga",
-   "name": "Obaga de Peramola",
-   "notes": "Dissected terrain with very low picker pressure.",
-   "access": "From Peramola take the track toward Tragó; park at the pass and walk west.",
-   "popularity": 3
-  }
- },
- "r3857a": {
-  "region_id": "r3857a",
-  "legacy": {
-   "id": "llosses-serra-mermider",
-   "name": "Serra de Mermider",
-   "notes": "Ordinary pine belt that yields modest baskets after sustained autumn rain.",
-   "access": "From Les Llosses take the track along the Serra de Mermider; park at the col by the transmitter.",
-   "popularity": 3
-  }
- },
- "r3857b": {
-  "region_id": "r3857b",
-  "legacy": {
-   "id": "ripoll-serrat-terrades",
-   "name": "Serrat de Terrades",
-   "notes": "Open pine with light crops in dry years, best visited mid-week when pressure is low.",
-   "access": "From Ripoll take the track towards the Serrat de Terrades; park at the quarry bend.",
-   "popularity": 4
-  }
- },
- "r3555": {
-  "region_id": "r3555",
-  "legacy": {
-   "id": "barbera-vall",
-   "name": "Vall de la Conca",
-   "notes": "A sheltered valley side that keeps producing after the windier crests have dried out.",
-   "access": "From Barberà de la Conca take the lane towards Montblanc and turn onto the eastern valley track; park at the bridge.",
-   "popularity": 3
-  }
- },
- "r2247b": {
-  "region_id": "r2247b",
-  "legacy": {
-   "id": "poblet-pena",
-   "name": "Pinedes de la Pena",
-   "notes": "West flank above the Pena stream; mid-level pressure.",
-   "access": "Take the la Pena turn from the main road; park at the village and walk west.",
-   "popularity": 5
-  }
- },
- "r3110": {
-  "region_id": "r3110",
-  "legacy": {
-   "id": "prats-llucones",
-   "name": "Obaga de Prats de Lluçanès",
-   "notes": "Lluçanès plateau woods; quiet, central and overlooked.",
-   "access": "From Prats de Lluçanès take the track behind the church; park at the sports field and walk north-west.",
-   "popularity": 3
-  }
- },
- "r3941c": {
-  "region_id": "r3941c",
-  "legacy": {
-   "id": "bellver-nas",
-   "name": "Costa de Nas",
-   "notes": "Overlooked western flank toward the Segre gorge.",
-   "access": "From Bellver take the Nas road to the hamlet; park at the church and walk west.",
-   "popularity": 4
-  }
- },
- "r1615d": {
-  "region_id": "r1615d"
- },
- "r0184d": {
-  "region_id": "r0184d"
- },
- "r1615e": {
-  "region_id": "r1615e",
-  "legacy": {
-   "id": "olzinelles-costa",
-   "name": "Costa de la Torre",
-   "notes": "A quiet southeastern flank of Montnegre that produces reliably but only rewards those willing to walk the full hour in.",
-   "access": "From Sant Celoni take the Olzinelles road and branch left at the Torre track; park at the track end by the stream.",
-   "popularity": 6
-  }
- },
- "r3924": {
-  "region_id": "r3924",
-  "legacy": {
-   "id": "olvan-riera",
-   "name": "Riera d'Olvan",
-   "notes": "Low, open pine along the stream that fruits only after very wet Octobers and is picked over within days.",
-   "access": "From Olvan take the C-16 frontage road down to the riera bridge; park at the wide verge before the track.",
-   "popularity": 4
-  }
- },
- "r2384": {
-  "region_id": "r2384"
- },
- "r3876": {
-  "region_id": "r3876"
- },
- "r0169": {
-  "region_id": "r0169",
-  "legacy": {
-   "id": "savall-bauma",
-   "name": "Serrat de la Bauma",
-   "notes": "South face; only after a wet week, then surprisingly good.",
-   "access": "From the western exit of the village take the serra track; park at the bend.",
-   "popularity": 5
-  }
- },
- "r0136": {
-  "region_id": "r0136"
- },
- "r1705": {
-  "region_id": "r1705",
-  "legacy": {
-   "id": "collsuspina-coll",
-   "name": "Coll de Collsuspina",
-   "notes": "Shady pass forests; good moisture retention.",
-   "access": "Park at the pass on the C-59; the tracks drop north into the shade.",
-   "popularity": 4
-  }
- },
- "r2858": {
-  "region_id": "r2858",
-  "legacy": {
-   "id": "albanya-bestraca",
-   "name": "Serra de Bestracà",
-   "notes": "Open Mediterranean-facing pine that needs heavy September rain before it produces at all.",
-   "access": "From Albanyà take the track towards the Serra de Bestracà; park at the Coll de Bestracà.",
-   "popularity": 3
-  }
- },
- "r0154": {
-  "region_id": "r0154"
- },
- "r2100": {
-  "region_id": "r2100",
-  "legacy": {
-   "id": "urgellet-vallmajor",
-   "name": "Vall Major north slopes",
-   "notes": "Ordinary Scots pine close to La Seu so it gets picked early on October weekends.",
-   "access": "From the road towards Castellbò park at the mirador bend above the valley; take the footpath into the pines on the north side.",
-   "popularity": 3
-  }
- },
- "r3082": {
-  "region_id": "r3082"
- },
- "r3159": {
-  "region_id": "r3159"
- },
- "r3250": {
-  "region_id": "r3250"
- },
- "r1006": {
-  "region_id": "r1006"
- },
- "r0245": {
-  "region_id": "r0245"
- },
- "r3895": {
-  "region_id": "r3895"
- },
- "r3894": {
-  "region_id": "r3894",
-  "legacy": {
-   "id": "gallifa-santpere",
-   "name": "Sant Pere de Gallifa",
-   "notes": "Small-village forest tracks; moderate pressure.",
-   "access": "From Gallifa follow the Sant Pere signs; park at the church and take the north path.",
-   "popularity": 4
-  }
- },
- "r3309": {
-  "region_id": "r3309"
- },
- "r3472": {
-  "region_id": "r3472"
- },
- "r3848": {
-  "region_id": "r3848",
-  "legacy": {
-   "id": "vilanovasau-cingles",
-   "name": "Cingles de Sau",
-   "notes": "Damp cliff-country pine above the pantà, scenic and busy, with good post-rain flushes.",
-   "access": "From Vilanova de Sau take the road past the reservoir dam and climb to the cliff footpaths; park at the mirador.",
-   "popularity": 5
-  }
- },
- "r3338": {
-  "region_id": "r3338"
- },
- "r0056": {
-  "region_id": "r0056"
- },
- "r3549": {
-  "region_id": "r3549"
- },
- "r1098": {
-  "region_id": "r1098"
- },
- "r0077": {
-  "region_id": "r0077"
- },
- "r0011": {
-  "region_id": "r0011",
-  "legacy": {
-   "id": "vallllobrega-puig-alarma",
-   "name": "Puig de l'Alarma",
-   "notes": "The first serious climb above the plain holds damp north faces that fruit well after sea-fog nights.",
-   "access": "From Vall-llobrega take the track behind the village toward the Gavarres ridge; park at the firing-range gate.",
-   "popularity": 5
-  }
- },
- "r0919": {
-  "region_id": "r0919"
- },
- "r1923": {
-  "region_id": "r1923"
- },
- "r1238": {
-  "region_id": "r1238"
- },
- "r0007": {
-  "region_id": "r0007"
- },
- "r3098": {
-  "region_id": "r3098"
- },
- "r2838": {
-  "region_id": "r2838"
- },
- "r0095": {
-  "region_id": "r0095",
-  "legacy": {
-   "id": "usall-serrat",
-   "name": "Serrat d'Usall",
-   "notes": "A west-facing serrat that catches the afternoon sun, giving good early-season flushes when late September is wet.",
-   "access": "From Banyoles take the GI-513 toward Usall and park at the bend where the tarmac becomes a forest track.",
-   "popularity": 5
-  }
- },
- "r0356": {
-  "region_id": "r0356"
- },
- "r0994": {
-  "region_id": "r0994",
-  "legacy": {
-   "id": "queralbs-freser",
-   "name": "Obaga del Freser",
-   "notes": "High valley of the Freser; peaks around late October.",
-   "access": "From Queralbs follow the Núria road to the first tunnel; park at the lay-by and take the west path.",
-   "popularity": 4
-  }
- },
- "r3836": {
-  "region_id": "r3836"
+  "region_id": "r2440a"
  },
  "r2626": {
   "region_id": "r2626"
+ },
+ "r2440b": {
+  "region_id": "r2440b"
+ },
+ "r2371b": {
+  "region_id": "r2371b",
+  "legacy": {
+   "id": "ulldemolins-santuari",
+   "name": "Santuari de Montsant",
+   "notes": "Scots pine around the sanctuary gives dependable October rovellons and sees steady weekend traffic.",
+   "access": "From Ulldemolins take the road to the Mare de Déu de Montsant sanctuary; park at the sanctuary gate.",
+   "popularity": 5
+  }
  },
  "r0300": {
   "region_id": "r0300",
@@ -1155,11 +38,56 @@
    "popularity": 4
   }
  },
+ "r2440c": {
+  "region_id": "r2440c",
+  "legacy": {
+   "id": "bossost-solana",
+   "name": "Solana de Bossòst",
+   "notes": "A warm, early slope that gives the first rovellons of the season but bakes dry within days without rain.",
+   "access": "From Bossòst take the lane behind the church that zigzags onto the south slope; park where the tarmac ends at the cistern.",
+   "popularity": 4
+  }
+ },
+ "r2440d": {
+  "region_id": "r2440d"
+ },
+ "r2440e": {
+  "region_id": "r2440e"
+ },
+ "r2440f": {
+  "region_id": "r2440f"
+ },
+ "r2356b": {
+  "region_id": "r2356b",
+  "legacy": {
+   "id": "torre-montsent",
+   "name": "Montsent de Pallars nord",
+   "notes": "The lone giant between the Fosca and Flamicell; wind-swept but the hollows produce.",
+   "access": "From Mont-ros take the track toward the Montsent antenna; park at the saddle and follow the north-west path.",
+   "popularity": 3
+  }
+ },
  "r1178": {
   "region_id": "r1178"
  },
  "r3369": {
   "region_id": "r3369"
+ },
+ "r3885a": {
+  "region_id": "r3885a"
+ },
+ "r3885b": {
+  "region_id": "r3885b"
+ },
+ "r3885c": {
+  "region_id": "r3885c",
+  "legacy": {
+   "id": "santagusti-obac",
+   "name": "Obac de Sant Agustí",
+   "notes": "A quiet, elevated obac that holds autumn dampness and fruits well into November.",
+   "access": "From Sant Agustí de Lluçanès take the track north past the last masies; park at the water deposit.",
+   "popularity": 3
+  }
  },
  "r4036": {
   "region_id": "r4036",
@@ -1169,6 +97,68 @@
    "notes": "Quiet side valley; terraced pines above the fields.",
    "access": "From Sort cross to the Vall d'Àssua road; park at Altron and take the south-east track.",
    "popularity": 3
+  }
+ },
+ "r2356d": {
+  "region_id": "r2356d",
+  "legacy": {
+   "id": "senterada-naens",
+   "name": "Obaga de Naens",
+   "notes": "Bòvida valley pines; zero crowds.",
+   "access": "From Senterada take the Naens road to the hamlet; park at the last house and climb north.",
+   "popularity": 3
+  }
+ },
+ "r0357a": {
+  "region_id": "r0357a"
+ },
+ "r1551a": {
+  "region_id": "r1551a"
+ },
+ "r3885d": {
+  "region_id": "r3885d"
+ },
+ "r1541a": {
+  "region_id": "r1541a",
+  "legacy": {
+   "id": "corca-casses",
+   "name": "Bacs de Casses",
+   "notes": "West-facing bacs close to La Bisbal, so expect company from mid-morning onwards on holidays.",
+   "access": "From Corçà take the road toward La Bisbal and turn onto the forest track at the Kilometre 2 marker; park at the track widening.",
+   "popularity": 5
+  }
+ },
+ "r1551b": {
+  "region_id": "r1551b",
+  "legacy": {
+   "id": "tossa-serra-carboner",
+   "name": "Serra de Can Carboner",
+   "notes": "Open coastal pine that needs two good rains to produce, then gives a fast, heavily contested flush.",
+   "access": "From Tossa take the old Vidreres road and climb the serra track at the second bend; park at the fire-tank clearing.",
+   "popularity": 6
+  }
+ },
+ "r1551d": {
+  "region_id": "r1551d"
+ },
+ "r1551e": {
+  "region_id": "r1551e",
+  "legacy": {
+   "id": "santacristina-solius",
+   "name": "Serrat de Solius",
+   "notes": "A shady north-facing bank inside the Gavarres that fruits well after sea-fog weeks and is a favourite of Aro valley pickers.",
+   "access": "From Santa Cristina d'Aro take the road up to Solius past the monastery; park at the fountain above the last houses.",
+   "popularity": 6
+  }
+ },
+ "r1541b": {
+  "region_id": "r1541b",
+  "legacy": {
+   "id": "corca-serra-nord",
+   "name": "Serra Nord de Corçà",
+   "notes": "North-east slopes that catch the sea damp and give reliable early crops in most autumns.",
+   "access": "From Corçà take the track up from the Rupià road toward the Gavarres; park at the bend by the water deposit.",
+   "popularity": 5
   }
  },
  "r3463": {
@@ -1181,11 +171,63 @@
    "popularity": 3
   }
  },
+ "r1541c": {
+  "region_id": "r1541c"
+ },
+ "r1551f": {
+  "region_id": "r1551f"
+ },
  "r2840": {
   "region_id": "r2840"
  },
+ "r1541d": {
+  "region_id": "r1541d"
+ },
+ "r1541e": {
+  "region_id": "r1541e"
+ },
+ "r1551g": {
+  "region_id": "r1551g"
+ },
+ "r1541g": {
+  "region_id": "r1541g"
+ },
+ "r1541h": {
+  "region_id": "r1541h"
+ },
+ "r1541i": {
+  "region_id": "r1541i"
+ },
+ "r1541j": {
+  "region_id": "r1541j"
+ },
  "r1020": {
   "region_id": "r1020"
+ },
+ "r1541k": {
+  "region_id": "r1541k"
+ },
+ "r1541l": {
+  "region_id": "r1541l"
+ },
+ "r1541m": {
+  "region_id": "r1541m"
+ },
+ "r1541n": {
+  "region_id": "r1541n",
+  "legacy": {
+   "id": "celra-comes-altes",
+   "name": "Comes Altes",
+   "notes": "Open stands that dry quickly, productive only when the tramuntana lets the autumn rains settle in.",
+   "access": "From Celrà take the GI-632 toward Juià and turn onto the track at the quarry bend; park at the quarry apron.",
+   "popularity": 5
+  }
+ },
+ "r1303a": {
+  "region_id": "r1303a"
+ },
+ "r1551h": {
+  "region_id": "r1551h"
  },
  "r1068": {
   "region_id": "r1068"
@@ -1203,6 +245,12 @@
    "popularity": 3
   }
  },
+ "r3857a": {
+  "region_id": "r3857a"
+ },
+ "r1271b": {
+  "region_id": "r1271b"
+ },
  "r3115": {
   "region_id": "r3115",
   "legacy": {
@@ -1212,6 +260,29 @@
    "access": "From Santa Maria d'Oló follow the lane south-east onto the plans; park at the grain store.",
    "popularity": 4
   }
+ },
+ "r3857b": {
+  "region_id": "r3857b",
+  "legacy": {
+   "id": "ripoll-serrat-terrades",
+   "name": "Serrat de Terrades",
+   "notes": "Open pine with light crops in dry years, best visited mid-week when pressure is low.",
+   "access": "From Ripoll take the track towards the Serrat de Terrades; park at the quarry bend.",
+   "popularity": 4
+  }
+ },
+ "r3857c": {
+  "region_id": "r3857c",
+  "legacy": {
+   "id": "llosses-serra-mermider",
+   "name": "Serra de Mermider",
+   "notes": "Ordinary pine belt that yields modest baskets after sustained autumn rain.",
+   "access": "From Les Llosses take the track along the Serra de Mermider; park at the col by the transmitter.",
+   "popularity": 3
+  }
+ },
+ "r3555a": {
+  "region_id": "r3555a"
  },
  "r2711": {
   "region_id": "r2711"
@@ -1226,6 +297,29 @@
    "popularity": 4
   }
  },
+ "r3110a": {
+  "region_id": "r3110a",
+  "legacy": {
+   "id": "olost-pla",
+   "name": "Pla d'Olost",
+   "notes": "Typical open Lluçanès plateau pine that gives light early crops and dries fast, best checked right after September rain.",
+   "access": "From Olost take the BV-4601 towards Prats de Lluçanès and turn onto the plateau track; park on the verge by the first pine stand.",
+   "popularity": 2
+  }
+ },
+ "r2247c": {
+  "region_id": "r2247c",
+  "legacy": {
+   "id": "poblet-pena",
+   "name": "Pinedes de la Pena",
+   "notes": "West flank above the Pena stream; mid-level pressure.",
+   "access": "Take the la Pena turn from the main road; park at the village and walk west.",
+   "popularity": 5
+  }
+ },
+ "r3857d": {
+  "region_id": "r3857d"
+ },
  "r1768": {
   "region_id": "r1768",
   "legacy": {
@@ -1236,14 +330,107 @@
    "popularity": 5
   }
  },
+ "r2247d": {
+  "region_id": "r2247d"
+ },
+ "r3555b": {
+  "region_id": "r3555b",
+  "legacy": {
+   "id": "barbera-vall",
+   "name": "Vall de la Conca",
+   "notes": "A sheltered valley side that keeps producing after the windier crests have dried out.",
+   "access": "From Barberà de la Conca take the lane towards Montblanc and turn onto the eastern valley track; park at the bridge.",
+   "popularity": 3
+  }
+ },
+ "r3110b": {
+  "region_id": "r3110b",
+  "legacy": {
+   "id": "prats-llucones",
+   "name": "Obaga de Prats de Lluçanès",
+   "notes": "Lluçanès plateau woods; quiet, central and overlooked.",
+   "access": "From Prats de Lluçanès take the track behind the church; park at the sports field and walk north-west.",
+   "popularity": 3
+  }
+ },
  "r3096": {
   "region_id": "r3096"
+ },
+ "r3941a": {
+  "region_id": "r3941a"
+ },
+ "r3941b": {
+  "region_id": "r3941b"
+ },
+ "r3941d": {
+  "region_id": "r3941d"
+ },
+ "r3941g": {
+  "region_id": "r3941g",
+  "legacy": {
+   "id": "bellver-nas",
+   "name": "Costa de Nas",
+   "notes": "Overlooked western flank toward the Segre gorge.",
+   "access": "From Bellver take the Nas road to the hamlet; park at the church and walk west.",
+   "popularity": 4
+  }
  },
  "r1237": {
   "region_id": "r1237"
  },
+ "r1853b": {
+  "region_id": "r1853b",
+  "legacy": {
+   "id": "vilada-catllaras-obaga",
+   "name": "Obaga de Catllaràs",
+   "notes": "The classic Catllaràs obaga holds humidity long after rain but is a fixture on weekend Berga circuits — go at first light.",
+   "access": "From Vilada take the BV-4031 towards La Pobla de Lillet and then the Catllaràs track on the right; park at the old fountain bend.",
+   "popularity": 5
+  }
+ },
+ "r1615a": {
+  "region_id": "r1615a"
+ },
+ "r1615b": {
+  "region_id": "r1615b"
+ },
+ "r1615c": {
+  "region_id": "r1615c"
+ },
+ "r1104a": {
+  "region_id": "r1104a",
+  "legacy": {
+   "id": "solsona-bergus",
+   "name": "Pinedes de Bergús",
+   "notes": "Lower and drier; good after wet autumns.",
+   "access": "From Solsona take the Bergús road; park at the village and take the south-west track.",
+   "popularity": 4
+  }
+ },
+ "r0184c": {
+  "region_id": "r0184c",
+  "legacy": {
+   "id": "corbera-ordal",
+   "name": "Serra d'Ordal",
+   "notes": "The Ordal range is the metro's favourite mushroom hill; expect company from dawn and a picked-clean understory by noon.",
+   "access": "From Corbera de Llobregat take the forest track towards the Serra d'Ordal; park at the spring below the pass.",
+   "popularity": 8
+  }
+ },
  "r0332": {
   "region_id": "r0332"
+ },
+ "r1615d": {
+  "region_id": "r1615d"
+ },
+ "r1615e": {
+  "region_id": "r1615e"
+ },
+ "r0536d": {
+  "region_id": "r0536d"
+ },
+ "r0184h": {
+  "region_id": "r0184h"
  },
  "r1727": {
   "region_id": "r1727"
@@ -1258,6 +445,41 @@
    "popularity": 3
   }
  },
+ "r1104c": {
+  "region_id": "r1104c"
+ },
+ "r1615f": {
+  "region_id": "r1615f"
+ },
+ "r1615g": {
+  "region_id": "r1615g"
+ },
+ "r1615h": {
+  "region_id": "r1615h",
+  "legacy": {
+   "id": "olzinelles-costa",
+   "name": "Costa de la Torre",
+   "notes": "A quiet southeastern flank of Montnegre that produces reliably but only rewards those willing to walk the full hour in.",
+   "access": "From Sant Celoni take the Olzinelles road and branch left at the Torre track; park at the track end by the stream.",
+   "popularity": 6
+  }
+ },
+ "r1615i": {
+  "region_id": "r1615i"
+ },
+ "r0536f": {
+  "region_id": "r0536f"
+ },
+ "r1615j": {
+  "region_id": "r1615j",
+  "legacy": {
+   "id": "dosrius-corredor",
+   "name": "Turó del Corredor",
+   "notes": "The best-known rovelló wood in the Maresme, mossy and productive, but you must be on the path by dawn on autumn Sundays.",
+   "access": "From Dosrius take the road up to the Corredor sanctuary; park in the small lot by the restaurant at the pass.",
+   "popularity": 8
+  }
+ },
  "r1896": {
   "region_id": "r1896",
   "legacy": {
@@ -1268,8 +490,107 @@
    "popularity": 4
   }
  },
+ "r1615l": {
+  "region_id": "r1615l"
+ },
+ "r2384a": {
+  "region_id": "r2384a"
+ },
+ "r1615m": {
+  "region_id": "r1615m"
+ },
+ "r1104e": {
+  "region_id": "r1104e"
+ },
+ "r0184n": {
+  "region_id": "r0184n"
+ },
+ "r3924a": {
+  "region_id": "r3924a",
+  "legacy": {
+   "id": "olvan-riera",
+   "name": "Riera d'Olvan",
+   "notes": "Low, open pine along the stream that fruits only after very wet Octobers and is picked over within days.",
+   "access": "From Olvan take the C-16 frontage road down to the riera bridge; park at the wide verge before the track.",
+   "popularity": 4
+  }
+ },
+ "r3924b": {
+  "region_id": "r3924b"
+ },
+ "r2061b": {
+  "region_id": "r2061b"
+ },
+ "r2061c": {
+  "region_id": "r2061c",
+  "legacy": {
+   "id": "valira-anserall-nord",
+   "name": "Obaga d'Anserall",
+   "notes": "Cool north slopes that hold moisture late into October, with moderate weekend pressure from La Seu pickers.",
+   "access": "From Anserall take the track up the left bank of the Valira towards Arcavell; park at the bend below the old bridge and follow the path into the north-facing pines.",
+   "popularity": 3
+  }
+ },
+ "r1104h": {
+  "region_id": "r1104h"
+ },
+ "r3876a": {
+  "region_id": "r3876a"
+ },
+ "r1104j": {
+  "region_id": "r1104j"
+ },
+ "r2384b": {
+  "region_id": "r2384b"
+ },
+ "r1615n": {
+  "region_id": "r1615n"
+ },
+ "r1615o": {
+  "region_id": "r1615o"
+ },
+ "r1104l": {
+  "region_id": "r1104l"
+ },
+ "r1104m": {
+  "region_id": "r1104m"
+ },
+ "r1104n": {
+  "region_id": "r1104n"
+ },
+ "r3876b": {
+  "region_id": "r3876b"
+ },
+ "r0768c": {
+  "region_id": "r0768c"
+ },
+ "r1615p": {
+  "region_id": "r1615p"
+ },
+ "r0169a": {
+  "region_id": "r0169a"
+ },
  "r1220": {
   "region_id": "r1220"
+ },
+ "r1104o": {
+  "region_id": "r1104o"
+ },
+ "r0247b": {
+  "region_id": "r0247b"
+ },
+ "r0169b": {
+  "region_id": "r0169b",
+  "legacy": {
+   "id": "savall-bauma",
+   "name": "Serrat de la Bauma",
+   "notes": "South face; only after a wet week, then surprisingly good.",
+   "access": "From the western exit of the village take the serra track; park at the bend.",
+   "popularity": 5
+  }
+ },
+ "r1104p": {
+  "region_id": "r1104p"
  },
  "r0150": {
   "region_id": "r0150",
@@ -1281,8 +602,49 @@
    "popularity": 6
   }
  },
+ "r0768k": {
+  "region_id": "r0768k"
+ },
+ "r0136b": {
+  "region_id": "r0136b"
+ },
+ "r0247j": {
+  "region_id": "r0247j"
+ },
+ "r0247l": {
+  "region_id": "r0247l"
+ },
+ "r1705a": {
+  "region_id": "r1705a",
+  "legacy": {
+   "id": "collsuspina-coll",
+   "name": "Coll de Collsuspina",
+   "notes": "Shady pass forests; good moisture retention.",
+   "access": "Park at the pass on the C-59; the tracks drop north into the shade.",
+   "popularity": 4
+  }
+ },
+ "r0247m": {
+  "region_id": "r0247m"
+ },
+ "r1115d": {
+  "region_id": "r1115d",
+  "legacy": {
+   "id": "lles-capdelrec",
+   "name": "Cap del Rec — obaga",
+   "notes": "High refuge plateau; late-season producer that keeps fruiting into December.",
+   "access": "Forest road from Lles to the Cap del Rec refuge; park at the refuge and take the tracks north of it.",
+   "popularity": 5
+  }
+ },
  "r4042": {
   "region_id": "r4042"
+ },
+ "r3964a": {
+  "region_id": "r3964a"
+ },
+ "r2858a": {
+  "region_id": "r2858a"
  },
  "r2925": {
   "region_id": "r2925"
@@ -1300,6 +662,25 @@
  "r2459": {
   "region_id": "r2459"
  },
+ "r2858b": {
+  "region_id": "r2858b",
+  "legacy": {
+   "id": "albanya-bestraca",
+   "name": "Serra de Bestracà",
+   "notes": "Open Mediterranean-facing pine that needs heavy September rain before it produces at all.",
+   "access": "From Albanyà take the track towards the Serra de Bestracà; park at the Coll de Bestracà.",
+   "popularity": 3
+  }
+ },
+ "r0154a": {
+  "region_id": "r0154a"
+ },
+ "r2100a": {
+  "region_id": "r2100a"
+ },
+ "r0154b": {
+  "region_id": "r0154b"
+ },
  "r1293": {
   "region_id": "r1293"
  },
@@ -1313,6 +694,16 @@
    "popularity": 4
   }
  },
+ "r2100b": {
+  "region_id": "r2100b",
+  "legacy": {
+   "id": "urgellet-vallmajor",
+   "name": "Vall Major north slopes",
+   "notes": "Ordinary Scots pine close to La Seu so it gets picked early on October weekends.",
+   "access": "From the road towards Castellbò park at the mirador bend above the valley; take the footpath into the pines on the north side.",
+   "popularity": 3
+  }
+ },
  "r0302": {
   "region_id": "r0302",
   "legacy": {
@@ -1322,6 +713,12 @@
    "access": "From the Cardona salt-mountain road park at the Salí gate; tracks run west.",
    "popularity": 4
   }
+ },
+ "r0844f": {
+  "region_id": "r0844f"
+ },
+ "r3082a": {
+  "region_id": "r3082a"
  },
  "r2448": {
   "region_id": "r2448"
@@ -1348,8 +745,40 @@
  "r3570": {
   "region_id": "r3570"
  },
+ "r3159a": {
+  "region_id": "r3159a"
+ },
+ "r0285a": {
+  "region_id": "r0285a"
+ },
  "r4060": {
   "region_id": "r4060"
+ },
+ "r3146a": {
+  "region_id": "r3146a",
+  "legacy": {
+   "id": "mura-montcau",
+   "name": "Serra del Montcau — obaga",
+   "notes": "The park's high north-west corner; cooler and later than the Mura slopes.",
+   "access": "From Talamanca take the road to the Coll d'Estenalles; park at the information centre and follow the Montcau path north.",
+   "popularity": 6
+  }
+ },
+ "r3146b": {
+  "region_id": "r3146b"
+ },
+ "r3159b": {
+  "region_id": "r3159b"
+ },
+ "r2121a": {
+  "region_id": "r2121a",
+  "legacy": {
+   "id": "portaine-cim",
+   "name": "Serrat del cim de Port Ainé",
+   "notes": "Wind-scoured upper stand that produces in short bursts right before the first snows threaten.",
+   "access": "From Sort drive up the Port Ainé station road; park at the antenna gate below the summit and follow the edge of the slopes.",
+   "popularity": 4
+  }
  },
  "r2227": {
   "region_id": "r2227",
@@ -1361,23 +790,346 @@
    "popularity": 4
   }
  },
+ "r3250a": {
+  "region_id": "r3250a"
+ },
+ "r3250b": {
+  "region_id": "r3250b"
+ },
+ "r3146c": {
+  "region_id": "r3146c"
+ },
+ "r1105a": {
+  "region_id": "r1105a"
+ },
+ "r0776a": {
+  "region_id": "r0776a"
+ },
+ "r3146d": {
+  "region_id": "r3146d"
+ },
+ "r1006a": {
+  "region_id": "r1006a"
+ },
+ "r1006b": {
+  "region_id": "r1006b"
+ },
+ "r1105b": {
+  "region_id": "r1105b"
+ },
  "r3596": {
   "region_id": "r3596"
+ },
+ "r2121d": {
+  "region_id": "r2121d"
+ },
+ "r1105c": {
+  "region_id": "r1105c"
+ },
+ "r1105d": {
+  "region_id": "r1105d"
+ },
+ "r2121e": {
+  "region_id": "r2121e"
+ },
+ "r2121g": {
+  "region_id": "r2121g",
+  "legacy": {
+   "id": "gerri-obaga",
+   "name": "Obaga de Gerri",
+   "notes": "Shady wall above the salt-town; monastery-hamlet start to the morning.",
+   "access": "From Gerri cross the bridge and take the forest track on the right; park after the water tank and climb north.",
+   "popularity": 4
+  }
+ },
+ "r1105e": {
+  "region_id": "r1105e"
  },
  "r3494": {
   "region_id": "r3494"
  },
+ "r2121j": {
+  "region_id": "r2121j"
+ },
+ "r0245b": {
+  "region_id": "r0245b"
+ },
  "r1144": {
   "region_id": "r1144"
+ },
+ "r1105g": {
+  "region_id": "r1105g"
+ },
+ "r1105h": {
+  "region_id": "r1105h"
+ },
+ "r3895a": {
+  "region_id": "r3895a"
  },
  "r0018": {
   "region_id": "r0018"
  },
+ "r3895b": {
+  "region_id": "r3895b"
+ },
+ "r0315a": {
+  "region_id": "r0315a"
+ },
+ "r3883a": {
+  "region_id": "r3883a",
+  "legacy": {
+   "id": "vallcebre-ensija",
+   "name": "Obaga de l'Ensija",
+   "notes": "High black-pine wall of the Ensija; late-season gold after the first cold nights.",
+   "access": "From Vallcebre take the Ensija gravel road to the clearing above the quarries; park at the barrier and climb into the north belt.",
+   "popularity": 4
+  }
+ },
+ "r3883b": {
+  "region_id": "r3883b"
+ },
+ "r3883c": {
+  "region_id": "r3883c",
+  "legacy": {
+   "id": "guardiola-catllaras",
+   "name": "Obaga de Catllaràs",
+   "notes": "The whole hidden massif between the Llobregat and Merdès valleys; reliable and quiet.",
+   "access": "From Guardiola take the road toward Sant Jaume de Frontanyà; at the Pendís fork park at the clearing and climb the track north.",
+   "popularity": 5
+  }
+ },
+ "r3883e": {
+  "region_id": "r3883e"
+ },
+ "r2121o": {
+  "region_id": "r2121o"
+ },
+ "r3883f": {
+  "region_id": "r3883f"
+ },
+ "r3883h": {
+  "region_id": "r3883h",
+  "legacy": {
+   "id": "castellar-riu-mirador",
+   "name": "Mirador de Castellar del Riu",
+   "notes": "Popular for the views as much as the mushrooms, so the ring within a kilometre of the car park is picked clean by mid-morning.",
+   "access": "From Castellar del Riu take the signed road to the famous viewpoint; park at the mirador car park and take either path down.",
+   "popularity": 5
+  }
+ },
  "r0477": {
   "region_id": "r0477"
  },
+ "r3883i": {
+  "region_id": "r3883i"
+ },
+ "r3916b": {
+  "region_id": "r3916b"
+ },
+ "r3883j": {
+  "region_id": "r3883j"
+ },
  "r1073": {
   "region_id": "r1073"
+ },
+ "r3883l": {
+  "region_id": "r3883l"
+ },
+ "r3883m": {
+  "region_id": "r3883m"
+ },
+ "r3883n": {
+  "region_id": "r3883n"
+ },
+ "r3883o": {
+  "region_id": "r3883o",
+  "legacy": {
+   "id": "la-quar-sant-maurici",
+   "name": "Boscos de Sant Maurici",
+   "notes": "Lower and sunnier, so it fruits early in the season and is largely finished once the obagues higher up start producing.",
+   "access": "From La Quar take the local road towards Sant Maurici and continue on the farm track; park at the turning circle by the chapel track.",
+   "popularity": 3
+  }
+ },
+ "r3883p": {
+  "region_id": "r3883p"
+ },
+ "r3883q": {
+  "region_id": "r3883q"
+ },
+ "r3883s": {
+  "region_id": "r3883s"
+ },
+ "r1968h": {
+  "region_id": "r1968h",
+  "legacy": {
+   "id": "pinell-santclimenc",
+   "name": "Sant Climenç",
+   "notes": "Rolling pine around Sant Climenç with light pressure and modest, regular flushes.",
+   "access": "From Pinell de Solsonès take the road to Sant Climenç and continue on the forest track; park below the village.",
+   "popularity": 3
+  }
+ },
+ "r2121p": {
+  "region_id": "r2121p"
+ },
+ "r0315d": {
+  "region_id": "r0315d"
+ },
+ "r3883u": {
+  "region_id": "r3883u",
+  "legacy": {
+   "id": "espunyola-serra",
+   "name": "Serra de l'Espunyola",
+   "notes": "Quiet, well-mossified Scots pine on the pre-Pyrenean edge that produces steadily in wet autumns with little picking pressure.",
+   "access": "From L'Espunyola take the road towards Casserres and turn onto the serra track at the crest; park at the wide bend by the water deposit.",
+   "popularity": 3
+  }
+ },
+ "r0315e": {
+  "region_id": "r0315e"
+ },
+ "r3883v": {
+  "region_id": "r3883v"
+ },
+ "r3883w": {
+  "region_id": "r3883w",
+  "legacy": {
+   "id": "espunyola-obaga",
+   "name": "Obaga del Riu d'Espunyola",
+   "notes": "A shaded streamside belt that keeps dew late into the morning, dependable in mediocre years when the high country stays dry.",
+   "access": "From L'Espunyola take the track down towards the stream and follow the obaga upstream; park at the concrete ford by the old mill.",
+   "popularity": 3
+  }
+ },
+ "r3883x": {
+  "region_id": "r3883x"
+ },
+ "r3883y": {
+  "region_id": "r3883y"
+ },
+ "r3883z": {
+  "region_id": "r3883z"
+ },
+ "r3883aa": {
+  "region_id": "r3883aa"
+ },
+ "r3883ab": {
+  "region_id": "r3883ab"
+ },
+ "r3883ad": {
+  "region_id": "r3883ad"
+ },
+ "r3883ac": {
+  "region_id": "r3883ac",
+  "legacy": {
+   "id": "lillet-sant-quirze",
+   "name": "Obaga de Sant Quirc de Durban",
+   "notes": "Easy family obaga with a chapel landmark; moderate pressure on Sundays.",
+   "access": "From La Pobla take the Durban road to the Sant Quirc chapel; park at the chapel and walk the track behind it.",
+   "popularity": 4
+  }
+ },
+ "r0315f": {
+  "region_id": "r0315f"
+ },
+ "r3883ae": {
+  "region_id": "r3883ae"
+ },
+ "r3883ag": {
+  "region_id": "r3883ag"
+ },
+ "r3883aj": {
+  "region_id": "r3883aj"
+ },
+ "r3883ak": {
+  "region_id": "r3883ak"
+ },
+ "r3883am": {
+  "region_id": "r3883am"
+ },
+ "r0315g": {
+  "region_id": "r0315g",
+  "legacy": {
+   "id": "mediona-castell",
+   "name": "Boscos del Castell de Mediona",
+   "notes": "Deep-soil pine under the castle that holds moisture well into December.",
+   "access": "From Mediona take the track signposted to the castle; park at the fold below the castle walls.",
+   "popularity": 3
+  }
+ },
+ "r3883an": {
+  "region_id": "r3883an"
+ },
+ "r3883ao": {
+  "region_id": "r3883ao"
+ },
+ "r3883ap": {
+  "region_id": "r3883ap",
+  "legacy": {
+   "id": "gosol-feners",
+   "name": "Obaga de Feners",
+   "notes": "Quiet valley hamlet; the north slopes hold dew until midday.",
+   "access": "From Gósol take the road to Feners and park at the village; tracks climb into the north-facing pine belt.",
+   "popularity": 5
+  }
+ },
+ "r3883ar": {
+  "region_id": "r3883ar"
+ },
+ "r3883as": {
+  "region_id": "r3883as"
+ },
+ "r3883at": {
+  "region_id": "r3883at",
+  "legacy": {
+   "id": "perafita-sant-esteve",
+   "name": "Voltants de Sant Esteve",
+   "notes": "Easy family pine around the landmark church that produces modest early crops and is picked over by village children first.",
+   "access": "From Perafita take the short road up to the church of Sant Esteve; park in the esplanade by the cemetery and follow any path down.",
+   "popularity": 2
+  }
+ },
+ "r3883au": {
+  "region_id": "r3883au"
+ },
+ "r3883av": {
+  "region_id": "r3883av",
+  "legacy": {
+   "id": "saldes-gresolet",
+   "name": "Obaga de Gresolet",
+   "notes": "Deep obaga on the Gresolet side; later fruiting than the canals and far quieter.",
+   "access": "Drive the Saldes-Gresolet road to the hamlet of Gresolet; park at the last houses and take the forest track north.",
+   "popularity": 5
+  }
+ },
+ "r0315h": {
+  "region_id": "r0315h"
+ },
+ "r3883aw": {
+  "region_id": "r3883aw"
+ },
+ "r3883ax": {
+  "region_id": "r3883ax"
+ },
+ "r3894a": {
+  "region_id": "r3894a",
+  "legacy": {
+   "id": "gallifa-santpere",
+   "name": "Sant Pere de Gallifa",
+   "notes": "Small-village forest tracks; moderate pressure.",
+   "access": "From Gallifa follow the Sant Pere signs; park at the church and take the north path.",
+   "popularity": 4
+  }
+ },
+ "r3883ay": {
+  "region_id": "r3883ay"
+ },
+ "r3883az": {
+  "region_id": "r3883az"
+ },
+ "r3894b": {
+  "region_id": "r3894b"
  },
  "r1645": {
   "region_id": "r1645",
@@ -1389,17 +1141,91 @@
    "popularity": 6
   }
  },
+ "r3883ba": {
+  "region_id": "r3883ba"
+ },
+ "r3883bb": {
+  "region_id": "r3883bb"
+ },
+ "r3883bc": {
+  "region_id": "r3883bc"
+ },
+ "r3883bd": {
+  "region_id": "r3883bd",
+  "legacy": {
+   "id": "vansa-obaga",
+   "name": "Obaga de la Vansa",
+   "notes": "The valley nobody drives through; dense pine and some of the lowest pressure in the Alt Urgell.",
+   "access": "From the La Vansa hamlet follow the valley track toward the Port del Comte side; park at the barrier beyond the last mas.",
+   "popularity": 4
+  }
+ },
+ "r3883bf": {
+  "region_id": "r3883bf"
+ },
  "r2992": {
   "region_id": "r2992"
+ },
+ "r3883bg": {
+  "region_id": "r3883bg"
+ },
+ "r1500a": {
+  "region_id": "r1500a"
+ },
+ "r3883bh": {
+  "region_id": "r3883bh"
  },
  "r2683": {
   "region_id": "r2683"
  },
+ "r2306a": {
+  "region_id": "r2306a"
+ },
+ "r2306b": {
+  "region_id": "r2306b"
+ },
+ "r3883bi": {
+  "region_id": "r3883bi"
+ },
+ "r3309a": {
+  "region_id": "r3309a"
+ },
+ "r3883bj": {
+  "region_id": "r3883bj"
+ },
+ "r0331i": {
+  "region_id": "r0331i"
+ },
+ "r3017a": {
+  "region_id": "r3017a",
+  "legacy": {
+   "id": "tagamanent-cim",
+   "name": "El Tagamanent",
+   "notes": "Montseny southern gateway; quiet on weekdays.",
+   "access": "From Tagamanent village take the hill road; park below the church on the summit.",
+   "popularity": 3
+  }
+ },
+ "r3309b": {
+  "region_id": "r3309b"
+ },
+ "r3883bk": {
+  "region_id": "r3883bk"
+ },
  "r4109": {
   "region_id": "r4109"
  },
+ "r3883bl": {
+  "region_id": "r3883bl"
+ },
+ "r0331n": {
+  "region_id": "r0331n"
+ },
  "r3553": {
   "region_id": "r3553"
+ },
+ "r0331p": {
+  "region_id": "r0331p"
  },
  "r3365": {
   "region_id": "r3365"
@@ -1407,11 +1233,17 @@
  "r3326": {
   "region_id": "r3326"
  },
+ "r2236m": {
+  "region_id": "r2236m"
+ },
  "r1151": {
   "region_id": "r1151"
  },
  "r1241": {
   "region_id": "r1241"
+ },
+ "r3472a": {
+  "region_id": "r3472a"
  },
  "r3420": {
   "region_id": "r3420"
@@ -1419,31 +1251,75 @@
  "r3829": {
   "region_id": "r3829"
  },
+ "r2236ag": {
+  "region_id": "r2236ag"
+ },
+ "r2236ai": {
+  "region_id": "r2236ai"
+ },
  "r3618": {
   "region_id": "r3618"
  },
- "r0184a": {
-  "region_id": "r0184a",
+ "r4011a": {
+  "region_id": "r4011a"
+ },
+ "r1288b": {
+  "region_id": "r1288b"
+ },
+ "r4011c": {
+  "region_id": "r4011c"
+ },
+ "r4011d": {
+  "region_id": "r4011d"
+ },
+ "r3472b": {
+  "region_id": "r3472b"
+ },
+ "r1058b": {
+  "region_id": "r1058b",
   "legacy": {
-   "id": "olivella-pla-palau",
-   "name": "Pla de Palau",
-   "notes": "Dry Garraf Aleppo that only produces after a stormy autumn, when the shaded north hollows fill quickly.",
-   "access": "From Olivella take the road towards Sitges and turn off at the Pla de Palau track; park at the fire tank by the track junction.",
+   "id": "alp-tosa",
+   "name": "Obaga de la Tosa d'Alp",
+   "notes": "North faces toward Tosa d'Alp; late-season stronghold.",
+   "access": "From Alp take the track toward La Tosa; park at the fountain below the ski slopes and climb north.",
    "popularity": 6
   }
  },
- "r0184b": {
-  "region_id": "r0184b",
-  "legacy": {
-   "id": "corbera-ordal",
-   "name": "Serra d'Ordal",
-   "notes": "The Ordal range is the metro's favourite mushroom hill; expect company from dawn and a picked-clean understory by noon.",
-   "access": "From Corbera de Llobregat take the forest track towards the Serra d'Ordal; park at the spring below the pass.",
-   "popularity": 8
-  }
+ "r3848b": {
+  "region_id": "r3848b"
  },
- "r0536a": {
-  "region_id": "r0536a"
+ "r4011e": {
+  "region_id": "r4011e"
+ },
+ "r1288d": {
+  "region_id": "r1288d"
+ },
+ "r0056a": {
+  "region_id": "r0056a"
+ },
+ "r1288f": {
+  "region_id": "r1288f"
+ },
+ "r0056b": {
+  "region_id": "r0056b"
+ },
+ "r3338b": {
+  "region_id": "r3338b"
+ },
+ "r1098a": {
+  "region_id": "r1098a"
+ },
+ "r2236bk": {
+  "region_id": "r2236bk"
+ },
+ "r1288g": {
+  "region_id": "r1288g"
+ },
+ "r0193c": {
+  "region_id": "r0193c"
+ },
+ "r2538a": {
+  "region_id": "r2538a"
  },
  "r3503": {
   "region_id": "r3503"
@@ -1451,78 +1327,1027 @@
  "r3823": {
   "region_id": "r3823"
  },
+ "r1288h": {
+  "region_id": "r1288h",
+  "legacy": {
+   "id": "bassella-obaga-moixa",
+   "name": "Obaga Moixa",
+   "notes": "Cool dense pine on the valley's shady side that fruits reliably after the first October rains.",
+   "access": "From Bassella take the N-260 towards Organyà and turn onto the track for the Obaga Moixa; park at the track barrier.",
+   "popularity": 3
+  }
+ },
+ "r0077a": {
+  "region_id": "r0077a"
+ },
  "r0118": {
   "region_id": "r0118"
  },
  "r1401": {
   "region_id": "r1401"
  },
- "r0768a": {
-  "region_id": "r0768a",
-  "legacy": {
-   "id": "arnes-est",
-   "name": "Vessant est d'Arnes",
-   "notes": "Morning-sun sector; go right after the first autumn storm.",
-   "access": "From the village take the east track past the olive mill; park at the bend.",
-   "popularity": 3
-  }
+ "r3549b": {
+  "region_id": "r3549b"
+ },
+ "r0193d": {
+  "region_id": "r0193d"
+ },
+ "r0193e": {
+  "region_id": "r0193e"
+ },
+ "r0077b": {
+  "region_id": "r0077b"
+ },
+ "r1098b": {
+  "region_id": "r1098b"
+ },
+ "r0145a": {
+  "region_id": "r0145a"
  },
  "r4155": {
   "region_id": "r4155"
  },
- "r0768c": {
-  "region_id": "r0768c",
+ "r0193f": {
+  "region_id": "r0193f",
   "legacy": {
-   "id": "pratcomte-estrets",
-   "name": "Els Estrets",
-   "notes": "Cool gorge heads near the Ports fringe give one of the earliest and most dependable rovellón runs in the Terra Alta.",
-   "access": "From Prat de Comte take the track towards the Estrets gorge; park at the barrier by the abandoned terraces.",
-   "popularity": 2
+   "id": "calders-riu",
+   "name": "Riu Calders",
+   "notes": "Riverside pine that fruits early after the first rains, a convenient evening spot for Moianès locals and thus quickly picked.",
+   "access": "From Calders take the lane towards the river below the village; park at the picnic area by the old bridge.",
+   "popularity": 3
   }
  },
- "r0247a": {
-  "region_id": "r0247a"
- },
- "r0247b": {
-  "region_id": "r0247b",
+ "r0193g": {
+  "region_id": "r0193g",
   "legacy": {
-   "id": "sallent-farges",
-   "name": "Serrat de les Farges",
-   "notes": "Weekend pressure from the Bages belt means early mornings pay off after rain.",
-   "access": "From Sallent take the C-16 service road towards the Llobregat and climb the track at the Serrat de les Farges; park at the water tank.",
+   "id": "avinyo-serrats",
+   "name": "Serrats d'Avinyó",
+   "notes": "Small but regular flushes on the northern serrats, best midweek to avoid weekend crowds.",
+   "access": "From Avinyó take the BV-4315 towards Artés and turn onto the track; park at the crest bend.",
    "popularity": 4
   }
  },
- "r0768d": {
-  "region_id": "r0768d",
+ "r4162a": {
+  "region_id": "r4162a"
+ },
+ "r4162b": {
+  "region_id": "r4162b"
+ },
+ "r4162c": {
+  "region_id": "r4162c"
+ },
+ "r0984d": {
+  "region_id": "r0984d"
+ },
+ "r0145b": {
+  "region_id": "r0145b"
+ },
+ "r0145c": {
+  "region_id": "r0145c"
+ },
+ "r0193h": {
+  "region_id": "r0193h"
+ },
+ "r1560a": {
+  "region_id": "r1560a"
+ },
+ "r1560b": {
+  "region_id": "r1560b",
   "legacy": {
-   "id": "caseres-serra",
-   "name": "Serra de Caseres",
-   "notes": "West-facing pines dry fast so time your visit right after September storm fronts pass through.",
-   "access": "From Caseres take the track that rises west along the serra towards the Aragón border; park at the clearing on the crest.",
-   "popularity": 2
+   "id": "arbucies-can-pla",
+   "name": "Serrat de Can Pla",
+   "notes": "East-facing slopes that dry out fast after rain, so come within two or three days of a good October soaking.",
+   "access": "From Arbúcies take the C-63 toward Sant Hilari and turn onto the Can Pla track after the last houses; park at the gate by the pasture.",
+   "popularity": 6
   }
  },
- "r0247c": {
-  "region_id": "r0247c"
+ "r1414b": {
+  "region_id": "r1414b"
  },
- "r0247d": {
-  "region_id": "r0247d"
+ "r1560c": {
+  "region_id": "r1560c"
+ },
+ "r1560d": {
+  "region_id": "r1560d"
+ },
+ "r0145d": {
+  "region_id": "r0145d"
+ },
+ "r1560e": {
+  "region_id": "r1560e"
+ },
+ "r1560f": {
+  "region_id": "r1560f"
+ },
+ "r4162d": {
+  "region_id": "r4162d"
+ },
+ "r1560g": {
+  "region_id": "r1560g"
+ },
+ "r1560h": {
+  "region_id": "r1560h"
+ },
+ "r1560i": {
+  "region_id": "r1560i"
+ },
+ "r1560j": {
+  "region_id": "r1560j"
+ },
+ "r1560k": {
+  "region_id": "r1560k",
+  "legacy": {
+   "id": "camprodon-rocabruna",
+   "name": "Obaga de Rocabruna",
+   "notes": "Sunny-side hamlet with a shady back slope; rings early after September rain.",
+   "access": "From Camprodon take the road to Rocabruna; park at the village and climb the track behind the church.",
+   "popularity": 5
+  }
+ },
+ "r1560l": {
+  "region_id": "r1560l"
+ },
+ "r1560m": {
+  "region_id": "r1560m",
+  "legacy": {
+   "id": "santgregori-puitja",
+   "name": "Serrat de Puitjà",
+   "notes": "A north-facing bank above the Ter basin that keeps some humidity, but Girona weekenders work it hard.",
+   "access": "From Sant Gregori take the Bescanó road and turn onto the Puitjà track at the quarry bend; park at the flat below the chapel.",
+   "popularity": 6
+  }
+ },
+ "r1560o": {
+  "region_id": "r1560o",
+  "legacy": {
+   "id": "osor-obaga",
+   "name": "Obaga d'Osor",
+   "notes": "Deep Guilleries obaga; damp valley granite that holds water all season.",
+   "access": "From Osor take the Anglès road 2 km; park at the reservoir track and climb north into the Guilleries.",
+   "popularity": 4
+  }
+ },
+ "r1560p": {
+  "region_id": "r1560p"
+ },
+ "r1560t": {
+  "region_id": "r1560t"
+ },
+ "r1560s": {
+  "region_id": "r1560s"
+ },
+ "r1560r": {
+  "region_id": "r1560r"
+ },
+ "r1560v": {
+  "region_id": "r1560v"
+ },
+ "r1560w": {
+  "region_id": "r1560w"
+ },
+ "r1560x": {
+  "region_id": "r1560x",
+  "legacy": {
+   "id": "planes-solana",
+   "name": "Solana de les Planes",
+   "notes": "Easy-access southern slope that fruits in pulses after storms and sees weekend families from Olot.",
+   "access": "From Les Planes follow the track up the sunny side above the village; park at the reservoir track gate and walk up through open pine.",
+   "popularity": 3
+  }
+ },
+ "r1560y": {
+  "region_id": "r1560y"
+ },
+ "r1560z": {
+  "region_id": "r1560z"
+ },
+ "r0248c": {
+  "region_id": "r0248c"
+ },
+ "r1560ab": {
+  "region_id": "r1560ab",
+  "legacy": {
+   "id": "sales-sant-marti",
+   "name": "Sant Martí de Sales",
+   "notes": "Dense north pine in a quiet corner of the Alta Garrotxa with dependable autumn moisture.",
+   "access": "From Sales de Llierca take the track past Sant Martí de Sales; park at the churchyard.",
+   "popularity": 3
+  }
+ },
+ "r1560ac": {
+  "region_id": "r1560ac"
+ },
+ "r1560ae": {
+  "region_id": "r1560ae"
+ },
+ "r1560af": {
+  "region_id": "r1560af"
+ },
+ "r1560ag": {
+  "region_id": "r1560ag",
+  "legacy": {
+   "id": "palautordera-fontmartina",
+   "name": "Obaga de Fontmartina",
+   "notes": "The west-Montseny Scots belt; the Vallès classic, busy on Sundays.",
+   "access": "From Sant Esteve de Palautordera take the Fontmartina track; park at the mas and climb north toward the Turó de l'Home belt.",
+   "popularity": 6
+  }
+ },
+ "r1560ah": {
+  "region_id": "r1560ah"
+ },
+ "r1560aj": {
+  "region_id": "r1560aj"
+ },
+ "r0248e": {
+  "region_id": "r0248e"
+ },
+ "r1560am": {
+  "region_id": "r1560am",
+  "legacy": {
+   "id": "palautordera-mosqueroles",
+   "name": "Obaga de Mosqueroles",
+   "notes": "Lower and earlier than Fontmartina; good opener while the high belt is still dry.",
+   "access": "From Mosqueroles take the track above the houses; park at the fold and climb the north-east slopes.",
+   "popularity": 5
+  }
+ },
+ "r1560al": {
+  "region_id": "r1560al"
+ },
+ "r1560ak": {
+  "region_id": "r1560ak"
+ },
+ "r1560ao": {
+  "region_id": "r1560ao"
+ },
+ "r1560aq": {
+  "region_id": "r1560aq"
+ },
+ "r1560ap": {
+  "region_id": "r1560ap"
+ },
+ "r1560ar": {
+  "region_id": "r1560ar"
+ },
+ "r1560as": {
+  "region_id": "r1560as"
+ },
+ "r1560au": {
+  "region_id": "r1560au"
+ },
+ "r4013b": {
+  "region_id": "r4013b",
+  "legacy": {
+   "id": "organya-nord",
+   "name": "Obaga d'Organyà",
+   "notes": "Peramola range pines; needs a wet autumn to deliver.",
+   "access": "From Organyà take the road toward Fígols; park at the first hairpin and climb north.",
+   "popularity": 4
+  }
+ },
+ "r1560ax": {
+  "region_id": "r1560ax"
+ },
+ "r1560aw": {
+  "region_id": "r1560aw"
+ },
+ "r1560az": {
+  "region_id": "r1560az"
+ },
+ "r1560ay": {
+  "region_id": "r1560ay"
+ },
+ "r1560ba": {
+  "region_id": "r1560ba",
+  "legacy": {
+   "id": "sils-serrat-morer",
+   "name": "Serrat del Morer",
+   "notes": "Low pine on the edge of the wetlands that fruits only after damp, windless autumns.",
+   "access": "From Sils take the road toward Maçanet and turn onto the serrat track at the cattle farm; park at the field gate.",
+   "popularity": 4
+  }
+ },
+ "r1560bc": {
+  "region_id": "r1560bc"
+ },
+ "r1560bd": {
+  "region_id": "r1560bd",
+  "legacy": {
+   "id": "espinelves-nord",
+   "name": "Obaga d'Espinelves",
+   "notes": "Fira de l'Arbreda crowds in November; walk further in than they do.",
+   "access": "From Espinelves take the Arbreda road to the last mas; park at the track barrier.",
+   "popularity": 6
+  }
+ },
+ "r1560be": {
+  "region_id": "r1560be"
+ },
+ "r1560bf": {
+  "region_id": "r1560bf"
  },
  "r2402": {
   "region_id": "r2402"
  },
+ "r1560bh": {
+  "region_id": "r1560bh"
+ },
+ "r1560bg": {
+  "region_id": "r1560bg"
+ },
+ "r1560bi": {
+  "region_id": "r1560bi"
+ },
+ "r1560bj": {
+  "region_id": "r1560bj"
+ },
+ "r1560bk": {
+  "region_id": "r1560bk"
+ },
+ "r1560bl": {
+  "region_id": "r1560bl"
+ },
  "r3458": {
   "region_id": "r3458"
+ },
+ "r1560bo": {
+  "region_id": "r1560bo"
+ },
+ "r1560bn": {
+  "region_id": "r1560bn",
+  "legacy": {
+   "id": "llanars-solana",
+   "name": "Solana de Llanars",
+   "notes": "Warm open pine that fruits in fast flushes right after rain but shuts down quickly in dry spells.",
+   "access": "From the main valley road at the Llanars exit take the paved lane up the sunny side; park at the last farmhouse and walk the track through open pine.",
+   "popularity": 4
+  }
+ },
+ "r1560bm": {
+  "region_id": "r1560bm"
+ },
+ "r1560bq": {
+  "region_id": "r1560bq"
+ },
+ "r1560bp": {
+  "region_id": "r1560bp",
+  "legacy": {
+   "id": "matagalls-ponent",
+   "name": "Matagalls Ponent",
+   "notes": "Western slopes facing Fontmartina see steady traffic, so late arrivals find only scraps.",
+   "access": "From Viladrau take the western path up from the Fontmartina side; park where the track forks below the ridge.",
+   "popularity": 7
+  }
+ },
+ "r1560br": {
+  "region_id": "r1560br"
+ },
+ "r1560bt": {
+  "region_id": "r1560bt"
+ },
+ "r1560bs": {
+  "region_id": "r1560bs"
+ },
+ "r1560bv": {
+  "region_id": "r1560bv",
+  "legacy": {
+   "id": "finestres-santmiquel",
+   "name": "Costa de Sant Miquel",
+   "notes": "Warmer south-west face; earliest fruiting of the zone.",
+   "access": "Continue past the castle track to the Sant Miquel fork; park at the col.",
+   "popularity": 3
+  }
+ },
+ "r1560bw": {
+  "region_id": "r1560bw"
+ },
+ "r1560by": {
+  "region_id": "r1560by",
+  "legacy": {
+   "id": "bas-hostalets",
+   "name": "Obaga sobre Els Hostalets",
+   "notes": "Humid corner under the cliff rim; steady if unspectacular.",
+   "access": "From Els Hostalets d'en Bas take the north track past the last houses.",
+   "popularity": 4
+  }
+ },
+ "r1560ca": {
+  "region_id": "r1560ca",
+  "legacy": {
+   "id": "arbucies-sant-segimon",
+   "name": "Sant Segimon",
+   "notes": "Mossy north-face beds that hold their dew well into the morning, though the easy track means crowds sweep them early on autumn Sundays.",
+   "access": "From Arbúcies take the Sant Segimon road north past Can Pallot and continue to the end of the forest track; park at the clearing below the shrine.",
+   "popularity": 7
+  }
+ },
+ "r1560cc": {
+  "region_id": "r1560cc"
+ },
+ "r1560cd": {
+  "region_id": "r1560cd",
+  "legacy": {
+   "id": "rupit-pruit",
+   "name": "Obaga de Pruit",
+   "notes": "Rupit itself is picked over; the Pruit side is quieter.",
+   "access": "From Rupit take the Pruit road to the hamlet; park at the church and follow the track north-west.",
+   "popularity": 4
+  }
+ },
+ "r1560cf": {
+  "region_id": "r1560cf"
+ },
+ "r1560ce": {
+  "region_id": "r1560ce"
+ },
+ "r1560ci": {
+  "region_id": "r1560ci"
+ },
+ "r1560ck": {
+  "region_id": "r1560ck",
+  "legacy": {
+   "id": "madremanya-solana",
+   "name": "Solana de Madremanya",
+   "notes": "West-facing groves that fruit early and short, worth the first week after the opening rains.",
+   "access": "From Madremanya take the track west past the last houses and follow the contour path; park at the water deposit clearing.",
+   "popularity": 4
+  }
+ },
+ "r1560cm": {
+  "region_id": "r1560cm"
+ },
+ "r1560cn": {
+  "region_id": "r1560cn"
+ },
+ "r1560cp": {
+  "region_id": "r1560cp"
+ },
+ "r1560cr": {
+  "region_id": "r1560cr"
+ },
+ "r1560ct": {
+  "region_id": "r1560ct"
+ },
+ "r1560cs": {
+  "region_id": "r1560cs",
+  "legacy": {
+   "id": "espolla-vilartoli",
+   "name": "Serrat de Vilartolí",
+   "notes": "South-facing Albera slopes that bake dry under the north wind and are best in the first mild, humid week of November.",
+   "access": "From Espolla take the lane toward Vilartolí and continue on the forest track; park at the bend above the last farmhouse.",
+   "popularity": 3
+  }
+ },
+ "r1560cv": {
+  "region_id": "r1560cv"
+ },
+ "r1560cu": {
+  "region_id": "r1560cu"
+ },
+ "r1560cw": {
+  "region_id": "r1560cw"
+ },
+ "r1560cx": {
+  "region_id": "r1560cx"
+ },
+ "r1560cy": {
+  "region_id": "r1560cy",
+  "legacy": {
+   "id": "macanet-salines",
+   "name": "Obaga de les Salines",
+   "notes": "Sanctuary forest on the French border; mixed pine with a damp north face.",
+   "access": "From Maçanet take the road to the Salines sanctuary; park at the sanctuary and take the north tracks.",
+   "popularity": 4
+  }
+ },
+ "r1560cz": {
+  "region_id": "r1560cz"
+ },
+ "r1560db": {
+  "region_id": "r1560db"
+ },
+ "r1560dd": {
+  "region_id": "r1560dd"
+ },
+ "r1560dc": {
+  "region_id": "r1560dc"
+ },
+ "r1560df": {
+  "region_id": "r1560df"
+ },
+ "r0011a": {
+  "region_id": "r0011a",
+  "legacy": {
+   "id": "vallllobrega-puig-alarma",
+   "name": "Puig de l'Alarma",
+   "notes": "The first serious climb above the plain holds damp north faces that fruit well after sea-fog nights.",
+   "access": "From Vall-llobrega take the track behind the village toward the Gavarres ridge; park at the firing-range gate.",
+   "popularity": 5
+  }
+ },
+ "r1560di": {
+  "region_id": "r1560di",
+  "legacy": {
+   "id": "santapau-bianya",
+   "name": "Costa de la Vall de Bianya",
+   "notes": "Humid valley with a pine-chestnut mix; low pressure on weekdays.",
+   "access": "From the Santa Pau-Bianya road park at Els Hostalets and take the track east.",
+   "popularity": 4
+  }
+ },
+ "r1560dj": {
+  "region_id": "r1560dj"
+ },
+ "r1560dm": {
+  "region_id": "r1560dm"
+ },
+ "r1560dl": {
+  "region_id": "r1560dl"
+ },
+ "r1560dk": {
+  "region_id": "r1560dk"
+ },
+ "r1560do": {
+  "region_id": "r1560do",
+  "legacy": {
+   "id": "fontmartina-costa",
+   "name": "Costa de Fontmartina",
+   "notes": "Deep Montseny; track access only, worth the walk.",
+   "access": "From Montseny village take the Fontmartina road to the farmhouse; park at the track fork.",
+   "popularity": 6
+  }
+ },
+ "r1560dn": {
+  "region_id": "r1560dn"
+ },
+ "r1560dr": {
+  "region_id": "r1560dr"
+ },
+ "r1560dq": {
+  "region_id": "r1560dq"
+ },
+ "r4013d": {
+  "region_id": "r4013d",
+  "legacy": {
+   "id": "cabo-obaga-pui",
+   "name": "Obaga del Pui",
+   "notes": "Deep mossy obaga where rovellons appear early and stay fresh if autumn mornings are humid.",
+   "access": "From Cabó follow the valley track towards the head of the Val de Cabó; park at the barrier past the last masies.",
+   "popularity": 3
+  }
+ },
+ "r0248h": {
+  "region_id": "r0248h"
+ },
+ "r1560dv": {
+  "region_id": "r1560dv"
+ },
+ "r1560dx": {
+  "region_id": "r1560dx"
+ },
+ "r1560ec": {
+  "region_id": "r1560ec"
+ },
+ "r1560eb": {
+  "region_id": "r1560eb"
+ },
+ "r1560ea": {
+  "region_id": "r1560ea",
+  "legacy": {
+   "id": "angles-serrat-pedro",
+   "name": "Serrat del Pedró d'Anglès",
+   "notes": "Proper mossy Scots pine belt that fruits reliably after the first autumn rains and sees only local pickers.",
+   "access": "From Anglès take the GI-534 toward Sant Hilari and turn onto the Guilleries track at the Segueró bend; park at the track fork.",
+   "popularity": 4
+  }
+ },
+ "r1560ed": {
+  "region_id": "r1560ed"
+ },
+ "r1560eg": {
+  "region_id": "r1560eg"
+ },
+ "r1560ef": {
+  "region_id": "r1560ef"
+ },
+ "r1560ee": {
+  "region_id": "r1560ee"
+ },
+ "r0919a": {
+  "region_id": "r0919a"
+ },
+ "r1560ei": {
+  "region_id": "r1560ei",
+  "legacy": {
+   "id": "sja-bac",
+   "name": "Obaga del Bac",
+   "notes": "Shady pocket valley between Sant Joan and Ogassa.",
+   "access": "Take the road toward el Bac; park at the farm and follow the shady track north.",
+   "popularity": 4
+  }
+ },
+ "r1560eh": {
+  "region_id": "r1560eh"
+ },
+ "r4013g": {
+  "region_id": "r4013g"
+ },
+ "r1560ek": {
+  "region_id": "r1560ek"
+ },
+ "r1560ej": {
+  "region_id": "r1560ej"
+ },
+ "r1560el": {
+  "region_id": "r1560el"
+ },
+ "r1560em": {
+  "region_id": "r1560em"
+ },
+ "r1560ep": {
+  "region_id": "r1560ep",
+  "legacy": {
+   "id": "arbucies-sant-marcal",
+   "name": "Sant Marçal",
+   "notes": "High mossy belt that only opens in November when the lower woods are finished, and the long climb keeps weekend pressure moderate.",
+   "access": "From Arbúcies follow the Sant Marçal road up through the upper belt to the pass; park at the small lot outside the chapel gates.",
+   "popularity": 8
+  }
+ },
+ "r1560eo": {
+  "region_id": "r1560eo",
+  "legacy": {
+   "id": "macanet-selva-sud",
+   "name": "Serra Sud de Maçanet",
+   "notes": "Open mixed pine that gives modest crops most years and is heavily worked on October Sundays.",
+   "access": "From Maçanet take the Caldes road and turn onto the serra track at the slaughterhouse bend; park at the water tank.",
+   "popularity": 5
+  }
+ },
+ "r1560en": {
+  "region_id": "r1560en"
  },
  "r2618": {
   "region_id": "r2618"
  },
+ "r1560eq": {
+  "region_id": "r1560eq"
+ },
+ "r1560es": {
+  "region_id": "r1560es"
+ },
+ "r1560et": {
+  "region_id": "r1560et"
+ },
+ "r1560eu": {
+  "region_id": "r1560eu"
+ },
+ "r1560ev": {
+  "region_id": "r1560ev"
+ },
+ "r1136b": {
+  "region_id": "r1136b"
+ },
+ "r1560ew": {
+  "region_id": "r1560ew",
+  "legacy": {
+   "id": "preses-bellpuig",
+   "name": "Costa de Bellpuig",
+   "notes": "South-east face above the valley floor; dries fast — go right after rain.",
+   "access": "From Les Preses follow the Bellpuig signs; park at the hermitage clearing.",
+   "popularity": 5
+  }
+ },
+ "r1560ex": {
+  "region_id": "r1560ex",
+  "legacy": {
+   "id": "bas-privat",
+   "name": "Costes de Sant Privat",
+   "notes": "West rim of the valley; afternoon shade after a morning elsewhere.",
+   "access": "From Sant Privat d'en Bas take the track behind the church; park at the bridge.",
+   "popularity": 4
+  }
+ },
+ "r1560ey": {
+  "region_id": "r1560ey",
+  "legacy": {
+   "id": "mieres-nord",
+   "name": "Obaga de Mieres",
+   "notes": "Warm, early zone; check the humid gullies.",
+   "access": "From Mieres take the track north past the church; park at the bend.",
+   "popularity": 3
+  }
+ },
+ "r1560ez": {
+  "region_id": "r1560ez"
+ },
+ "r1560fa": {
+  "region_id": "r1560fa",
+  "legacy": {
+   "id": "santfeliu-obaga",
+   "name": "Obaga de Sant Feliu",
+   "notes": "Southern gateway to the Garrotxa pines; quiet and family-friendly.",
+   "access": "From Sant Feliu de Pallerols take the road toward les Planes; park at the first bridge and follow the track north-east.",
+   "popularity": 4
+  }
+ },
+ "r1560fb": {
+  "region_id": "r1560fb"
+ },
+ "r1560ff": {
+  "region_id": "r1560ff"
+ },
+ "r1560fd": {
+  "region_id": "r1560fd"
+ },
+ "r1560fc": {
+  "region_id": "r1560fc"
+ },
+ "r1560fg": {
+  "region_id": "r1560fg"
+ },
+ "r1560fh": {
+  "region_id": "r1560fh"
+ },
+ "r1560fi": {
+  "region_id": "r1560fi"
+ },
+ "r1560fj": {
+  "region_id": "r1560fj"
+ },
+ "r1560fm": {
+  "region_id": "r1560fm"
+ },
+ "r1560fn": {
+  "region_id": "r1560fn"
+ },
+ "r1560fo": {
+  "region_id": "r1560fo"
+ },
+ "r1560fp": {
+  "region_id": "r1560fp"
+ },
+ "r4013i": {
+  "region_id": "r4013i"
+ },
+ "r1560fq": {
+  "region_id": "r1560fq"
+ },
+ "r1560fr": {
+  "region_id": "r1560fr"
+ },
+ "r1560ft": {
+  "region_id": "r1560ft"
+ },
+ "r1560fs": {
+  "region_id": "r1560fs",
+  "legacy": {
+   "id": "falgars-els-colls",
+   "name": "Els Colls",
+   "notes": "Open sunny pine over the Bas valley that produces well only in wet autumns.",
+   "access": "From Les Preses take the road towards Falgars and continue on the forest track to Els Colls; park at the track gate.",
+   "popularity": 4
+  }
+ },
+ "r1560fu": {
+  "region_id": "r1560fu",
+  "legacy": {
+   "id": "setcases-costabona",
+   "name": "Obaga de Costabona",
+   "notes": "The great shady wall above the Ter headwaters; big rings after October storms, but a long climb.",
+   "access": "From Setcases take the Vallter road to the last bend below the station; park at the lay-by and climb the Costabona tracks into the north face.",
+   "popularity": 6
+  }
+ },
+ "r1560fv": {
+  "region_id": "r1560fv"
+ },
+ "r1560fz": {
+  "region_id": "r1560fz"
+ },
+ "r1560fy": {
+  "region_id": "r1560fy"
+ },
+ "r1560gb": {
+  "region_id": "r1560gb"
+ },
+ "r1560ga": {
+  "region_id": "r1560ga"
+ },
+ "r1560gc": {
+  "region_id": "r1560gc"
+ },
+ "r4013k": {
+  "region_id": "r4013k"
+ },
+ "r0599a": {
+  "region_id": "r0599a"
+ },
+ "r1560gd": {
+  "region_id": "r1560gd"
+ },
+ "r1560ge": {
+  "region_id": "r1560ge",
+  "legacy": {
+   "id": "tavertet-corneli",
+   "name": "Sant Corneli de Tavertet",
+   "notes": "Clifftop pines over the Ter; drier south faces.",
+   "access": "From Tavertet follow the Sant Corneli signs; park at the hermitage and walk the south path.",
+   "popularity": 4
+  }
+ },
+ "r1560gf": {
+  "region_id": "r1560gf"
+ },
  "r0439": {
   "region_id": "r0439"
  },
+ "r1560gh": {
+  "region_id": "r1560gh"
+ },
+ "r1560gi": {
+  "region_id": "r1560gi"
+ },
+ "r1560gj": {
+  "region_id": "r1560gj"
+ },
+ "r1560gk": {
+  "region_id": "r1560gk"
+ },
+ "r1560gm": {
+  "region_id": "r1560gm",
+  "legacy": {
+   "id": "montesquiu-obaga",
+   "name": "Obaga de Montesquiu",
+   "notes": "The shaded slope above the Ter holds dew all morning and keeps producing after the park side is stripped, with far fewer people.",
+   "access": "From Montesquiu take the BV-4226 towards Sora and turn onto the north-side forest track; park at the gate by the stream crossing.",
+   "popularity": 4
+  }
+ },
+ "r1560gl": {
+  "region_id": "r1560gl"
+ },
+ "r1560go": {
+  "region_id": "r1560go",
+  "legacy": {
+   "id": "santhilari-pla-boix",
+   "name": "Pla del Boix",
+   "notes": "Deep Guilleries ground where the mist keeps the moss wet and the season runs long into late autumn.",
+   "access": "From Sant Hilari take the Vilanova de Sau road and turn onto the Guilleries track at the Osor sign; park at the boix clearing.",
+   "popularity": 4
+  }
+ },
  "r3251": {
   "region_id": "r3251"
+ },
+ "r1560gp": {
+  "region_id": "r1560gp",
+  "legacy": {
+   "id": "santhilari-solterra",
+   "name": "Sant Miquel de Solterra",
+   "notes": "Guilleries high ground with extensive pine tracts.",
+   "access": "From Sant Hilari take the Solterra road to the castle ruin; park at the track end.",
+   "popularity": 6
+  }
+ },
+ "r1560gr": {
+  "region_id": "r1560gr"
+ },
+ "r1560gq": {
+  "region_id": "r1560gq"
+ },
+ "r1560gt": {
+  "region_id": "r1560gt"
+ },
+ "r1560gs": {
+  "region_id": "r1560gs"
+ },
+ "r1560gu": {
+  "region_id": "r1560gu"
+ },
+ "r1560gv": {
+  "region_id": "r1560gv"
+ },
+ "r1560gw": {
+  "region_id": "r1560gw",
+  "legacy": {
+   "id": "espinelves-viladrau",
+   "name": "Pinedes del camí de Viladrau",
+   "notes": "Woods straddling the Espinelves-Viladrau boundary; deep and shaded.",
+   "access": "From Espinelves take the Viladrau track; park at the mas gate and continue on foot.",
+   "popularity": 5
+  }
+ },
+ "r1560gx": {
+  "region_id": "r1560gx"
+ },
+ "r1560gz": {
+  "region_id": "r1560gz"
+ },
+ "r1560ha": {
+  "region_id": "r1560ha"
+ },
+ "r1560hb": {
+  "region_id": "r1560hb"
+ },
+ "r1806a": {
+  "region_id": "r1806a"
+ },
+ "r1560hc": {
+  "region_id": "r1560hc"
+ },
+ "r1560hd": {
+  "region_id": "r1560hd"
+ },
+ "r4013l": {
+  "region_id": "r4013l"
+ },
+ "r1560he": {
+  "region_id": "r1560he",
+  "legacy": {
+   "id": "llosses-coma-frecha",
+   "name": "Coma Frecha",
+   "notes": "Hidden valley pine with almost no pressure and reliable moisture in the comas.",
+   "access": "From Les Llosses follow the forest track into the Coma Frecha; park at the track barrier.",
+   "popularity": 3
+  }
+ },
+ "r1560hg": {
+  "region_id": "r1560hg"
+ },
+ "r1560hf": {
+  "region_id": "r1560hf",
+  "legacy": {
+   "id": "sora-obaga-ter",
+   "name": "Obaga del Ter",
+   "notes": "The damp heart of the gorge — long to reach but the mossy Scots pine here holds the best and least-picked rovellons of the sector.",
+   "access": "From Sora take the footpath down towards the Ter and follow the shady bank downstream; there is no parking closer than the village fountain.",
+   "popularity": 4
+  }
+ },
+ "r1560hh": {
+  "region_id": "r1560hh",
+  "legacy": {
+   "id": "santhilari-gutina",
+   "name": "La Gutina",
+   "notes": "Pass forest that catches the morning fog moisture.",
+   "access": "Take the road to the La Gutina pass; park at the pass and enter the pines east.",
+   "popularity": 6
+  }
+ },
+ "r1560hi": {
+  "region_id": "r1560hi"
+ },
+ "r1560hj": {
+  "region_id": "r1560hj"
+ },
+ "r1560hl": {
+  "region_id": "r1560hl"
+ },
+ "r1560hk": {
+  "region_id": "r1560hk"
+ },
+ "r1560hm": {
+  "region_id": "r1560hm",
+  "legacy": {
+   "id": "sora-cingles",
+   "name": "Cingles de Sora",
+   "notes": "Cliff-top pine with sea-of-fog moisture from the gorge, giving strong mid-season flushes but a fair few pickers from Osona.",
+   "access": "From Sora take the track along the top of the Ter gorge cliffs; park at the viewpoint clearing and descend the west-facing paths.",
+   "popularity": 4
+  }
+ },
+ "r1560hn": {
+  "region_id": "r1560hn",
+  "legacy": {
+   "id": "viladrau-santsebastia",
+   "name": "Sant Sebastià de Viladrau",
+   "notes": "The Montseny classic; very popular — be there at dawn.",
+   "access": "From Viladrau take the Sant Sebastià road to the hermitage; park at the spring and walk the north track.",
+   "popularity": 8
+  }
+ },
+ "r1560ho": {
+  "region_id": "r1560ho"
+ },
+ "r0011b": {
+  "region_id": "r0011b"
+ },
+ "r1560hp": {
+  "region_id": "r1560hp"
+ },
+ "r1560hq": {
+  "region_id": "r1560hq"
+ },
+ "r1560hr": {
+  "region_id": "r1560hr"
+ },
+ "r1560hs": {
+  "region_id": "r1560hs"
+ },
+ "r1560hu": {
+  "region_id": "r1560hu"
  },
  "r2997": {
   "region_id": "r2997",
@@ -1534,17 +2359,176 @@
    "popularity": 7
   }
  },
- "r0844a": {
-  "region_id": "r0844a"
+ "r1560hv": {
+  "region_id": "r1560hv"
  },
- "r0844b": {
-  "region_id": "r0844b"
+ "r1560hw": {
+  "region_id": "r1560hw"
+ },
+ "r0919b": {
+  "region_id": "r0919b"
+ },
+ "r1560hx": {
+  "region_id": "r1560hx"
+ },
+ "r4013n": {
+  "region_id": "r4013n"
+ },
+ "r1560hz": {
+  "region_id": "r1560hz"
+ },
+ "r1560ia": {
+  "region_id": "r1560ia"
+ },
+ "r1560ib": {
+  "region_id": "r1560ib"
+ },
+ "r1560ic": {
+  "region_id": "r1560ic"
+ },
+ "r1176b": {
+  "region_id": "r1176b"
+ },
+ "r1560if": {
+  "region_id": "r1560if",
+  "legacy": {
+   "id": "tavertet-cingle",
+   "name": "Obaga del Cingle de Tavertet",
+   "notes": "North side of the cliff; the valley humidity climbs up at dusk.",
+   "access": "Take the road toward L'Avenc and park at the bend; the obaga drops north.",
+   "popularity": 4
+  }
+ },
+ "r1560ig": {
+  "region_id": "r1560ig"
+ },
+ "r1806c": {
+  "region_id": "r1806c"
+ },
+ "r1560ih": {
+  "region_id": "r1560ih"
+ },
+ "r1560ii": {
+  "region_id": "r1560ii",
+  "legacy": {
+   "id": "santhilari-serrat-cau",
+   "name": "Serrat del Cau",
+   "notes": "Quiet Scots pine belt a long walk from the sanctuary crowds, productive for those who know the fire-breaks.",
+   "access": "From Sant Hilari take the track toward can Cassasses from the reservoir road; park at the gate on the serrat's south side.",
+   "popularity": 3
+  }
+ },
+ "r1560ij": {
+  "region_id": "r1560ij"
+ },
+ "r1560ik": {
+  "region_id": "r1560ik"
+ },
+ "r1560im": {
+  "region_id": "r1560im"
+ },
+ "r1560il": {
+  "region_id": "r1560il"
+ },
+ "r1560in": {
+  "region_id": "r1560in"
+ },
+ "r4013o": {
+  "region_id": "r4013o"
+ },
+ "r1560io": {
+  "region_id": "r1560io"
+ },
+ "r3973a": {
+  "region_id": "r3973a"
+ },
+ "r1560ip": {
+  "region_id": "r1560ip",
+  "legacy": {
+   "id": "santhilari-osor",
+   "name": "Vall d'Osor",
+   "notes": "West slopes above the Osor reservoir; humid and green.",
+   "access": "From Sant Hilari take the Osor road; park at the reservoir bridge and climb west.",
+   "popularity": 5
+  }
+ },
+ "r1560iq": {
+  "region_id": "r1560iq"
+ },
+ "r1560ir": {
+  "region_id": "r1560ir"
+ },
+ "r1560is": {
+  "region_id": "r1560is",
+  "legacy": {
+   "id": "falgars-sant-miquel",
+   "name": "Sant Miquel de Falgars",
+   "notes": "Easy access means weekend families pick the near woods, but the northern band behind the sanctuary holds up.",
+   "access": "From Les Preses take the road up to Sant Miquel de Falgars; park at the sanctuary car park and walk the pines on either side.",
+   "popularity": 4
+  }
  },
  "r4165": {
   "region_id": "r4165"
  },
+ "r1560it": {
+  "region_id": "r1560it"
+ },
+ "r1560iu": {
+  "region_id": "r1560iu"
+ },
+ "r1560iv": {
+  "region_id": "r1560iv",
+  "legacy": {
+   "id": "vidra-ciuret",
+   "name": "Obaga de Ciuret",
+   "notes": "Border-of-three-comarques forest; dense, quiet, and famously productive.",
+   "access": "From Vidrà take the road to Ciuret; park at the hamlet and follow the track north into the pine belt.",
+   "popularity": 4
+  }
+ },
+ "r0202c": {
+  "region_id": "r0202c"
+ },
+ "r0202d": {
+  "region_id": "r0202d",
+  "legacy": {
+   "id": "santfruitos-fonollosa",
+   "name": "Obaga del camí de Fonollosa",
+   "notes": "Low Aleppo stands; early and late-season trickles.",
+   "access": "From Sant Fruitós take the Fonollosa road; park at the track fork after 2 km.",
+   "popularity": 4
+  }
+ },
+ "r0278d": {
+  "region_id": "r0278d"
+ },
  "r1329": {
   "region_id": "r1329"
+ },
+ "r1923a": {
+  "region_id": "r1923a"
+ },
+ "r1238a": {
+  "region_id": "r1238a"
+ },
+ "r0278e": {
+  "region_id": "r0278e"
+ },
+ "r0202e": {
+  "region_id": "r0202e"
+ },
+ "r0202f": {
+  "region_id": "r0202f"
+ },
+ "r1923b": {
+  "region_id": "r1923b"
+ },
+ "r0278f": {
+  "region_id": "r0278f"
+ },
+ "r0202g": {
+  "region_id": "r0202g"
  },
  "r3173": {
   "region_id": "r3173"
@@ -1552,14 +2536,55 @@
  "r2994": {
   "region_id": "r2994"
  },
+ "r1238b": {
+  "region_id": "r1238b"
+ },
+ "r3098a": {
+  "region_id": "r3098a"
+ },
+ "r3996a": {
+  "region_id": "r3996a",
+  "legacy": {
+   "id": "montferrer-castellbo",
+   "name": "Obaga de la Vall de Castellbò",
+   "notes": "Border valley, damp and rarely crowded.",
+   "access": "From La Seu take the Castellbò road to the village; park at the castle ruin and follow the north track.",
+   "popularity": 3
+  }
+ },
  "r0667": {
   "region_id": "r0667"
+ },
+ "r0007a": {
+  "region_id": "r0007a"
  },
  "r1117": {
   "region_id": "r1117"
  },
- "r2121a": {
-  "region_id": "r2121a"
+ "r1066a": {
+  "region_id": "r1066a",
+  "legacy": {
+   "id": "meranges-obaga",
+   "name": "Obaga de Meranges",
+   "notes": "Border-valley black pine; quiet and cold, later fruiting than the Cerdanya floor.",
+   "access": "From Meranges follow the road toward the Engorgs valley; park where it turns to track and walk into the north-east pines.",
+   "popularity": 4
+  }
+ },
+ "r1066b": {
+  "region_id": "r1066b"
+ },
+ "r0007b": {
+  "region_id": "r0007b"
+ },
+ "r3996b": {
+  "region_id": "r3996b"
+ },
+ "r3098b": {
+  "region_id": "r3098b"
+ },
+ "r1066c": {
+  "region_id": "r1066c"
  },
  "r1074": {
   "region_id": "r1074",
@@ -1571,34 +2596,34 @@
    "popularity": 4
   }
  },
- "r0776": {
-  "region_id": "r0776",
+ "r1850b": {
+  "region_id": "r1850b",
   "legacy": {
-   "id": "horta-ports-n",
-   "name": "Obaga dels Ports",
-   "notes": "Els Ports north faces; rovellons with mountain sage.",
-   "access": "From Horta take the road toward Els Ports; park at the barrier before the park boundary and climb north.",
-   "popularity": 4
-  }
- },
- "r0327": {
-  "region_id": "r0327",
-  "legacy": {
-   "id": "odena-corona",
-   "name": "Turó de la Corona",
-   "notes": "West-facing slopes drain fast, so pick here only in the days right after rain while the shaded hollows are still damp.",
-   "access": "From Òdena take the track up towards the Turó de la Corona behind the industrial estate; park at the wide shoulder where the pines start.",
+   "id": "santvicenc-riera",
+   "name": "Riera de Castellet",
+   "notes": "Riverside pine that only produces after very wet spells and sees constant local traffic.",
+   "access": "From Sant Vicenç de Castellet take the path up the riera from the station; park at the bridge.",
    "popularity": 5
   }
+ },
+ "r0356a": {
+  "region_id": "r0356a"
  },
  "r3483": {
   "region_id": "r3483"
  },
- "r2121c": {
-  "region_id": "r2121c"
+ "r2838a": {
+  "region_id": "r2838a"
  },
- "r2121d": {
-  "region_id": "r2121d"
+ "r0095a": {
+  "region_id": "r0095a",
+  "legacy": {
+   "id": "usall-serrat",
+   "name": "Serrat d'Usall",
+   "notes": "A west-facing serrat that catches the afternoon sun, giving good early-season flushes when late September is wet.",
+   "access": "From Banyoles take the GI-513 toward Usall and park at the bend where the tarmac becomes a forest track.",
+   "popularity": 5
+  }
  },
  "r3118": {
   "region_id": "r3118",
@@ -1610,40 +2635,114 @@
    "popularity": 6
   }
  },
+ "r0994a": {
+  "region_id": "r0994a",
+  "legacy": {
+   "id": "queralbs-freser",
+   "name": "Obaga del Freser",
+   "notes": "High valley of the Freser; peaks around late October.",
+   "access": "From Queralbs follow the Núria road to the first tunnel; park at the lay-by and take the west path.",
+   "popularity": 4
+  }
+ },
+ "r0095b": {
+  "region_id": "r0095b",
+  "legacy": {
+   "id": "usall-costa-mata",
+   "name": "Costa de Mata",
+   "notes": "Low rolling pine over clay that goes quickly in dry years and is often better in the second flush of November.",
+   "access": "From Usall take the rural lane toward the Mata farmhouses; park at the track gate by the sheepfold.",
+   "popularity": 4
+  }
+ },
+ "r2838b": {
+  "region_id": "r2838b"
+ },
  "r3095": {
   "region_id": "r3095"
  },
  "r1028": {
   "region_id": "r1028"
  },
+ "r3868a": {
+  "region_id": "r3868a",
+  "legacy": {
+   "id": "vallfogona-nord",
+   "name": "Obaga de Vallfogona",
+   "notes": "Rolling farmland-pine mosaic; check the north hedge lines.",
+   "access": "From Vallfogona take the track behind the church northwards; park at the first gate.",
+   "popularity": 4
+  }
+ },
+ "r0356b": {
+  "region_id": "r0356b"
+ },
+ "r3868b": {
+  "region_id": "r3868b",
+  "legacy": {
+   "id": "sja-surroca",
+   "name": "Pinedes de Surroca",
+   "notes": "East-facing terraces warm up early in the season.",
+   "access": "From Sant Joan take the Surroca road; park at the old mines and walk east.",
+   "popularity": 4
+  }
+ },
  "r1075": {
   "region_id": "r1075"
  },
- "r0331a": {
-  "region_id": "r0331a"
- },
- "r2306": {
-  "region_id": "r2306",
+ "r3868c": {
+  "region_id": "r3868c",
   "legacy": {
-   "id": "poboleda-coma-fosca",
-   "name": "Coma Fosca",
-   "notes": "Shaded gullies that keep moisture through dry spells; the rovellons arrive later but fatter than on the solana.",
-   "access": "From Poboleda take the trail signed to the Montsant springs and leave the path at the second gully; park at the edge of the village.",
+   "id": "santsegimon-serrat-balma",
+   "name": "Serrat de la Balma",
+   "notes": "Dense high pine that keeps a late crop when the valley woods have already been picked through.",
+   "access": "From the Sant Segimon sanctuary take the forest track north-west to the Serrat de la Balma; park at the track gate below the plateau.",
    "popularity": 4
   }
  },
- "r1500": {
-  "region_id": "r1500"
+ "r2440g": {
+  "region_id": "r2440g"
  },
- "r0331d": {
-  "region_id": "r0331d",
+ "r3836a": {
+  "region_id": "r3836a"
+ },
+ "r3836b": {
+  "region_id": "r3836b"
+ },
+ "r2260b": {
+  "region_id": "r2260b"
+ },
+ "r0612d": {
+  "region_id": "r0612d"
+ },
+ "r2440h": {
+  "region_id": "r2440h"
+ },
+ "r2440i": {
+  "region_id": "r2440i",
   "legacy": {
-   "id": "stmarti-serra-gaia",
-   "name": "Serra del Gaià",
-   "notes": "A good upper-Gaià pine belt that keeps fruiting through November in wet years.",
-   "access": "From Sant Martí Sarroca take the road towards Pontons and turn right onto the track above the vineyards; park at the clearing at the top of the bend.",
-   "popularity": 4
+   "id": "les-pineda",
+   "name": "Pineda de Les",
+   "notes": "Cool pinewood that keeps the dew until mid-morning after the Garona fog lifts, so it fruits early in the season.",
+   "access": "From Les take the signed track above the village that climbs the flank north of the N-230; park at the clearing by the water tank at the edge of the pines.",
+   "popularity": 3
   }
+ },
+ "r0612f": {
+  "region_id": "r0612f",
+  "legacy": {
+   "id": "tivissa-llaberia-sud",
+   "name": "Serra de Llaberia sud",
+   "notes": "Cool dense pinewood that holds moisture from the first storms; expect a long walk and almost no other pickers midweek.",
+   "access": "From Tivissa take the road toward Pradell de la Teixeta and park where the track to the antennas leaves the pass; follow the path into the pines.",
+   "popularity": 3
+  }
+ },
+ "r3868d": {
+  "region_id": "r3868d"
+ },
+ "r2440j": {
+  "region_id": "r2440j"
  },
  "r1515": {
   "region_id": "r1515"
@@ -1651,24 +2750,11 @@
  "r2069": {
   "region_id": "r2069"
  },
- "r2236a": {
-  "region_id": "r2236a",
-  "legacy": {
-   "id": "sarga-alsamora",
-   "name": "Obaga d'Alsamora",
-   "notes": "Terraced-world hamlet above the Mont-rebei gorge; quiet and damp.",
-   "access": "From Alsamora hamlet take the track north-west; park at the last house and climb the hollow.",
-   "popularity": 3
-  }
- },
  "r3228": {
   "region_id": "r3228"
  },
  "r1232": {
   "region_id": "r1232"
- },
- "r2236d": {
-  "region_id": "r2236d"
  },
  "r0376": {
   "region_id": "r0376"
@@ -1676,43 +2762,11 @@
  "r1659": {
   "region_id": "r1659"
  },
- "r2236e": {
-  "region_id": "r2236e"
- },
- "r2236f": {
-  "region_id": "r2236f",
-  "legacy": {
-   "id": "gavet-solana",
-   "name": "Solà de Gavet",
-   "notes": "Thin, open cover that dries quickly — an early-season option while the higher zones are still parched.",
-   "access": "From Gavet take the track behind the village church onto the sunny ridge; park where the track narrows at the pines.",
-   "popularity": 3
-  }
- },
  "r0064": {
   "region_id": "r0064"
  },
  "r4024": {
   "region_id": "r4024"
- },
- "r2236i": {
-  "region_id": "r2236i"
- },
- "r2236j": {
-  "region_id": "r2236j"
- },
- "r0846a": {
-  "region_id": "r0846a",
-  "legacy": {
-   "id": "ribaroja-serra",
-   "name": "Serra de la Torre",
-   "notes": "Dry south-west faces need storm rain, but when it comes the rovellons appear in tight rings and go fast.",
-   "access": "From Riba-roja d'Ebre take the track that climbs the serra north-west; park at the bend below the tower ruin.",
-   "popularity": 2
-  }
- },
- "r2236k": {
-  "region_id": "r2236k"
  },
  "r3655": {
   "region_id": "r3655"
@@ -1733,26 +2787,14 @@
  "r3425": {
   "region_id": "r3425"
  },
- "r2236o": {
-  "region_id": "r2236o"
- },
- "r4011a": {
-  "region_id": "r4011a"
- },
  "r3660": {
   "region_id": "r3660"
- },
- "r2236p": {
-  "region_id": "r2236p"
  },
  "r3272": {
   "region_id": "r3272"
  },
  "r2648": {
   "region_id": "r2648"
- },
- "r0193a": {
-  "region_id": "r0193a"
  },
  "r1322": {
   "region_id": "r1322"
@@ -1763,28 +2805,8 @@
  "r0075": {
   "region_id": "r0075"
  },
- "r0984": {
-  "region_id": "r0984",
-  "legacy": {
-   "id": "vallter-bacives",
-   "name": "Els Bacives",
-   "notes": "Resort-side black pine with steady weekend pressure; the far side of the ridge is quieter and fruits later.",
-   "access": "From Setcases take the mountain road up to the Vallter 2000 resort; park at the base station and walk the slopes below the Bacives ridge.",
-   "popularity": 6
-  }
- },
  "r1841": {
   "region_id": "r1841"
- },
- "r1414": {
-  "region_id": "r1414",
-  "legacy": {
-   "id": "artiga-caldes",
-   "name": "Pòrt de Caldes",
-   "notes": "Cold, late ground where rovellons flush from mid-October, and the long walk-in keeps pressure minimal.",
-   "access": "From Era Artiga de Lin follow the Colomèrs trail up the Valarties to the Pòrt de Caldes springs; there is no vehicle access beyond the Artiga.",
-   "popularity": 2
-  }
  },
  "r4019": {
   "region_id": "r4019"
@@ -1792,14 +2814,8 @@
  "r1812": {
   "region_id": "r1812"
  },
- "r0248a": {
-  "region_id": "r0248a"
- },
  "r3073": {
   "region_id": "r3073"
- },
- "r2035a": {
-  "region_id": "r2035a"
  },
  "r3292": {
   "region_id": "r3292",
@@ -1811,62 +2827,17 @@
    "popularity": 5
   }
  },
- "r1560n": {
-  "region_id": "r1560n",
-  "legacy": {
-   "id": "peralada-mollo",
-   "name": "Serrat del Molló",
-   "notes": "Ordinary pine stands that only fruit well after steady September rain, with light local picking pressure.",
-   "access": "From Peralada take the GIV-602 toward Vilabertran and turn onto the serrat track; park at the gate below the ridge.",
-   "popularity": 3
-  }
- },
  "r1724": {
   "region_id": "r1724"
- },
- "r4013a": {
-  "region_id": "r4013a",
-  "legacy": {
-   "id": "organya-nord",
-   "name": "Obaga d'Organyà",
-   "notes": "Peramola range pines; needs a wet autumn to deliver.",
-   "access": "From Organyà take the road toward Fígols; park at the first hairpin and climb north.",
-   "popularity": 4
-  }
- },
- "r1560w": {
-  "region_id": "r1560w",
-  "legacy": {
-   "id": "rupit-pruit",
-   "name": "Obaga de Pruit",
-   "notes": "Rupit itself is picked over; the Pruit side is quieter.",
-   "access": "From Rupit take the Pruit road to the hamlet; park at the church and follow the track north-west.",
-   "popularity": 4
-  }
- },
- "r4013b": {
-  "region_id": "r4013b"
  },
  "r0065": {
   "region_id": "r0065"
  },
- "r1560ar": {
-  "region_id": "r1560ar"
- },
- "r4013c": {
-  "region_id": "r4013c"
- },
  "r2596": {
   "region_id": "r2596"
  },
- "r0599a": {
-  "region_id": "r0599a"
- },
  "r0534": {
   "region_id": "r0534"
- },
- "r1176": {
-  "region_id": "r1176"
  },
  "r2860": {
   "region_id": "r2860"
@@ -1876,9 +2847,6 @@
  },
  "r3065": {
   "region_id": "r3065"
- },
- "r0278a": {
-  "region_id": "r0278a"
  },
  "r1290": {
   "region_id": "r1290",
@@ -1900,31 +2868,8 @@
    "popularity": 5
   }
  },
- "r3973": {
-  "region_id": "r3973",
-  "legacy": {
-   "id": "coma-canalda",
-   "name": "Canalda",
-   "notes": "The famous Canalda woods; big rings but expect company.",
-   "access": "From La Coma take the road to Canalda; park at the sanctuary and walk into the pines.",
-   "popularity": 6
-  }
- },
- "r0202b": {
-  "region_id": "r0202b",
-  "legacy": {
-   "id": "mura-obaga-vila",
-   "name": "Obaga de Mura",
-   "notes": "Stream-side Aleppo belt; fruits after any decent September storm.",
-   "access": "From Mura's plaça take the cement track north; park at the bend by the stream and climb into the pines.",
-   "popularity": 6
-  }
- },
  "r2125": {
   "region_id": "r2125"
- },
- "r0278b": {
-  "region_id": "r0278b"
  },
  "r3638": {
   "region_id": "r3638"
@@ -1963,24 +2908,11 @@
  "r4082": {
   "region_id": "r4082"
  },
- "r0612b": {
-  "region_id": "r0612b",
-  "legacy": {
-   "id": "tivissa-llaberia-sud",
-   "name": "Serra de Llaberia sud",
-   "notes": "Cool dense pinewood that holds moisture from the first storms; expect a long walk and almost no other pickers midweek.",
-   "access": "From Tivissa take the road toward Pradell de la Teixeta and park where the track to the antennas leaves the pass; follow the path into the pines.",
-   "popularity": 3
-  }
- },
  "r3409": {
   "region_id": "r3409"
  },
  "r0583": {
   "region_id": "r0583"
- },
- "r0633a": {
-  "region_id": "r0633a"
  },
  "r1737": {
   "region_id": "r1737",
@@ -1995,14 +2927,8 @@
  "r1346": {
   "region_id": "r1346"
  },
- "r0633b": {
-  "region_id": "r0633b"
- },
  "r4044": {
   "region_id": "r4044"
- },
- "r2356a": {
-  "region_id": "r2356a"
  },
  "r2936": {
   "region_id": "r2936"
@@ -2016,16 +2942,6 @@
  "r3545": {
   "region_id": "r3545"
  },
- "r0633d": {
-  "region_id": "r0633d",
-  "legacy": {
-   "id": "montsant-figuera",
-   "name": "Costa de la Figuera",
-   "notes": "South rim above the Ebro; earliest of the Montsant sectors.",
-   "access": "From La Figuera take the track toward the Montsant cliff; park at the vineyard shed.",
-   "popularity": 4
-  }
- },
  "r3475": {
   "region_id": "r3475"
  },
@@ -2034,9 +2950,6 @@
  },
  "r2307": {
   "region_id": "r2307"
- },
- "r0965": {
-  "region_id": "r0965"
  },
  "r0200": {
   "region_id": "r0200"
@@ -2048,19 +2961,6 @@
    "name": "Serra de Busa",
    "notes": "Cliff-top plateau; the damp hollows produce after light rains.",
    "access": "From Sant Llorenç de Morunys take the Busa road to the Hostal de Busa; park at the chapel and walk the serra.",
-   "popularity": 3
-  }
- },
- "r0357b": {
-  "region_id": "r0357b"
- },
- "r2140b": {
-  "region_id": "r2140b",
-  "legacy": {
-   "id": "meia-santamaria",
-   "name": "Costes de Santa Maria de Meià",
-   "notes": "Karstic, fast-draining ground that flushes briefly but heavily after the autumn storms.",
-   "access": "From Vilanova de Meià take the road towards Santa Maria de Meià; park at the old canonical house and climb onto the south-east slopes.",
    "popularity": 3
   }
  },
@@ -2079,31 +2979,11 @@
  "r0024": {
   "region_id": "r0024"
  },
- "r1541h": {
-  "region_id": "r1541h",
-  "legacy": {
-   "id": "celra-comes-altes",
-   "name": "Comes Altes",
-   "notes": "Open stands that dry quickly, productive only when the tramuntana lets the autumn rains settle in.",
-   "access": "From Celrà take the GI-632 toward Juià and turn onto the track at the quarry bend; park at the quarry apron.",
-   "popularity": 5
-  }
- },
  "r4067": {
   "region_id": "r4067"
  },
  "r1458": {
   "region_id": "r1458"
- },
- "r2247a": {
-  "region_id": "r2247a",
-  "legacy": {
-   "id": "cornudella-siurana",
-   "name": "Siurana Slopes",
-   "notes": "Popular weekend country under Siurana's cliffs, so go on a weekday if you want the shady north benches.",
-   "access": "From Cornudella de Montsant take the road up to Siurana; park at the reservoir dam and climb the north track.",
-   "popularity": 5
-  }
  },
  "r4158": {
   "region_id": "r4158"
@@ -2113,22 +2993,6 @@
  },
  "r1003": {
   "region_id": "r1003"
- },
- "r1584": {
-  "region_id": "r1584"
- },
- "r3941a": {
-  "region_id": "r3941a"
- },
- "r3941b": {
-  "region_id": "r3941b",
-  "legacy": {
-   "id": "tuixen-serra-mentid",
-   "name": "Serra de Mentid",
-   "notes": "Local families work these slopes hard at weekends, so an early start matters in wet years.",
-   "access": "From Tuixén take the forest track along the Serra de Mentid; park at the col above the village.",
-   "popularity": 3
-  }
  },
  "r0727": {
   "region_id": "r0727"
@@ -2146,19 +3010,6 @@
  "r1014": {
   "region_id": "r1014"
  },
- "r0631": {
-  "region_id": "r0631"
- },
- "r3941d": {
-  "region_id": "r3941d",
-  "legacy": {
-   "id": "montella-cadi",
-   "name": "Obaga de Montellà",
-   "notes": "First Cadí north faces above the Cerdanya floor; mixes Scots and black pine as it climbs.",
-   "access": "From Montellà take the track toward the Cadí; park at the last mas and climb north.",
-   "popularity": 4
-  }
- },
  "r3931": {
   "region_id": "r3931",
   "legacy": {
@@ -2169,12 +3020,6 @@
    "popularity": 3
   }
  },
- "r0565a": {
-  "region_id": "r0565a"
- },
- "r2442a": {
-  "region_id": "r2442a"
- },
  "r3882": {
   "region_id": "r3882"
  },
@@ -2184,34 +3029,11 @@
  "r3366": {
   "region_id": "r3366"
  },
- "r4059": {
-  "region_id": "r4059",
-  "legacy": {
-   "id": "prades-albarca",
-   "name": "Pinedes d'Albarca",
-   "notes": "North-west benches near the abandoned village; strong habitat, low pressure.",
-   "access": "From the Prades-Albarca road park at the hamlet; tracks climb north-west.",
-   "popularity": 5
-  }
- },
- "r2442b": {
-  "region_id": "r2442b"
- },
  "r3860": {
   "region_id": "r3860"
  },
  "r3440": {
   "region_id": "r3440"
- },
- "r1853": {
-  "region_id": "r1853",
-  "legacy": {
-   "id": "vilada-catllaras-obaga",
-   "name": "Obaga de Catllaràs",
-   "notes": "The classic Catllaràs obaga holds humidity long after rain but is a fixture on weekend Berga circuits — go at first light.",
-   "access": "From Vilada take the BV-4031 towards La Pobla de Lillet and then the Catllaràs track on the right; park at the old fountain bend.",
-   "popularity": 5
-  }
  },
  "r3398": {
   "region_id": "r3398"
@@ -2222,23 +3044,14 @@
  "r0085": {
   "region_id": "r0085"
  },
- "r0536b": {
-  "region_id": "r0536b"
- },
  "r0043": {
   "region_id": "r0043"
- },
- "r0536c": {
-  "region_id": "r0536c"
  },
  "r0404": {
   "region_id": "r0404"
  },
  "r0350": {
   "region_id": "r0350"
- },
- "r2088": {
-  "region_id": "r2088"
  },
  "r4057": {
   "region_id": "r4057",
@@ -2300,16 +3113,6 @@
    "popularity": 2
   }
  },
- "r3964": {
-  "region_id": "r3964",
-  "legacy": {
-   "id": "vansa-tuixen",
-   "name": "Costa de Tuixén",
-   "notes": "West-facing benches above Tuixén; the afternoon-warm option of the valley.",
-   "access": "From Tuixén take the Josa road out of the village; park at the first bend and climb west.",
-   "popularity": 3
-  }
- },
  "r0190": {
   "region_id": "r0190"
  },
@@ -2366,9 +3169,6 @@
  "r2734": {
   "region_id": "r2734"
  },
- "r0188": {
-  "region_id": "r0188"
- },
  "r1736": {
   "region_id": "r1736",
   "legacy": {
@@ -2392,9 +3192,6 @@
    "popularity": 4
   }
  },
- "r1554": {
-  "region_id": "r1554"
- },
  "r1658": {
   "region_id": "r1658",
   "legacy": {
@@ -2411,9 +3208,6 @@
  "r3560": {
   "region_id": "r3560"
  },
- "r0285": {
-  "region_id": "r0285"
- },
  "r2688": {
   "region_id": "r2688"
  },
@@ -2425,9 +3219,6 @@
  },
  "r3803": {
   "region_id": "r3803"
- },
- "r3916": {
-  "region_id": "r3916"
  },
  "r1052": {
   "region_id": "r1052"
@@ -2470,16 +3261,6 @@
  },
  "r3910": {
   "region_id": "r3910"
- },
- "r3017": {
-  "region_id": "r3017",
-  "legacy": {
-   "id": "tagamanent-cim",
-   "name": "El Tagamanent",
-   "notes": "Montseny southern gateway; quiet on weekdays.",
-   "access": "From Tagamanent village take the hill road; park below the church on the summit.",
-   "popularity": 3
-  }
  },
  "r0237": {
   "region_id": "r0237"
@@ -2537,16 +3318,6 @@
    "popularity": 3
   }
  },
- "r1058": {
-  "region_id": "r1058",
-  "legacy": {
-   "id": "baga-coll-de-pal",
-   "name": "Coll de Pal — obaga del Cadí",
-   "notes": "High belt that switches on after the first cold nights; easy roadside access.",
-   "access": "Park at the Coll de Pal pass; the black-pine belt spreads below the road on the Cadí side.",
-   "popularity": 6
-  }
- },
  "r1283": {
   "region_id": "r1283"
  },
@@ -2577,9 +3348,6 @@
  "r3214": {
   "region_id": "r3214"
  },
- "r0408": {
-  "region_id": "r0408"
- },
  "r4116": {
   "region_id": "r4116"
  },
@@ -2603,16 +3371,6 @@
  },
  "r3051": {
   "region_id": "r3051"
- },
- "r1136": {
-  "region_id": "r1136",
-  "legacy": {
-   "id": "gosol-padro",
-   "name": "Serra de Padro (oest)",
-   "notes": "Long west flank with almost no competition on weekdays.",
-   "access": "Take the track west of Gósol toward the Padro ridge; park where the track forks at the coll.",
-   "popularity": 4
-  }
  },
  "r3081": {
   "region_id": "r3081"
@@ -2705,11 +3463,33 @@
  "r0513": {
   "region_id": "r0513"
  },
+ "r0633a": {
+  "region_id": "r0633a"
+ },
+ "r0612a": {
+  "region_id": "r0612a",
+  "legacy": {
+   "id": "falset-serra",
+   "name": "Serra de Falset",
+   "notes": "Close enough to town for after-work picking, so the first flush after storms disappears within days.",
+   "access": "From Falset take the track that climbs the serra behind the cooperative; park at the water tank on the crest.",
+   "popularity": 4
+  }
+ },
+ "r0612b": {
+  "region_id": "r0612b"
+ },
  "r2147": {
   "region_id": "r2147"
  },
  "r0179": {
   "region_id": "r0179"
+ },
+ "r0633b": {
+  "region_id": "r0633b"
+ },
+ "r2356a": {
+  "region_id": "r2356a"
  },
  "r2042": {
   "region_id": "r2042",
@@ -2724,17 +3504,58 @@
  "r0972": {
   "region_id": "r0972"
  },
+ "r0633e": {
+  "region_id": "r0633e"
+ },
  "r2437": {
   "region_id": "r2437"
  },
  "r3040": {
   "region_id": "r3040"
  },
+ "r2356c": {
+  "region_id": "r2356c"
+ },
  "r3495": {
   "region_id": "r3495"
  },
+ "r0633f": {
+  "region_id": "r0633f"
+ },
+ "r0633h": {
+  "region_id": "r0633h",
+  "legacy": {
+   "id": "montsant-figuera",
+   "name": "Costa de la Figuera",
+   "notes": "South rim above the Ebro; earliest of the Montsant sectors.",
+   "access": "From La Figuera take the track toward the Montsant cliff; park at the vineyard shed.",
+   "popularity": 4
+  }
+ },
+ "r2140b": {
+  "region_id": "r2140b"
+ },
+ "r1551c": {
+  "region_id": "r1551c"
+ },
+ "r0965a": {
+  "region_id": "r0965a"
+ },
  "r1838": {
   "region_id": "r1838"
+ },
+ "r2140c": {
+  "region_id": "r2140c",
+  "legacy": {
+   "id": "meia-santamaria",
+   "name": "Costes de Santa Maria de Meià",
+   "notes": "Karstic, fast-draining ground that flushes briefly but heavily after the autumn storms.",
+   "access": "From Vilanova de Meià take the road towards Santa Maria de Meià; park at the old canonical house and climb onto the south-east slopes.",
+   "popularity": 3
+  }
+ },
+ "r0965b": {
+  "region_id": "r0965b"
  },
  "r0698": {
   "region_id": "r0698",
@@ -2752,6 +3573,12 @@
  "r3056": {
   "region_id": "r3056"
  },
+ "r2140d": {
+  "region_id": "r2140d"
+ },
+ "r1541f": {
+  "region_id": "r1541f"
+ },
  "r2397": {
   "region_id": "r2397"
  },
@@ -2766,6 +3593,9 @@
  },
  "r2779": {
   "region_id": "r2779"
+ },
+ "r1541o": {
+  "region_id": "r1541o"
  },
  "r3071": {
   "region_id": "r3071"
@@ -2796,6 +3626,16 @@
  "r3210": {
   "region_id": "r3210"
  },
+ "r1271a": {
+  "region_id": "r1271a",
+  "legacy": {
+   "id": "peramola-obaga",
+   "name": "Obaga de Peramola",
+   "notes": "Dissected terrain with very low picker pressure.",
+   "access": "From Peramola take the track toward Tragó; park at the pass and walk west.",
+   "popularity": 3
+  }
+ },
  "r1093": {
   "region_id": "r1093"
  },
@@ -2815,6 +3655,16 @@
  "r4049": {
   "region_id": "r4049"
  },
+ "r2247a": {
+  "region_id": "r2247a",
+  "legacy": {
+   "id": "cornudella-siurana",
+   "name": "Siurana Slopes",
+   "notes": "Popular weekend country under Siurana's cliffs, so go on a weekday if you want the shady north benches.",
+   "access": "From Cornudella de Montsant take the road up to Siurana; park at the reservoir dam and climb the north track.",
+   "popularity": 5
+  }
+ },
  "r0999": {
   "region_id": "r0999",
   "legacy": {
@@ -2831,6 +3681,9 @@
  "r0568": {
   "region_id": "r0568"
  },
+ "r2247b": {
+  "region_id": "r2247b"
+ },
  "r1167": {
   "region_id": "r1167"
  },
@@ -2842,6 +3695,12 @@
  },
  "r3875": {
   "region_id": "r3875"
+ },
+ "r1584a": {
+  "region_id": "r1584a"
+ },
+ "r1584b": {
+  "region_id": "r1584b"
  },
  "r4032": {
   "region_id": "r4032"
@@ -2855,14 +3714,46 @@
  "r1512": {
   "region_id": "r1512"
  },
+ "r3941c": {
+  "region_id": "r3941c"
+ },
+ "r3941e": {
+  "region_id": "r3941e",
+  "legacy": {
+   "id": "tuixen-serra-mentid",
+   "name": "Serra de Mentid",
+   "notes": "Local families work these slopes hard at weekends, so an early start matters in wet years.",
+   "access": "From Tuixén take the forest track along the Serra de Mentid; park at the col above the village.",
+   "popularity": 3
+  }
+ },
  "r3963": {
   "region_id": "r3963"
+ },
+ "r2442a": {
+  "region_id": "r2442a"
+ },
+ "r0565a": {
+  "region_id": "r0565a"
+ },
+ "r3941f": {
+  "region_id": "r3941f",
+  "legacy": {
+   "id": "montella-cadi",
+   "name": "Obaga de Montellà",
+   "notes": "First Cadí north faces above the Cerdanya floor; mixes Scots and black pine as it climbs.",
+   "access": "From Montellà take the track toward the Cadí; park at the last mas and climb north.",
+   "popularity": 4
+  }
  },
  "r3122": {
   "region_id": "r3122"
  },
  "r3428": {
   "region_id": "r3428"
+ },
+ "r3941h": {
+  "region_id": "r3941h"
  },
  "r3269": {
   "region_id": "r3269"
@@ -2886,8 +3777,27 @@
  "r1437": {
   "region_id": "r1437"
  },
+ "r4059a": {
+  "region_id": "r4059a",
+  "legacy": {
+   "id": "prades-albarca",
+   "name": "Pinedes d'Albarca",
+   "notes": "North-west benches near the abandoned village; strong habitat, low pressure.",
+   "access": "From the Prades-Albarca road park at the hamlet; tracks climb north-west.",
+   "popularity": 5
+  }
+ },
+ "r0631b": {
+  "region_id": "r0631b"
+ },
  "r2678": {
   "region_id": "r2678"
+ },
+ "r0565b": {
+  "region_id": "r0565b"
+ },
+ "r2442b": {
+  "region_id": "r2442b"
  },
  "r1079": {
   "region_id": "r1079"
@@ -2905,6 +3815,9 @@
    "popularity": 7
   }
  },
+ "r2442c": {
+  "region_id": "r2442c"
+ },
  "r4096": {
   "region_id": "r4096"
  },
@@ -2913,6 +3826,16 @@
  },
  "r0026": {
   "region_id": "r0026"
+ },
+ "r0565d": {
+  "region_id": "r0565d",
+  "legacy": {
+   "id": "colldejou-llaberia",
+   "name": "Llaberia de Colldejou",
+   "notes": "The high shady side of Llaberia keeps damp after sea storms and is barely picked outside the village.",
+   "access": "From Colldejou take the track that climbs into the Llaberia range; park at the fold where the pines close in.",
+   "popularity": 3
+  }
  },
  "r2981": {
   "region_id": "r2981",
@@ -2924,6 +3847,9 @@
    "popularity": 7
   }
  },
+ "r2442d": {
+  "region_id": "r2442d"
+ },
  "r2280": {
   "region_id": "r2280",
   "legacy": {
@@ -2934,8 +3860,20 @@
    "popularity": 2
   }
  },
+ "r1853a": {
+  "region_id": "r1853a"
+ },
  "r3792": {
   "region_id": "r3792"
+ },
+ "r4059b": {
+  "region_id": "r4059b"
+ },
+ "r0536a": {
+  "region_id": "r0536a"
+ },
+ "r0184a": {
+  "region_id": "r0184a"
  },
  "r2884": {
   "region_id": "r2884"
@@ -2958,14 +3896,76 @@
  "r1266": {
   "region_id": "r1266"
  },
+ "r0536b": {
+  "region_id": "r0536b"
+ },
+ "r0184e": {
+  "region_id": "r0184e"
+ },
+ "r0536c": {
+  "region_id": "r0536c"
+ },
+ "r0184f": {
+  "region_id": "r0184f"
+ },
+ "r0184g": {
+  "region_id": "r0184g"
+ },
+ "r1104b": {
+  "region_id": "r1104b"
+ },
+ "r0536e": {
+  "region_id": "r0536e"
+ },
+ "r0184i": {
+  "region_id": "r0184i"
+ },
+ "r0184j": {
+  "region_id": "r0184j"
+ },
  "r3069": {
   "region_id": "r3069"
+ },
+ "r0184k": {
+  "region_id": "r0184k"
+ },
+ "r0184m": {
+  "region_id": "r0184m",
+  "legacy": {
+   "id": "olivella-pla-palau",
+   "name": "Pla de Palau",
+   "notes": "Dry Garraf Aleppo that only produces after a stormy autumn, when the shaded north hollows fill quickly.",
+   "access": "From Olivella take the road towards Sitges and turn off at the Pla de Palau track; park at the fire tank by the track junction.",
+   "popularity": 6
+  }
+ },
+ "r1615k": {
+  "region_id": "r1615k"
+ },
+ "r1104d": {
+  "region_id": "r1104d"
  },
  "r0501": {
   "region_id": "r0501"
  },
+ "r0536g": {
+  "region_id": "r0536g"
+ },
+ "r2061a": {
+  "region_id": "r2061a"
+ },
  "r0094": {
   "region_id": "r0094"
+ },
+ "r0184p": {
+  "region_id": "r0184p",
+  "legacy": {
+   "id": "begues-serra-nord",
+   "name": "Serra d'Ordal nord",
+   "notes": "The best-drained north slopes around Begues hold a late November crop, but expect company from the Baix Llobregat.",
+   "access": "From Begues take the road towards Sant Llorenç d'Ordal and turn off on the forest track after the second rise; park at the clearing by the pylon.",
+   "popularity": 7
+  }
  },
  "r3997": {
   "region_id": "r3997"
@@ -2976,17 +3976,87 @@
  "r3594": {
   "region_id": "r3594"
  },
+ "r2088b": {
+  "region_id": "r2088b"
+ },
  "r3415": {
   "region_id": "r3415"
+ },
+ "r0536h": {
+  "region_id": "r0536h"
  },
  "r1379": {
   "region_id": "r1379"
  },
+ "r0768b": {
+  "region_id": "r0768b"
+ },
+ "r0247a": {
+  "region_id": "r0247a"
+ },
+ "r0768d": {
+  "region_id": "r0768d",
+  "legacy": {
+   "id": "arnes-est",
+   "name": "Vessant est d'Arnes",
+   "notes": "Morning-sun sector; go right after the first autumn storm.",
+   "access": "From the village take the east track past the olive mill; park at the bend.",
+   "popularity": 3
+  }
+ },
+ "r0768e": {
+  "region_id": "r0768e"
+ },
  "r2803": {
   "region_id": "r2803"
  },
+ "r0136a": {
+  "region_id": "r0136a"
+ },
  "r0274": {
   "region_id": "r0274"
+ },
+ "r0768g": {
+  "region_id": "r0768g"
+ },
+ "r0768h": {
+  "region_id": "r0768h"
+ },
+ "r0768i": {
+  "region_id": "r0768i",
+  "legacy": {
+   "id": "asco-serra-lloreta",
+   "name": "Serra de Lloreta",
+   "notes": "Denser east-facing pinewood that keeps damp into late October; quiet on weekdays but busy with hunters at weekends.",
+   "access": "From Ascó cross the Ebre on the C-12 heading south and take the vineyard track at the first bend; park at the shed at the foot of the serra.",
+   "popularity": 2
+  }
+ },
+ "r0247d": {
+  "region_id": "r0247d",
+  "legacy": {
+   "id": "sallent-farges",
+   "name": "Serrat de les Farges",
+   "notes": "Weekend pressure from the Bages belt means early mornings pay off after rain.",
+   "access": "From Sallent take the C-16 service road towards the Llobregat and climb the track at the Serrat de les Farges; park at the water tank.",
+   "popularity": 4
+  }
+ },
+ "r0247g": {
+  "region_id": "r0247g"
+ },
+ "r0768j": {
+  "region_id": "r0768j",
+  "legacy": {
+   "id": "caseres-serra",
+   "name": "Serra de Caseres",
+   "notes": "West-facing pines dry fast so time your visit right after September storm fronts pass through.",
+   "access": "From Caseres take the track that rises west along the serra towards the Aragón border; park at the clearing on the crest.",
+   "popularity": 2
+  }
+ },
+ "r0247h": {
+  "region_id": "r0247h"
  },
  "r0464": {
   "region_id": "r0464"
@@ -2994,11 +4064,53 @@
  "r3223": {
   "region_id": "r3223"
  },
+ "r0768l": {
+  "region_id": "r0768l",
+  "legacy": {
+   "id": "pratcomte-estrets",
+   "name": "Els Estrets",
+   "notes": "Cool gorge heads near the Ports fringe give one of the earliest and most dependable rovellón runs in the Terra Alta.",
+   "access": "From Prat de Comte take the track towards the Estrets gorge; park at the barrier by the abandoned terraces.",
+   "popularity": 2
+  }
+ },
+ "r0768m": {
+  "region_id": "r0768m",
+  "legacy": {
+   "id": "pratcomte-serra",
+   "name": "Serra de la Solsida",
+   "notes": "A mixed stand that produces late-season flushes when the higher Ports zones are already finished.",
+   "access": "From Prat de Comte take the southern track along the serra; park where the track narrows at the pine line.",
+   "popularity": 2
+  }
+ },
+ "r0768n": {
+  "region_id": "r0768n",
+  "legacy": {
+   "id": "caseres-vall",
+   "name": "Vall Major",
+   "notes": "The sheltered valley bottom stays humid and rovellons here often survive the whole late-autumn season.",
+   "access": "From Caseres take the lane down into the Vall Major and continue on the forest track; park at the old pond.",
+   "popularity": 2
+  }
+ },
  "r2329": {
   "region_id": "r2329"
  },
+ "r0247k": {
+  "region_id": "r0247k"
+ },
  "r0326": {
   "region_id": "r0326"
+ },
+ "r0768p": {
+  "region_id": "r0768p"
+ },
+ "r1705b": {
+  "region_id": "r1705b"
+ },
+ "r0247n": {
+  "region_id": "r0247n"
  },
  "r1234": {
   "region_id": "r1234"
@@ -3006,8 +4118,21 @@
  "r3119": {
   "region_id": "r3119"
  },
+ "r1115b": {
+  "region_id": "r1115b",
+  "legacy": {
+   "id": "lanos-estany",
+   "name": "Estany de Lanós",
+   "notes": "Quiet high circuit that holds moisture from the lake and fruits into November.",
+   "access": "From Lles take the track towards the Estany de Lanós; park at the gate below the Prat de Lanós and continue on foot.",
+   "popularity": 5
+  }
+ },
  "r3160": {
   "region_id": "r3160"
+ },
+ "r0247p": {
+  "region_id": "r0247p"
  },
  "r1121": {
   "region_id": "r1121"
@@ -3041,6 +4166,16 @@
  "r2918": {
   "region_id": "r2918"
  },
+ "r3964b": {
+  "region_id": "r3964b",
+  "legacy": {
+   "id": "vansa-tuixen",
+   "name": "Costa de Tuixén",
+   "notes": "West-facing benches above Tuixén; the afternoon-warm option of the valley.",
+   "access": "From Tuixén take the Josa road out of the village; park at the first bend and climb west.",
+   "popularity": 3
+  }
+ },
  "r3370": {
   "region_id": "r3370"
  },
@@ -3071,14 +4206,23 @@
  "r3342": {
   "region_id": "r3342"
  },
+ "r0844a": {
+  "region_id": "r0844a"
+ },
  "r0003": {
   "region_id": "r0003"
  },
  "r1335": {
   "region_id": "r1335"
  },
+ "r0844b": {
+  "region_id": "r0844b"
+ },
  "r2792": {
   "region_id": "r2792"
+ },
+ "r0844c": {
+  "region_id": "r0844c"
  },
  "r2223": {
   "region_id": "r2223"
@@ -3088,6 +4232,9 @@
  },
  "r3903": {
   "region_id": "r3903"
+ },
+ "r0844d": {
+  "region_id": "r0844d"
  },
  "r0084": {
   "region_id": "r0084"
@@ -3108,14 +4255,26 @@
    "popularity": 6
   }
  },
+ "r0188a": {
+  "region_id": "r0188a"
+ },
  "r4107": {
   "region_id": "r4107"
+ },
+ "r3082b": {
+  "region_id": "r3082b"
  },
  "r3460": {
   "region_id": "r3460"
  },
+ "r0188b": {
+  "region_id": "r0188b"
+ },
  "r3406": {
   "region_id": "r3406"
+ },
+ "r1554b": {
+  "region_id": "r1554b"
  },
  "r1170": {
   "region_id": "r1170"
@@ -3135,14 +4294,64 @@
  "r2795": {
   "region_id": "r2795"
  },
+ "r0285b": {
+  "region_id": "r0285b"
+ },
+ "r2121b": {
+  "region_id": "r2121b"
+ },
  "r2072": {
   "region_id": "r2072"
+ },
+ "r1809a": {
+  "region_id": "r1809a",
+  "legacy": {
+   "id": "borreda-picancel",
+   "name": "Serra de Picancel",
+   "notes": "Dissected serra between Borredà and La Quar; very low picker pressure.",
+   "access": "From Borredà take the track signposted to Picancel; park at the mas and continue on foot.",
+   "popularity": 3
+  }
+ },
+ "r0245a": {
+  "region_id": "r0245a"
+ },
+ "r0327a": {
+  "region_id": "r0327a",
+  "legacy": {
+   "id": "odena-corona",
+   "name": "Turó de la Corona",
+   "notes": "West-facing slopes drain fast, so pick here only in the days right after rain while the shaded hollows are still damp.",
+   "access": "From Òdena take the track up towards the Turó de la Corona behind the industrial estate; park at the wide shoulder where the pines start.",
+   "popularity": 5
+  }
  },
  "r0166": {
   "region_id": "r0166"
  },
+ "r2121c": {
+  "region_id": "r2121c"
+ },
+ "r2121f": {
+  "region_id": "r2121f"
+ },
+ "r0327b": {
+  "region_id": "r0327b"
+ },
  "r2571": {
   "region_id": "r2571"
+ },
+ "r2121i": {
+  "region_id": "r2121i"
+ },
+ "r1105f": {
+  "region_id": "r1105f"
+ },
+ "r2121k": {
+  "region_id": "r2121k"
+ },
+ "r2121m": {
+  "region_id": "r2121m"
  },
  "r3548": {
   "region_id": "r3548"
@@ -3163,11 +4372,43 @@
  "r0037": {
   "region_id": "r0037"
  },
+ "r1809n": {
+  "region_id": "r1809n",
+  "legacy": {
+   "id": "olvan-obaga",
+   "name": "Obaga d'Olvan",
+   "notes": "Damp north-west woodland close to Berga, so expect company on holiday weekends.",
+   "access": "From Olvan take the road towards La Coromina and then the forest track; park at the quarry gate.",
+   "popularity": 3
+  }
+ },
+ "r0315b": {
+  "region_id": "r0315b"
+ },
+ "r0327d": {
+  "region_id": "r0327d"
+ },
+ "r1968g": {
+  "region_id": "r1968g"
+ },
+ "r3883d": {
+  "region_id": "r3883d"
+ },
  "r1693": {
   "region_id": "r1693"
  },
  "r3350": {
   "region_id": "r3350"
+ },
+ "r3883g": {
+  "region_id": "r3883g",
+  "legacy": {
+   "id": "vansa-josa",
+   "name": "Obaga de Josa",
+   "notes": "Tiny walled village, huge quiet forest; a local secret.",
+   "access": "From Josa village take the track behind the church; park at the fold and climb north-east.",
+   "popularity": 3
+  }
  },
  "r0071": {
   "region_id": "r0071"
@@ -3177,6 +4418,16 @@
  },
  "r3042": {
   "region_id": "r3042"
+ },
+ "r0315c": {
+  "region_id": "r0315c",
+  "legacy": {
+   "id": "montbui-turo",
+   "name": "Turó de Montbui",
+   "notes": "Open east-facing pines with light pressure, best on the second flush in late October once the early crowd has passed.",
+   "access": "From Santa Margarida de Montbui take the track up the Turó de Montbui behind the church; park at the reservoir fence.",
+   "popularity": 4
+  }
  },
  "r1972": {
   "region_id": "r1972",
@@ -3194,6 +4445,15 @@
  "r3456": {
   "region_id": "r3456"
  },
+ "r3883r": {
+  "region_id": "r3883r"
+ },
+ "r3883t": {
+  "region_id": "r3883t"
+ },
+ "r3883af": {
+  "region_id": "r3883af"
+ },
  "r3297": {
   "region_id": "r3297",
   "legacy": {
@@ -3203,6 +4463,9 @@
    "access": "From Cardona take the Serrateix road; park at the monastery and walk south-east.",
    "popularity": 4
   }
+ },
+ "r3883ah": {
+  "region_id": "r3883ah"
  },
  "r1048": {
   "region_id": "r1048"
@@ -3217,17 +4480,45 @@
    "popularity": 5
   }
  },
+ "r3883al": {
+  "region_id": "r3883al"
+ },
+ "r3883aq": {
+  "region_id": "r3883aq"
+ },
  "r2375": {
   "region_id": "r2375"
  },
  "r1091": {
   "region_id": "r1091"
  },
+ "r2416b": {
+  "region_id": "r2416b"
+ },
  "r1590": {
   "region_id": "r1590"
  },
+ "r0234a": {
+  "region_id": "r0234a"
+ },
+ "r0331c": {
+  "region_id": "r0331c"
+ },
  "r1471": {
   "region_id": "r1471"
+ },
+ "r3883be": {
+  "region_id": "r3883be",
+  "legacy": {
+   "id": "lillet-asland",
+   "name": "Pinedes sobre Asland",
+   "notes": "South-facing and early; rings first after the September storms.",
+   "access": "Park at the old Asland cement works and climb the track above the quarry.",
+   "popularity": 4
+  }
+ },
+ "r0331d": {
+  "region_id": "r0331d"
  },
  "r1035": {
   "region_id": "r1035"
@@ -3235,14 +4526,42 @@
  "r1908": {
   "region_id": "r1908"
  },
+ "r0331f": {
+  "region_id": "r0331f"
+ },
  "r0878": {
   "region_id": "r0878"
+ },
+ "r1500b": {
+  "region_id": "r1500b"
+ },
+ "r1500c": {
+  "region_id": "r1500c"
  },
  "r0423": {
   "region_id": "r0423"
  },
+ "r0331g": {
+  "region_id": "r0331g"
+ },
+ "r2306c": {
+  "region_id": "r2306c"
+ },
  "r3154": {
   "region_id": "r3154"
+ },
+ "r0331j": {
+  "region_id": "r0331j"
+ },
+ "r2306d": {
+  "region_id": "r2306d",
+  "legacy": {
+   "id": "poboleda-coma-fosca",
+   "name": "Coma Fosca",
+   "notes": "Shaded gullies that keep moisture through dry spells; the rovellons arrive later but fatter than on the solana.",
+   "access": "From Poboleda take the trail signed to the Montsant springs and leave the path at the second gully; park at the edge of the village.",
+   "popularity": 4
+  }
  },
  "r3644": {
   "region_id": "r3644"
@@ -3256,11 +4575,23 @@
  "r0040": {
   "region_id": "r0040"
  },
+ "r0331m": {
+  "region_id": "r0331m"
+ },
+ "r1500d": {
+  "region_id": "r1500d"
+ },
+ "r0331o": {
+  "region_id": "r0331o"
+ },
  "r2365": {
   "region_id": "r2365"
  },
  "r2410": {
   "region_id": "r2410"
+ },
+ "r3017b": {
+  "region_id": "r3017b"
  },
  "r1780": {
   "region_id": "r1780"
@@ -3268,11 +4599,30 @@
  "r0005": {
   "region_id": "r0005"
  },
+ "r2236f": {
+  "region_id": "r2236f"
+ },
+ "r2236g": {
+  "region_id": "r2236g"
+ },
  "r3394": {
   "region_id": "r3394"
  },
+ "r2236k": {
+  "region_id": "r2236k"
+ },
  "r3874": {
   "region_id": "r3874"
+ },
+ "r2236o": {
+  "region_id": "r2236o",
+  "legacy": {
+   "id": "santgervas-nord",
+   "name": "Obaga de Sant Gervàs",
+   "notes": "Close to Tremp, so it bears the town's weekend pickers — be there at first light in October.",
+   "access": "From Tremp take the road towards Puigcercós and continue to the north flank of the serra; park at the water tank and enter the woods.",
+   "popularity": 4
+  }
  },
  "r0451": {
   "region_id": "r0451"
@@ -3283,8 +4633,17 @@
  "r3302": {
   "region_id": "r3302"
  },
+ "r2236r": {
+  "region_id": "r2236r"
+ },
+ "r2236s": {
+  "region_id": "r2236s"
+ },
  "r3797": {
   "region_id": "r3797"
+ },
+ "r2236u": {
+  "region_id": "r2236u"
  },
  "r0282": {
   "region_id": "r0282"
@@ -3292,14 +4651,63 @@
  "r0263": {
   "region_id": "r0263"
  },
+ "r2236w": {
+  "region_id": "r2236w"
+ },
+ "r2236z": {
+  "region_id": "r2236z"
+ },
+ "r2236aa": {
+  "region_id": "r2236aa",
+  "legacy": {
+   "id": "gavet-solana",
+   "name": "Solà de Gavet",
+   "notes": "Thin, open cover that dries quickly — an early-season option while the higher zones are still parched.",
+   "access": "From Gavet take the track behind the village church onto the sunny ridge; park where the track narrows at the pines.",
+   "popularity": 3
+  }
+ },
+ "r2236ab": {
+  "region_id": "r2236ab"
+ },
+ "r0846a": {
+  "region_id": "r0846a"
+ },
  "r3320": {
   "region_id": "r3320"
+ },
+ "r2236ae": {
+  "region_id": "r2236ae"
+ },
+ "r2236ad": {
+  "region_id": "r2236ad"
+ },
+ "r2236aj": {
+  "region_id": "r2236aj"
+ },
+ "r2236ak": {
+  "region_id": "r2236ak"
  },
  "r0584": {
   "region_id": "r0584"
  },
+ "r2236al": {
+  "region_id": "r2236al"
+ },
  "r3891": {
   "region_id": "r3891"
+ },
+ "r2236am": {
+  "region_id": "r2236am"
+ },
+ "r2236an": {
+  "region_id": "r2236an"
+ },
+ "r1288a": {
+  "region_id": "r1288a"
+ },
+ "r0846d": {
+  "region_id": "r0846d"
  },
  "r0129": {
   "region_id": "r0129",
@@ -3311,8 +4719,37 @@
    "popularity": 5
   }
  },
+ "r0846e": {
+  "region_id": "r0846e"
+ },
  "r1763": {
   "region_id": "r1763"
+ },
+ "r2236as": {
+  "region_id": "r2236as"
+ },
+ "r1058a": {
+  "region_id": "r1058a",
+  "legacy": {
+   "id": "baga-coll-de-pal",
+   "name": "Coll de Pal — obaga del Cadí",
+   "notes": "High belt that switches on after the first cold nights; easy roadside access.",
+   "access": "Park at the Coll de Pal pass; the black-pine belt spreads below the road on the Cadí side.",
+   "popularity": 6
+  }
+ },
+ "r2236au": {
+  "region_id": "r2236au"
+ },
+ "r3848a": {
+  "region_id": "r3848a",
+  "legacy": {
+   "id": "vilanovasau-cingles",
+   "name": "Cingles de Sau",
+   "notes": "Damp cliff-country pine above the pantà, scenic and busy, with good post-rain flushes.",
+   "access": "From Vilanova de Sau take the road past the reservoir dam and climb to the cliff footpaths; park at the mirador.",
+   "popularity": 5
+  }
  },
  "r1272": {
   "region_id": "r1272"
@@ -3320,11 +4757,23 @@
  "r1156": {
   "region_id": "r1156"
  },
+ "r2236az": {
+  "region_id": "r2236az"
+ },
+ "r2236ay": {
+  "region_id": "r2236ay"
+ },
  "r3630": {
   "region_id": "r3630"
  },
  "r1349": {
   "region_id": "r1349"
+ },
+ "r4011b": {
+  "region_id": "r4011b"
+ },
+ "r2236ba": {
+  "region_id": "r2236ba"
  },
  "r1438": {
   "region_id": "r1438"
@@ -3332,11 +4781,26 @@
  "r3349": {
   "region_id": "r3349"
  },
+ "r3338a": {
+  "region_id": "r3338a"
+ },
+ "r1288c": {
+  "region_id": "r1288c"
+ },
  "r1576": {
   "region_id": "r1576"
  },
+ "r2236bc": {
+  "region_id": "r2236bc"
+ },
  "r0657": {
   "region_id": "r0657"
+ },
+ "r2236bf": {
+  "region_id": "r2236bf"
+ },
+ "r2236bg": {
+  "region_id": "r2236bg"
  },
  "r3582": {
   "region_id": "r3582"
@@ -3344,11 +4808,20 @@
  "r3401": {
   "region_id": "r3401"
  },
+ "r0846h": {
+  "region_id": "r0846h"
+ },
  "r3830": {
   "region_id": "r3830"
  },
+ "r2236bi": {
+  "region_id": "r2236bi"
+ },
  "r2894": {
   "region_id": "r2894"
+ },
+ "r1288e": {
+  "region_id": "r1288e"
  },
  "r1038": {
   "region_id": "r1038"
@@ -3359,8 +4832,23 @@
  "r3068": {
   "region_id": "r3068"
  },
+ "r0193a": {
+  "region_id": "r0193a"
+ },
+ "r3549a": {
+  "region_id": "r3549a"
+ },
+ "r4011g": {
+  "region_id": "r4011g"
+ },
  "r2287": {
   "region_id": "r2287"
+ },
+ "r4011h": {
+  "region_id": "r4011h"
+ },
+ "r2236bl": {
+  "region_id": "r2236bl"
  },
  "r0693": {
   "region_id": "r0693"
@@ -3373,6 +4861,16 @@
  },
  "r4034": {
   "region_id": "r4034"
+ },
+ "r0984b": {
+  "region_id": "r0984b",
+  "legacy": {
+   "id": "vallter-bacives",
+   "name": "Els Bacives",
+   "notes": "Resort-side black pine with steady weekend pressure; the far side of the ridge is quieter and fruits later.",
+   "access": "From Setcases take the mountain road up to the Vallter 2000 resort; park at the base station and walk the slopes below the Bacives ridge.",
+   "popularity": 6
+  }
  },
  "r0276": {
   "region_id": "r0276"
@@ -3389,6 +4887,12 @@
  "r4054": {
   "region_id": "r4054"
  },
+ "r0408a": {
+  "region_id": "r0408a"
+ },
+ "r0408b": {
+  "region_id": "r0408b"
+ },
  "r3762": {
   "region_id": "r3762"
  },
@@ -3397,6 +4901,9 @@
  },
  "r3344": {
   "region_id": "r3344"
+ },
+ "r1414a": {
+  "region_id": "r1414a"
  },
  "r3254": {
   "region_id": "r3254"
@@ -3410,11 +4917,65 @@
  "r0135": {
   "region_id": "r0135"
  },
+ "r2035a": {
+  "region_id": "r2035a"
+ },
+ "r1560q": {
+  "region_id": "r1560q"
+ },
  "r0803": {
   "region_id": "r0803"
  },
  "r2877": {
   "region_id": "r2877"
+ },
+ "r1560aa": {
+  "region_id": "r1560aa"
+ },
+ "r0248d": {
+  "region_id": "r0248d",
+  "legacy": {
+   "id": "marganell-cova",
+   "name": "Cova de Marganell",
+   "notes": "Busy, dry southern slopes that produce only after abundant rain and are combed daily in season.",
+   "access": "From Marganell follow the track south past the hermitage; park at the fountain.",
+   "popularity": 8
+  }
+ },
+ "r1560ai": {
+  "region_id": "r1560ai",
+  "legacy": {
+   "id": "montagut-costa-llarga",
+   "name": "Costa Llarga de Montagut",
+   "notes": "Low warm pine that fruits erratically and is mostly worked by locals on Sundays.",
+   "access": "From Montagut take the road towards Oix and park at the track bend above the village; the Costa Llarga path starts there.",
+   "popularity": 4
+  }
+ },
+ "r1560an": {
+  "region_id": "r1560an"
+ },
+ "r4013a": {
+  "region_id": "r4013a"
+ },
+ "r0248f": {
+  "region_id": "r0248f"
+ },
+ "r1560at": {
+  "region_id": "r1560at"
+ },
+ "r1560av": {
+  "region_id": "r1560av",
+  "legacy": {
+   "id": "finestres-castell",
+   "name": "Obaga del castell de Finestres",
+   "notes": "Finestres castle slopes; surprise producer after storms.",
+   "access": "From Sant Aniol follow the track to the Finestres castle; park below the crag and walk the north path.",
+   "popularity": 3
+  }
+ },
+ "r1560bb": {
+  "region_id": "r1560bb"
  },
  "r3179": {
   "region_id": "r3179"
@@ -3425,11 +4986,37 @@
  "r2386": {
   "region_id": "r2386"
  },
+ "r2035f": {
+  "region_id": "r2035f"
+ },
  "r2934": {
   "region_id": "r2934"
  },
+ "r1560bu": {
+  "region_id": "r1560bu",
+  "legacy": {
+   "id": "canoves-serrat",
+   "name": "Serrat de la Tosca",
+   "notes": "A long walk filters out most pickers, and the north serrat can hold mushrooms through the whole of a wet November.",
+   "access": "From Cànoves take the Samalús road and continue on the Tosca track; park at the saddle where the track forks.",
+   "popularity": 7
+  }
+ },
+ "r1560bx": {
+  "region_id": "r1560bx",
+  "legacy": {
+   "id": "oix-santa-barbara",
+   "name": "Santa Bàrbara de Pruneres",
+   "notes": "West-facing chapel woods with light pressure and a short but productive season after storms.",
+   "access": "From Oix take the track towards the Santa Bàrbara de Pruneres chapel; park below the chapel.",
+   "popularity": 3
+  }
+ },
  "r4108": {
   "region_id": "r4108"
+ },
+ "r1560bz": {
+  "region_id": "r1560bz"
  },
  "r1746": {
   "region_id": "r1746"
@@ -3447,17 +5034,113 @@
  "r0535": {
   "region_id": "r0535"
  },
+ "r1560cb": {
+  "region_id": "r1560cb"
+ },
+ "r1560ch": {
+  "region_id": "r1560ch"
+ },
+ "r1560cg": {
+  "region_id": "r1560cg"
+ },
+ "r1560cj": {
+  "region_id": "r1560cj",
+  "legacy": {
+   "id": "camprodon-beget",
+   "name": "Obaga de Beget",
+   "notes": "Steep quiet obaga above the stone village; very low weekend pressure.",
+   "access": "From Camprodon take the Beget road to the last bend above the village; park at the bridge and follow the forest track north.",
+   "popularity": 4
+  }
+ },
+ "r2035g": {
+  "region_id": "r2035g"
+ },
+ "r1560cl": {
+  "region_id": "r1560cl"
+ },
+ "r1560co": {
+  "region_id": "r1560co"
+ },
+ "r1560cq": {
+  "region_id": "r1560cq"
+ },
+ "r2035h": {
+  "region_id": "r2035h"
+ },
+ "r1560da": {
+  "region_id": "r1560da"
+ },
+ "r0248g": {
+  "region_id": "r0248g"
+ },
+ "r1560de": {
+  "region_id": "r1560de"
+ },
+ "r1560dh": {
+  "region_id": "r1560dh",
+  "legacy": {
+   "id": "peralada-mollo",
+   "name": "Serrat del Molló",
+   "notes": "Ordinary pine stands that only fruit well after steady September rain, with light local picking pressure.",
+   "access": "From Peralada take the GIV-602 toward Vilabertran and turn onto the serrat track; park at the gate below the ridge.",
+   "popularity": 3
+  }
+ },
  "r1361": {
   "region_id": "r1361"
+ },
+ "r1560dp": {
+  "region_id": "r1560dp"
+ },
+ "r1560ds": {
+  "region_id": "r1560ds"
+ },
+ "r1560dt": {
+  "region_id": "r1560dt"
+ },
+ "r1560dz": {
+  "region_id": "r1560dz",
+  "legacy": {
+   "id": "llanars-poble-ne",
+   "name": "Slope above Llanars",
+   "notes": "Mossy mixed pine just above the village, popular with Ripollès pickers and often swept by mid-morning.",
+   "access": "From Llanars follow the track behind the sports field up the north-east slope; park at the water tank and continue on foot.",
+   "popularity": 5
+  }
+ },
+ "r1560dw": {
+  "region_id": "r1560dw"
  },
  "r4110": {
   "region_id": "r4110"
  },
+ "r4013e": {
+  "region_id": "r4013e"
+ },
  "r1585": {
   "region_id": "r1585"
  },
+ "r4013h": {
+  "region_id": "r4013h"
+ },
  "r3702": {
   "region_id": "r3702"
+ },
+ "r1560er": {
+  "region_id": "r1560er"
+ },
+ "r1560fe": {
+  "region_id": "r1560fe"
+ },
+ "r2004d": {
+  "region_id": "r2004d"
+ },
+ "r1560fk": {
+  "region_id": "r1560fk"
+ },
+ "r1560fw": {
+  "region_id": "r1560fw"
  },
  "r1069": {
   "region_id": "r1069"
@@ -3465,14 +5148,67 @@
  "r1270": {
   "region_id": "r1270"
  },
+ "r1560gn": {
+  "region_id": "r1560gn",
+  "legacy": {
+   "id": "capmany-serrat-bosc",
+   "name": "Serrat del Bosc",
+   "notes": "Gently shelving pine over granite sand that drains fast and needs a truly wet autumn, then fruits suddenly.",
+   "access": "From Capmany take the GI-602 toward Sant Climent and turn onto the forest track at the last masia; park at the first gate.",
+   "popularity": 4
+  }
+ },
+ "r1176a": {
+  "region_id": "r1176a"
+ },
+ "r1560gy": {
+  "region_id": "r1560gy"
+ },
+ "r4013m": {
+  "region_id": "r4013m"
+ },
+ "r0599d": {
+  "region_id": "r0599d"
+ },
  "r3405": {
   "region_id": "r3405"
+ },
+ "r1560ht": {
+  "region_id": "r1560ht"
+ },
+ "r1806b": {
+  "region_id": "r1806b"
+ },
+ "r0599e": {
+  "region_id": "r0599e"
+ },
+ "r1560hy": {
+  "region_id": "r1560hy"
+ },
+ "r1560id": {
+  "region_id": "r1560id",
+  "legacy": {
+   "id": "sora-costa",
+   "name": "Costa de Sora",
+   "notes": "A sunny upper belt that fruits in bursts after cold-front rain, quieter than the cingles and good as an early-season backup.",
+   "access": "From Sora take the uphill track towards the eastern pastures; park at the bend by the stone shelter and work the slope below.",
+   "popularity": 3
+  }
  },
  "r3739": {
   "region_id": "r3739"
  },
+ "r1176c": {
+  "region_id": "r1176c"
+ },
+ "r0278b": {
+  "region_id": "r0278b"
+ },
  "r3901": {
   "region_id": "r3901"
+ },
+ "r1176d": {
+  "region_id": "r1176d"
  },
  "r2720": {
   "region_id": "r2720",
@@ -3484,6 +5220,9 @@
    "popularity": 6
   }
  },
+ "r0599g": {
+  "region_id": "r0599g"
+ },
  "r0557": {
   "region_id": "r0557",
   "legacy": {
@@ -3494,14 +5233,48 @@
    "popularity": 3
   }
  },
+ "r0599i": {
+  "region_id": "r0599i"
+ },
+ "r0599j": {
+  "region_id": "r0599j"
+ },
+ "r0599k": {
+  "region_id": "r0599k"
+ },
  "r1113": {
   "region_id": "r1113"
+ },
+ "r0202a": {
+  "region_id": "r0202a"
  },
  "r0437": {
   "region_id": "r0437"
  },
+ "r0202b": {
+  "region_id": "r0202b"
+ },
+ "r3973b": {
+  "region_id": "r3973b",
+  "legacy": {
+   "id": "coma-canalda",
+   "name": "Canalda",
+   "notes": "The famous Canalda woods; big rings but expect company.",
+   "access": "From La Coma take the road to Canalda; park at the sanctuary and walk into the pines.",
+   "popularity": 6
+  }
+ },
+ "r0278c": {
+  "region_id": "r0278c"
+ },
+ "r1806d": {
+  "region_id": "r1806d"
+ },
  "r1457": {
   "region_id": "r1457"
+ },
+ "r0599o": {
+  "region_id": "r0599o"
  },
  "r4087": {
   "region_id": "r4087"
@@ -3512,6 +5285,9 @@
  "r3658": {
   "region_id": "r3658"
  },
+ "r2380a": {
+  "region_id": "r2380a"
+ },
  "r0383": {
   "region_id": "r0383"
  },
@@ -3521,6 +5297,9 @@
  "r1582": {
   "region_id": "r1582"
  },
+ "r3973c": {
+  "region_id": "r3973c"
+ },
  "r2812": {
   "region_id": "r2812"
  },
@@ -3529,6 +5308,16 @@
  },
  "r2886": {
   "region_id": "r2886"
+ },
+ "r3973d": {
+  "region_id": "r3973d",
+  "legacy": {
+   "id": "guixers-sisquer",
+   "name": "Obaga de Sisquer",
+   "notes": "Vall de Lord benches with morning shade keeping the moss damp.",
+   "access": "From Guixers take the road to Sisquer; park below the village and follow the track north.",
+   "popularity": 3
+  }
  },
  "r3314": {
   "region_id": "r3314",
@@ -3540,8 +5329,24 @@
    "popularity": 4
   }
  },
+ "r2380c": {
+  "region_id": "r2380c"
+ },
+ "r0278h": {
+  "region_id": "r0278h"
+ },
  "r3193": {
   "region_id": "r3193"
+ },
+ "r0202h": {
+  "region_id": "r0202h",
+  "legacy": {
+   "id": "mura-obaga-vila",
+   "name": "Obaga de Mura",
+   "notes": "Stream-side Aleppo belt; fruits after any decent September storm.",
+   "access": "From Mura's plaça take the cement track north; park at the bend by the stream and climb into the pines.",
+   "popularity": 6
+  }
  },
  "r3227": {
   "region_id": "r3227"
@@ -3552,8 +5357,21 @@
  "r3814": {
   "region_id": "r3814"
  },
+ "r1066d": {
+  "region_id": "r1066d"
+ },
  "r3127": {
   "region_id": "r3127"
+ },
+ "r3996d": {
+  "region_id": "r3996d",
+  "legacy": {
+   "id": "montferrer-muntanya",
+   "name": "Muntanya de Montferrer",
+   "notes": "North-west hollows catch the damp air coming off the Cerdanya.",
+   "access": "From Montferrer village take the track up the mountain; park at the spring.",
+   "popularity": 3
+  }
  },
  "r2655": {
   "region_id": "r2655"
@@ -3583,6 +5401,9 @@
  "r2707": {
   "region_id": "r2707"
  },
+ "r0612c": {
+  "region_id": "r0612c"
+ },
  "r4091": {
   "region_id": "r4091"
  },
@@ -3607,6 +5428,12 @@
  },
  "r0373": {
   "region_id": "r0373"
+ },
+ "r0612e": {
+  "region_id": "r0612e"
+ },
+ "r2260c": {
+  "region_id": "r2260c"
  },
  "r3835": {
   "region_id": "r3835"
@@ -4003,16 +5830,6 @@
  "r3972": {
   "region_id": "r3972"
  },
- "r0184c": {
-  "region_id": "r0184c",
-  "legacy": {
-   "id": "begues-serra-nord",
-   "name": "Serra d'Ordal nord",
-   "notes": "The best-drained north slopes around Begues hold a late November crop, but expect company from the Baix Llobregat.",
-   "access": "From Begues take the road towards Sant Llorenç d'Ordal and turn off on the forest track after the second rise; park at the clearing by the pylon.",
-   "popularity": 7
-  }
- },
  "r1331": {
   "region_id": "r1331"
  },
@@ -4042,16 +5859,6 @@
  },
  "r2728": {
   "region_id": "r2728"
- },
- "r0768b": {
-  "region_id": "r0768b",
-  "legacy": {
-   "id": "asco-tossal-gros",
-   "name": "Tossal Gros",
-   "notes": "A narrow Aleppo belt that wakes with the first October storms and is worked quickly by locals — go within days of good rain.",
-   "access": "From Ascó take the track behind the sports centre towards the tossals and follow the fire road up; park at the clearing below the transmitter mast.",
-   "popularity": 3
-  }
  },
  "r4160": {
   "region_id": "r4160"
@@ -4293,16 +6100,6 @@
  "r1253": {
   "region_id": "r1253"
  },
- "r1809b": {
-  "region_id": "r1809b",
-  "legacy": {
-   "id": "puig-reig-galliners",
-   "name": "Serra de Galliners",
-   "notes": "A modest but little-visited belt above the Llobregat that keeps moisture on its north face and surprises in consistently rainy autumns.",
-   "access": "From Puig-reig take the BV-4235 towards Montmajor and pull onto the forest track at the Galliners sign; park at the junction by the transformer hut.",
-   "popularity": 3
-  }
- },
  "r3132": {
   "region_id": "r3132"
  },
@@ -4369,16 +6166,6 @@
  "r2342": {
   "region_id": "r2342"
  },
- "r0331b": {
-  "region_id": "r0331b",
-  "legacy": {
-   "id": "bisbal-turo",
-   "name": "Turó de la Bisbal",
-   "notes": "A small north-facing wood that stays productive a few days longer than the surrounding dry slopes.",
-   "access": "From La Bisbal del Penedès take the lane up the Turó behind the village; park at the track barrier at the pine edge.",
-   "popularity": 3
-  }
- },
  "r3531": {
   "region_id": "r3531"
  },
@@ -4417,12 +6204,6 @@
  "r0271": {
   "region_id": "r0271"
  },
- "r2236b": {
-  "region_id": "r2236b"
- },
- "r2236c": {
-  "region_id": "r2236c"
- },
  "r0082": {
   "region_id": "r0082"
  },
@@ -4444,26 +6225,6 @@
  "r2136": {
   "region_id": "r2136"
  },
- "r2236g": {
-  "region_id": "r2236g",
-  "legacy": {
-   "id": "santgervas-nord",
-   "name": "Obaga de Sant Gervàs",
-   "notes": "Close to Tremp, so it bears the town's weekend pickers — be there at first light in October.",
-   "access": "From Tremp take the road towards Puigcercós and continue to the north flank of the serra; park at the water tank and enter the woods.",
-   "popularity": 4
-  }
- },
- "r2236h": {
-  "region_id": "r2236h",
-  "legacy": {
-   "id": "os-montsec",
-   "name": "Feixes del Montsec",
-   "notes": "Town-adjacent ground under steady local pressure — pick it in the first days after rain.",
-   "access": "From Os de Balaguer take the track that climbs behind the village towards the Montsec foot; park at the first bench of terraces.",
-   "popularity": 4
-  }
- },
  "r2662": {
   "region_id": "r2662"
  },
@@ -4473,30 +6234,11 @@
  "r4003": {
   "region_id": "r4003"
  },
- "r2236l": {
-  "region_id": "r2236l"
- },
- "r0846b": {
-  "region_id": "r0846b"
- },
- "r2236m": {
-  "region_id": "r2236m",
-  "legacy": {
-   "id": "ager-corsa",
-   "name": "Voltants de Corçà",
-   "notes": "Wind-exposed open stand where crops appear briefly after the first autumn storms.",
-   "access": "From Àger take the road to Corçà and continue on the forest track towards the crest; park at the bend at the upper meadows.",
-   "popularity": 3
-  }
- },
  "r2695": {
   "region_id": "r2695"
  },
  "r1364": {
   "region_id": "r1364"
- },
- "r2236n": {
-  "region_id": "r2236n"
  },
  "r1169": {
   "region_id": "r1169"
@@ -4620,16 +6362,6 @@
  "r3628": {
   "region_id": "r3628"
  },
- "r2035b": {
-  "region_id": "r2035b",
-  "legacy": {
-   "id": "molsosa-obac",
-   "name": "Obac de la Molsosa",
-   "notes": "A remote, damp obac where baskets fill slowly but surely and you rarely meet another picker.",
-   "access": "From La Molsosa take the lane north-west past the last mas; park at the end of the tarmac.",
-   "popularity": 2
-  }
- },
  "r1517": {
   "region_id": "r1517"
  },
@@ -4662,28 +6394,8 @@
  "r2885": {
   "region_id": "r2885"
  },
- "r2004": {
-  "region_id": "r2004",
-  "legacy": {
-   "id": "sanauja-east",
-   "name": "East slope of Sanaüja",
-   "notes": "Quiet east-facing stand where scots pine mixes in and the crop stretches later than on the plain.",
-   "access": "From Sanaüja take the lane east towards Biosca and turn onto the pine track; park at the barns at the track bend.",
-   "popularity": 2
-  }
- },
  "r0387": {
   "region_id": "r0387"
- },
- "r1560ae": {
-  "region_id": "r1560ae",
-  "legacy": {
-   "id": "jonquera-capmany",
-   "name": "Pinedes de Capmany",
-   "notes": "Wine-village pines; the tramuntana dries them fast, go right after rain.",
-   "access": "From Capmany take the Requesens track 3 km; park at the fold and climb the north-east slopes.",
-   "popularity": 4
-  }
  },
  "r2769": {
   "region_id": "r2769"
@@ -4718,9 +6430,6 @@
  "r3010": {
   "region_id": "r3010"
  },
- "r0599c": {
-  "region_id": "r0599c"
- },
  "r2976": {
   "region_id": "r2976"
  },
@@ -4736,9 +6445,6 @@
  "r3956": {
   "region_id": "r3956"
  },
- "r0599d": {
-  "region_id": "r0599d"
- },
  "r2871": {
   "region_id": "r2871"
  },
@@ -4747,16 +6453,6 @@
  },
  "r2815": {
   "region_id": "r2815"
- },
- "r2380": {
-  "region_id": "r2380",
-  "legacy": {
-   "id": "gratallops-serra",
-   "name": "Serra de Gratallops",
-   "notes": "North faces above the Priorat vineyards fruit well after storms, and wine-country visitors keep pressure modest.",
-   "access": "From Gratallops take the track that rises north above the vineyards; park at the pine belt where the track ends.",
-   "popularity": 4
-  }
  },
  "r1281": {
   "region_id": "r1281",
@@ -4874,16 +6570,6 @@
  "r2669": {
   "region_id": "r2669"
  },
- "r2371": {
-  "region_id": "r2371",
-  "legacy": {
-   "id": "montsant-escaladei",
-   "name": "Costa d'Escaladei",
-   "notes": "Shaded terraces of the Priorat; a vineyard-pine mosaic.",
-   "access": "From La Morera continue to Escaladei; park at the old charterhouse and take the east track.",
-   "popularity": 4
-  }
- },
  "r2635": {
   "region_id": "r2635"
  },
@@ -4918,9 +6604,6 @@
  "r4043": {
   "region_id": "r4043"
  },
- "r0633c": {
-  "region_id": "r0633c"
- },
  "r0377": {
   "region_id": "r0377"
  },
@@ -4938,9 +6621,6 @@
  },
  "r1830": {
   "region_id": "r1830"
- },
- "r2140a": {
-  "region_id": "r2140a"
  },
  "r1060": {
   "region_id": "r1060"
@@ -5204,16 +6884,6 @@
  "r4012": {
   "region_id": "r4012"
  },
- "r0565b": {
-  "region_id": "r0565b",
-  "legacy": {
-   "id": "llaberia-cim",
-   "name": "Serra de Llaberia — obaga",
-   "notes": "Coastal-range pines; night humidity drifts in from the sea.",
-   "access": "From the coll de Llaberia take the track to the antenna; park below the summit.",
-   "popularity": 3
-  }
- },
  "r3650": {
   "region_id": "r3650"
  },
@@ -5264,9 +6934,6 @@
  },
  "r1472": {
   "region_id": "r1472"
- },
- "r0184e": {
-  "region_id": "r0184e"
  },
  "r0151": {
   "region_id": "r0151"
@@ -5648,16 +7315,6 @@
  "r0137": {
   "region_id": "r0137"
  },
- "r2416": {
-  "region_id": "r2416",
-  "legacy": {
-   "id": "alos-solana",
-   "name": "Solana d'Alòs",
-   "notes": "South-facing pinewood that fruits in pulses right after rain and empties fast under local pressure.",
-   "access": "From Alòs de Balaguer take the track that rises south of the village towards the serra; park at the water tank at the first bend.",
-   "popularity": 3
-  }
- },
  "r0646": {
   "region_id": "r0646",
   "legacy": {
@@ -5681,16 +7338,6 @@
  "r2785": {
   "region_id": "r2785"
  },
- "r1885": {
-  "region_id": "r1885",
-  "legacy": {
-   "id": "monistrol-santmiquel",
-   "name": "Sant Miquel",
-   "notes": "The most hammered north face in the massif — dawn starts are essential for even a small basket.",
-   "access": "From Monistrol de Montserrat take the camí to the Sant Miquel hermitage; park at the road's end above the town.",
-   "popularity": 9
-  }
- },
  "r0581": {
   "region_id": "r0581"
  },
@@ -5712,9 +7359,6 @@
  "r0231": {
   "region_id": "r0231"
  },
- "r0234": {
-  "region_id": "r0234"
- },
  "r2984": {
   "region_id": "r2984"
  },
@@ -5735,16 +7379,6 @@
  },
  "r3414": {
   "region_id": "r3414"
- },
- "r0395": {
-  "region_id": "r0395",
-  "legacy": {
-   "id": "vespella-serra",
-   "name": "Serra de Vespella",
-   "notes": "One of the better Gaià-side pine belts; go on weekday mornings because Tarragona families sweep it in season.",
-   "access": "From Vespella de Gaià take the track behind the church up onto the serra; park at the turning circle by the antennas.",
-   "popularity": 6
-  }
  },
  "r3019": {
   "region_id": "r3019"
@@ -5818,16 +7452,6 @@
  },
  "r2152": {
   "region_id": "r2152"
- },
- "r2154": {
-  "region_id": "r2154",
-  "legacy": {
-   "id": "bassella-serrat-alt",
-   "name": "Serrat de Bassella",
-   "notes": "Ordinary pine with light pressure, best mid-season once the valley bottom has had steady rain.",
-   "access": "From Bassella take the road up to the Serrat and continue on the forest track; park at the water tank clearing.",
-   "popularity": 3
-  }
  },
  "r3639": {
   "region_id": "r3639"
@@ -6011,9 +7635,6 @@
  "r1186": {
   "region_id": "r1186"
  },
- "r0910": {
-  "region_id": "r0910"
- },
  "r2814": {
   "region_id": "r2814",
   "legacy": {
@@ -6149,16 +7770,6 @@
  "r1022": {
   "region_id": "r1022"
  },
- "r1850": {
-  "region_id": "r1850",
-  "legacy": {
-   "id": "santvicenc-riera",
-   "name": "Riera de Castellet",
-   "notes": "Riverside pine that only produces after very wet spells and sees constant local traffic.",
-   "access": "From Sant Vicenç de Castellet take the path up the riera from the station; park at the bridge.",
-   "popularity": 5
-  }
- },
  "r4015": {
   "region_id": "r4015"
  },
@@ -6200,1595 +7811,5 @@
  },
  "r1542": {
   "region_id": "r1542"
- },
- "r1501": {
-  "region_id": "r1501"
- },
- "r3856": {
-  "region_id": "r3856"
- },
- "r3164": {
-  "region_id": "r3164"
- },
- "r2388": {
-  "region_id": "r2388"
- },
- "r1583": {
-  "region_id": "r1583"
- },
- "r1917": {
-  "region_id": "r1917"
- },
- "r3476": {
-  "region_id": "r3476"
- },
- "r1669": {
-  "region_id": "r1669"
- },
- "r0440": {
-  "region_id": "r0440"
- },
- "r3506": {
-  "region_id": "r3506"
- },
- "r2888": {
-  "region_id": "r2888"
- },
- "r2647": {
-  "region_id": "r2647"
- },
- "r3168": {
-  "region_id": "r3168"
- },
- "r1644": {
-  "region_id": "r1644"
- },
- "r0956": {
-  "region_id": "r0956"
- },
- "r0371": {
-  "region_id": "r0371"
- },
- "r2426": {
-  "region_id": "r2426"
- },
- "r3402": {
-  "region_id": "r3402"
- },
- "r2632": {
-  "region_id": "r2632"
- },
- "r3831": {
-  "region_id": "r3831"
- },
- "r3571": {
-  "region_id": "r3571"
- },
- "r3177": {
-  "region_id": "r3177"
- },
- "r0016": {
-  "region_id": "r0016"
- },
- "r1829": {
-  "region_id": "r1829"
- },
- "r3499": {
-  "region_id": "r3499"
- },
- "r1844": {
-  "region_id": "r1844"
- },
- "r3125": {
-  "region_id": "r3125"
- },
- "r1971": {
-  "region_id": "r1971"
- },
- "r1550": {
-  "region_id": "r1550"
- },
- "r2119": {
-  "region_id": "r2119"
- },
- "r2293": {
-  "region_id": "r2293"
- },
- "r3551": {
-  "region_id": "r3551"
- },
- "r3378": {
-  "region_id": "r3378"
- },
- "r2570": {
-  "region_id": "r2570"
- },
- "r1377": {
-  "region_id": "r1377"
- },
- "r1212": {
-  "region_id": "r1212"
- },
- "r0346": {
-  "region_id": "r0346"
- },
- "r3347": {
-  "region_id": "r3347"
- },
- "r4089": {
-  "region_id": "r4089"
- },
- "r1087": {
-  "region_id": "r1087"
- },
- "r0466": {
-  "region_id": "r0466",
-  "legacy": {
-   "id": "valls-masmolets",
-   "name": "Masmolets",
-   "notes": "Out-of-the-way woods where the southwest aspect means a short but rarely contested window after each rain.",
-   "access": "From Valls take the TV-2442 towards Masmolets; park at the hamlet and take the track south-west up the slope.",
-   "popularity": 4
-  }
- },
- "r0540": {
-  "region_id": "r0540"
- },
- "r3080": {
-  "region_id": "r3080"
- },
- "r3859": {
-  "region_id": "r3859"
- },
- "r3057": {
-  "region_id": "r3057"
- },
- "r1621": {
-  "region_id": "r1621"
- },
- "r0146": {
-  "region_id": "r0146"
- },
- "r3009": {
-  "region_id": "r3009"
- },
- "r2411": {
-  "region_id": "r2411"
- },
- "r1574": {
-  "region_id": "r1574"
- },
- "r3376": {
-  "region_id": "r3376"
- },
- "r3380": {
-  "region_id": "r3380"
- },
- "r3175": {
-  "region_id": "r3175"
- },
- "r0143": {
-  "region_id": "r0143"
- },
- "r0595": {
-  "region_id": "r0595"
- },
- "r2946": {
-  "region_id": "r2946"
- },
- "r1061": {
-  "region_id": "r1061"
- },
- "r3665": {
-  "region_id": "r3665"
- },
- "r2208": {
-  "region_id": "r2208"
- },
- "r3257": {
-  "region_id": "r3257"
- },
- "r4147": {
-  "region_id": "r4147"
- },
- "r4142": {
-  "region_id": "r4142"
- },
- "r1165": {
-  "region_id": "r1165"
- },
- "r2133": {
-  "region_id": "r2133"
- },
- "r3105": {
-  "region_id": "r3105"
- },
- "r0021": {
-  "region_id": "r0021"
- },
- "r2243": {
-  "region_id": "r2243"
- },
- "r0227": {
-  "region_id": "r0227"
- },
- "r1129": {
-  "region_id": "r1129"
- },
- "r3020": {
-  "region_id": "r3020"
- },
- "r0958": {
-  "region_id": "r0958"
- },
- "r0185": {
-  "region_id": "r0185"
- },
- "r0375": {
-  "region_id": "r0375"
- },
- "r1594": {
-  "region_id": "r1594"
- },
- "r1142": {
-  "region_id": "r1142"
- },
- "r1463": {
-  "region_id": "r1463"
- },
- "r1586": {
-  "region_id": "r1586"
- },
- "r3775": {
-  "region_id": "r3775"
- },
- "r0745": {
-  "region_id": "r0745"
- },
- "r0606": {
-  "region_id": "r0606"
- },
- "r2568": {
-  "region_id": "r2568"
- },
- "r1665": {
-  "region_id": "r1665"
- },
- "r0963": {
-  "region_id": "r0963"
- },
- "r2092": {
-  "region_id": "r2092"
- },
- "r1057": {
-  "region_id": "r1057"
- },
- "r0035": {
-  "region_id": "r0035"
- },
- "r1716": {
-  "region_id": "r1716"
- },
- "r3703": {
-  "region_id": "r3703"
- },
- "r1973": {
-  "region_id": "r1973"
- },
- "r1483": {
-  "region_id": "r1483"
- },
- "r0113": {
-  "region_id": "r0113"
- },
- "r0683": {
-  "region_id": "r0683"
- },
- "r3524": {
-  "region_id": "r3524"
- },
- "r1201": {
-  "region_id": "r1201"
- },
- "r3367": {
-  "region_id": "r3367"
- },
- "r4114": {
-  "region_id": "r4114"
- },
- "r3120": {
-  "region_id": "r3120"
- },
- "r2490": {
-  "region_id": "r2490"
- },
- "r1090": {
-  "region_id": "r1090"
- },
- "r3952": {
-  "region_id": "r3952",
-  "legacy": {
-   "id": "bolvir-martiva-nord",
-   "name": "Pla de Martiva north",
-   "notes": "Flat accessible woods that fruit early and are swept by local families within days of a good rain.",
-   "access": "From Bolvir follow the signs for Pla de Martiva on the dirt track; park at the picnic clearing and explore the pines north of the track.",
-   "popularity": 5
-  }
- },
- "r1397": {
-  "region_id": "r1397"
- },
- "r0917": {
-  "region_id": "r0917"
- },
- "r0289": {
-  "region_id": "r0289"
- },
- "r2605": {
-  "region_id": "r2605"
- },
- "r2988": {
-  "region_id": "r2988"
- },
- "r2444": {
-  "region_id": "r2444"
- },
- "r2155": {
-  "region_id": "r2155"
- },
- "r0028": {
-  "region_id": "r0028"
- },
- "r2007": {
-  "region_id": "r2007"
- },
- "r2939": {
-  "region_id": "r2939"
- },
- "r0238": {
-  "region_id": "r0238"
- },
- "r0587": {
-  "region_id": "r0587"
- },
- "r3788": {
-  "region_id": "r3788"
- },
- "r0978": {
-  "region_id": "r0978"
- },
- "r4133": {
-  "region_id": "r4133"
- },
- "r2998": {
-  "region_id": "r2998"
- },
- "r2974": {
-  "region_id": "r2974"
- },
- "r3673": {
-  "region_id": "r3673"
- },
- "r2921": {
-  "region_id": "r2921"
- },
- "r1868": {
-  "region_id": "r1868"
- },
- "r1571": {
-  "region_id": "r1571"
- },
- "r0370": {
-  "region_id": "r0370"
- },
- "r0115": {
-  "region_id": "r0115"
- },
- "r1807": {
-  "region_id": "r1807"
- },
- "r0092": {
-  "region_id": "r0092"
- },
- "r3595": {
-  "region_id": "r3595"
- },
- "r0682": {
-  "region_id": "r0682"
- },
- "r3670": {
-  "region_id": "r3670"
- },
- "r1447": {
-  "region_id": "r1447"
- },
- "r0107": {
-  "region_id": "r0107"
- },
- "r4161": {
-  "region_id": "r4161"
- },
- "r0608": {
-  "region_id": "r0608",
-  "legacy": {
-   "id": "pradell-julia",
-   "name": "Costa del Coll de Julià",
-   "notes": "Pass-side belt that catches both sea fog and inland rain.",
-   "access": "From Pradell park at the Coll de Julià pass; walk the north-east slopes below the antennas.",
-   "popularity": 4
-  }
- },
- "r1962": {
-  "region_id": "r1962"
- },
- "r2592": {
-  "region_id": "r2592"
- },
- "r0449": {
-  "region_id": "r0449"
- },
- "r1599": {
-  "region_id": "r1599"
- },
- "r0967": {
-  "region_id": "r0967"
- },
- "r0476": {
-  "region_id": "r0476"
- },
- "r0258": {
-  "region_id": "r0258"
- },
- "r0019": {
-  "region_id": "r0019"
- },
- "r3682": {
-  "region_id": "r3682"
- },
- "r1593": {
-  "region_id": "r1593"
- },
- "r1032": {
-  "region_id": "r1032"
- },
- "r2875": {
-  "region_id": "r2875"
- },
- "r2853": {
-  "region_id": "r2853"
- },
- "r1929": {
-  "region_id": "r1929"
- },
- "r3980": {
-  "region_id": "r3980"
- },
- "r2926": {
-  "region_id": "r2926"
- },
- "r2691": {
-  "region_id": "r2691"
- },
- "r1102": {
-  "region_id": "r1102"
- },
- "r2180": {
-  "region_id": "r2180"
- },
- "r2494": {
-  "region_id": "r2494"
- },
- "r0762": {
-  "region_id": "r0762"
- },
- "r1848": {
-  "region_id": "r1848"
- },
- "r3441": {
-  "region_id": "r3441"
- },
- "r2757": {
-  "region_id": "r2757",
-  "legacy": {
-   "id": "barcelona-caralleu",
-   "name": "Can Caralleu",
-   "notes": "Every patch near the centre is picked within hours of rain, so arrive before dawn or not at all.",
-   "access": "From Barcelona take the Ronda de Dalt to the Can Caralleu exit and park at the sports centre; take the trail behind the complex uphill.",
-   "popularity": 10
-  }
- },
- "r1755": {
-  "region_id": "r1755"
- },
- "r3645": {
-  "region_id": "r3645"
- },
- "r2204": {
-  "region_id": "r2204"
- },
- "r0314": {
-  "region_id": "r0314"
- },
- "r3704": {
-  "region_id": "r3704"
- },
- "r0225": {
-  "region_id": "r0225"
- },
- "r0240": {
-  "region_id": "r0240"
- },
- "r1225": {
-  "region_id": "r1225"
- },
- "r1605": {
-  "region_id": "r1605"
- },
- "r3724": {
-  "region_id": "r3724"
- },
- "r3174": {
-  "region_id": "r3174"
- },
- "r0516": {
-  "region_id": "r0516"
- },
- "r0475": {
-  "region_id": "r0475"
- },
- "r1134": {
-  "region_id": "r1134"
- },
- "r1338": {
-  "region_id": "r1338"
- },
- "r2969": {
-  "region_id": "r2969"
- },
- "r0412": {
-  "region_id": "r0412"
- },
- "r3013": {
-  "region_id": "r3013"
- },
- "r1491": {
-  "region_id": "r1491"
- },
- "r1250": {
-  "region_id": "r1250"
- },
- "r0549": {
-  "region_id": "r0549"
- },
- "r3884": {
-  "region_id": "r3884"
- },
- "r3587": {
-  "region_id": "r3587"
- },
- "r2634": {
-  "region_id": "r2634"
- },
- "r1247": {
-  "region_id": "r1247"
- },
- "r1871": {
-  "region_id": "r1871"
- },
- "r1600": {
-  "region_id": "r1600"
- },
- "r0004": {
-  "region_id": "r0004"
- },
- "r2407": {
-  "region_id": "r2407",
-  "legacy": {
-   "id": "poboleda-solana-montsant",
-   "name": "Solana de Montsant",
-   "notes": "Big sunny faces of Scots pine that produce after the first cool storms; popular with Priorat locals, so come on weekdays.",
-   "access": "From Poboleda follow the track towards the Escaladei monastery and continue to the firebreak below the cliff line; park at the water deposit.",
-   "popularity": 4
-  }
- },
- "r0131": {
-  "region_id": "r0131"
- },
- "r3576": {
-  "region_id": "r3576"
- },
- "r2650": {
-  "region_id": "r2650"
- },
- "r2621": {
-  "region_id": "r2621"
- },
- "r3580": {
-  "region_id": "r3580"
- },
- "r1341": {
-  "region_id": "r1341"
- },
- "r0586": {
-  "region_id": "r0586"
- },
- "r0547": {
-  "region_id": "r0547"
- },
- "r3987": {
-  "region_id": "r3987"
- },
- "r3298": {
-  "region_id": "r3298"
- },
- "r1773": {
-  "region_id": "r1773"
- },
- "r1465": {
-  "region_id": "r1465"
- },
- "r1223": {
-  "region_id": "r1223"
- },
- "r3536": {
-  "region_id": "r3536"
- },
- "r3206": {
-  "region_id": "r3206"
- },
- "r2880": {
-  "region_id": "r2880"
- },
- "r3489": {
-  "region_id": "r3489"
- },
- "r2337": {
-  "region_id": "r2337"
- },
- "r3087": {
-  "region_id": "r3087",
-  "legacy": {
-   "id": "moia-berti",
-   "name": "Cingles de Bertí",
-   "notes": "Cliff-top pines; the shade line along the cingle is the productive strip.",
-   "access": "From Moià take the Sant Quirze Safaja road; park at the Bertí track fork and walk to the cliff edge.",
-   "popularity": 4
-  }
- },
- "r3286": {
-  "region_id": "r3286"
- },
- "r3043": {
-  "region_id": "r3043"
- },
- "r1641": {
-  "region_id": "r1641"
- },
- "r1065": {
-  "region_id": "r1065"
- },
- "r1652": {
-  "region_id": "r1652"
- },
- "r1002": {
-  "region_id": "r1002"
- },
- "r2323": {
-  "region_id": "r2323"
- },
- "r2286": {
-  "region_id": "r2286"
- },
- "r1141": {
-  "region_id": "r1141"
- },
- "r3634": {
-  "region_id": "r3634"
- },
- "r2239": {
-  "region_id": "r2239"
- },
- "r4027": {
-  "region_id": "r4027"
- },
- "r1820": {
-  "region_id": "r1820"
- },
- "r2726": {
-  "region_id": "r2726"
- },
- "r0821": {
-  "region_id": "r0821"
- },
- "r2378": {
-  "region_id": "r2378"
- },
- "r3035": {
-  "region_id": "r3035"
- },
- "r3022": {
-  "region_id": "r3022",
-  "legacy": {
-   "id": "castellar-bosc",
-   "name": "Bosc de Can Febrera",
-   "notes": "Dense north-facing mixed pine that holds moisture well, though the Granollers crowd knows it as well as anyone.",
-   "access": "From Castellar del Vallès take the Llitera track north into the Can Febrera woods; park at the forest track barrier.",
-   "popularity": 7
-  }
- },
- "r1597": {
-  "region_id": "r1597"
- },
- "r0519": {
-  "region_id": "r0519"
- },
- "r0230": {
-  "region_id": "r0230"
- },
- "r0299": {
-  "region_id": "r0299"
- },
- "r0030": {
-  "region_id": "r0030"
- },
- "r0012": {
-  "region_id": "r0012"
- },
- "r2113": {
-  "region_id": "r2113"
- },
- "r1205": {
-  "region_id": "r1205"
- },
- "r0041": {
-  "region_id": "r0041"
- },
- "r4097": {
-  "region_id": "r4097"
- },
- "r4007": {
-  "region_id": "r4007"
- },
- "r2074": {
-  "region_id": "r2074"
- },
- "r2833": {
-  "region_id": "r2833"
- },
- "r2801": {
-  "region_id": "r2801"
- },
- "r3390": {
-  "region_id": "r3390"
- },
- "r3770": {
-  "region_id": "r3770"
- },
- "r3588": {
-  "region_id": "r3588"
- },
- "r4095": {
-  "region_id": "r4095"
- },
- "r3145": {
-  "region_id": "r3145"
- },
- "r2961": {
-  "region_id": "r2961"
- },
- "r3315": {
-  "region_id": "r3315"
- },
- "r1254": {
-  "region_id": "r1254"
- },
- "r2819": {
-  "region_id": "r2819"
- },
- "r1699": {
-  "region_id": "r1699"
- },
- "r0895": {
-  "region_id": "r0895"
- },
- "r3925": {
-  "region_id": "r3925"
- },
- "r3985": {
-  "region_id": "r3985"
- },
- "r3099": {
-  "region_id": "r3099"
- },
- "r0336": {
-  "region_id": "r0336"
- },
- "r3760": {
-  "region_id": "r3760"
- },
- "r1175": {
-  "region_id": "r1175"
- },
- "r0689": {
-  "region_id": "r0689"
- },
- "r0626": {
-  "region_id": "r0626"
- },
- "r0550": {
-  "region_id": "r0550"
- },
- "r3375": {
-  "region_id": "r3375"
- },
- "r1810": {
-  "region_id": "r1810"
- },
- "r0427": {
-  "region_id": "r0427"
- },
- "r1466": {
-  "region_id": "r1466"
- },
- "r2829": {
-  "region_id": "r2829"
- },
- "r3384": {
-  "region_id": "r3384"
- },
- "r1132": {
-  "region_id": "r1132"
- },
- "r1416": {
-  "region_id": "r1416"
- },
- "r1378": {
-  "region_id": "r1378"
- },
- "r1059": {
-  "region_id": "r1059"
- },
- "r3383": {
-  "region_id": "r3383",
-  "legacy": {
-   "id": "josa-coll-pradell",
-   "name": "Coll de Pradell",
-   "notes": "Quiet high ground that holds a late October crop when lower sectors have already dried out.",
-   "access": "From Josa take the track towards the Coll de Pradell; park at the col and work either side.",
-   "popularity": 3
-  }
- },
- "r1796": {
-  "region_id": "r1796"
- },
- "r1955": {
-  "region_id": "r1955"
- },
- "r0149": {
-  "region_id": "r0149"
- },
- "r0528": {
-  "region_id": "r0528"
- },
- "r1085": {
-  "region_id": "r1085"
- },
- "r4023": {
-  "region_id": "r4023"
- },
- "r4028": {
-  "region_id": "r4028"
- },
- "r3819": {
-  "region_id": "r3819"
- },
- "r3711": {
-  "region_id": "r3711"
- },
- "r1985": {
-  "region_id": "r1985"
- },
- "r0228": {
-  "region_id": "r0228"
- },
- "r4061": {
-  "region_id": "r4061"
- },
- "r0173": {
-  "region_id": "r0173"
- },
- "r1358": {
-  "region_id": "r1358"
- },
- "r1903": {
-  "region_id": "r1903"
- },
- "r2930": {
-  "region_id": "r2930"
- },
- "r1126": {
-  "region_id": "r1126"
- },
- "r0980": {
-  "region_id": "r0980"
- },
- "r1580": {
-  "region_id": "r1580"
- },
- "r3601": {
-  "region_id": "r3601"
- },
- "r1784": {
-  "region_id": "r1784"
- },
- "r0533": {
-  "region_id": "r0533"
- },
- "r2315": {
-  "region_id": "r2315"
- },
- "r1839": {
-  "region_id": "r1839"
- },
- "r2261": {
-  "region_id": "r2261"
- },
- "r0397": {
-  "region_id": "r0397"
- },
- "r2985": {
-  "region_id": "r2985"
- },
- "r2799": {
-  "region_id": "r2799"
- },
- "r0201": {
-  "region_id": "r0201"
- },
- "r3920": {
-  "region_id": "r3920"
- },
- "r3243": {
-  "region_id": "r3243"
- },
- "r4157": {
-  "region_id": "r4157"
- },
- "r1610": {
-  "region_id": "r1610"
- },
- "r2102": {
-  "region_id": "r2102"
- },
- "r2083": {
-  "region_id": "r2083"
- },
- "r1587": {
-  "region_id": "r1587"
- },
- "r0628": {
-  "region_id": "r0628"
- },
- "r0090": {
-  "region_id": "r0090"
- },
- "r1474": {
-  "region_id": "r1474"
- },
- "r2272": {
-  "region_id": "r2272"
- },
- "r3542": {
-  "region_id": "r3542"
- },
- "r0335": {
-  "region_id": "r0335"
- },
- "r1119": {
-  "region_id": "r1119",
-  "legacy": {
-   "id": "gosol-plans",
-   "name": "Plans de Gósol",
-   "notes": "Higher east-facing benches; late-season producer.",
-   "access": "Forest track leaving the Gósol-Saldes road eastwards at km 2; drivable to the plans.",
-   "popularity": 4
-  }
- },
- "r1559": {
-  "region_id": "r1559"
- },
- "r2567": {
-  "region_id": "r2567"
- },
- "r1082": {
-  "region_id": "r1082"
- },
- "r3467": {
-  "region_id": "r3467"
- },
- "r3046": {
-  "region_id": "r3046"
- },
- "r2973": {
-  "region_id": "r2973"
- },
- "r2642": {
-  "region_id": "r2642"
- },
- "r0525": {
-  "region_id": "r0525"
- },
- "r2830": {
-  "region_id": "r2830"
- },
- "r2218": {
-  "region_id": "r2218"
- },
- "r1453": {
-  "region_id": "r1453"
- },
- "r1581": {
-  "region_id": "r1581"
- },
- "r1282": {
-  "region_id": "r1282"
- },
- "r0991": {
-  "region_id": "r0991"
- },
- "r3000": {
-  "region_id": "r3000"
- },
- "r2341": {
-  "region_id": "r2341"
- },
- "r2657": {
-  "region_id": "r2657"
- },
- "r4098": {
-  "region_id": "r4098",
-  "legacy": {
-   "id": "gurp-santgervasi",
-   "name": "Pinedes de Sant Gervasi",
-   "notes": "Remote and little-picked pinewood that rewards the extra walk in moist autumns.",
-   "access": "From Tremp take the road towards Gurp and turn off at Sant Gervasi onto the dirt track behind the hamlet; park at the threshing floor.",
-   "popularity": 2
-  }
- },
- "r1880": {
-  "region_id": "r1880"
- },
- "r1781": {
-  "region_id": "r1781"
- },
- "r0452": {
-  "region_id": "r0452"
- },
- "r2586": {
-  "region_id": "r2586"
- },
- "r0906": {
-  "region_id": "r0906"
- },
- "r3016": {
-  "region_id": "r3016"
- },
- "r1635": {
-  "region_id": "r1635"
- },
- "r2039": {
-  "region_id": "r2039"
- },
- "r2116": {
-  "region_id": "r2116"
- },
- "r2366": {
-  "region_id": "r2366"
- },
- "r3519": {
-  "region_id": "r3519"
- },
- "r1392": {
-  "region_id": "r1392"
- },
- "r1055": {
-  "region_id": "r1055"
- },
- "r2346": {
-  "region_id": "r2346"
- },
- "r0206": {
-  "region_id": "r0206"
- },
- "r3189": {
-  "region_id": "r3189",
-  "legacy": {
-   "id": "gombreny-montgrony",
-   "name": "Obaga de Montgrony",
-   "notes": "The north wall under the Montgrony cliffs; damp moss and big rings, some company on Sundays.",
-   "access": "From Gombreny follow the signs to the Montgrony sanctuary; park at the sanctuary and take the track below the cliffs.",
-   "popularity": 6
-  }
- },
- "r3134": {
-  "region_id": "r3134"
- },
- "r0955": {
-  "region_id": "r0955"
- },
- "r1539": {
-  "region_id": "r1539"
- },
- "r1518": {
-  "region_id": "r1518"
- },
- "r1143": {
-  "region_id": "r1143"
- },
- "r3710": {
-  "region_id": "r3710"
- },
- "r3054": {
-  "region_id": "r3054"
- },
- "r1267": {
-  "region_id": "r1267"
- },
- "r1297": {
-  "region_id": "r1297"
- },
- "r3581": {
-  "region_id": "r3581"
- },
- "r3422": {
-  "region_id": "r3422",
-  "legacy": {
-   "id": "alas-cerc-obaga",
-   "name": "Obaga d'Alàs",
-   "notes": "Ordinary Scots pine on the obaga that produces steadily in wet Octobers with very light picking pressure.",
-   "access": "From Alàs take the forest track behind the church towards the Cerc side; park where the track forks above the fields and walk into the obaga.",
-   "popularity": 3
-  }
- },
- "r2259": {
-  "region_id": "r2259"
- },
- "r0347": {
-  "region_id": "r0347"
- },
- "r1663": {
-  "region_id": "r1663"
- },
- "r1399": {
-  "region_id": "r1399"
- },
- "r0281": {
-  "region_id": "r0281",
-  "legacy": {
-   "id": "ribes-solanes",
-   "name": "Solanes de Ribes",
-   "notes": "Slightly further in than the Roquetes banks, but still busy on weekends whenever autumn damp settles in.",
-   "access": "From Sant Pere de Ribes take the track towards the Solanes above Can Lloses; park at the quarry barrier.",
-   "popularity": 6
-  }
- },
- "r2713": {
-  "region_id": "r2713"
- },
- "r1262": {
-  "region_id": "r1262"
- },
- "r0217": {
-  "region_id": "r0217"
- },
- "r0216": {
-  "region_id": "r0216"
- },
- "r0144": {
-  "region_id": "r0144"
- },
- "r0106": {
-  "region_id": "r0106"
- },
- "r0033": {
-  "region_id": "r0033"
- },
- "r2037": {
-  "region_id": "r2037"
- },
- "r0099": {
-  "region_id": "r0099"
- },
- "r3599": {
-  "region_id": "r3599"
- },
- "r1043": {
-  "region_id": "r1043"
- },
- "r0159": {
-  "region_id": "r0159"
- },
- "r0855": {
-  "region_id": "r0855"
- },
- "r3055": {
-  "region_id": "r3055"
- },
- "r0931": {
-  "region_id": "r0931"
- },
- "r1887": {
-  "region_id": "r1887"
- },
- "r2057": {
-  "region_id": "r2057"
- },
- "r0252": {
-  "region_id": "r0252"
- },
- "r3357": {
-  "region_id": "r3357"
- },
- "r0048": {
-  "region_id": "r0048"
- },
- "r3439": {
-  "region_id": "r3439"
- },
- "r1988": {
-  "region_id": "r1988"
- },
- "r2241": {
-  "region_id": "r2241"
- },
- "r1715": {
-  "region_id": "r1715"
- },
- "r0351": {
-  "region_id": "r0351"
- },
- "r2046": {
-  "region_id": "r2046"
- },
- "r0523": {
-  "region_id": "r0523"
- },
- "r1655": {
-  "region_id": "r1655"
- },
- "r3559": {
-  "region_id": "r3559"
- },
- "r0168": {
-  "region_id": "r0168"
- },
- "r3554": {
-  "region_id": "r3554"
- },
- "r1510": {
-  "region_id": "r1510"
- },
- "r1836": {
-  "region_id": "r1836"
- },
- "r3351": {
-  "region_id": "r3351"
- },
- "r0795": {
-  "region_id": "r0795"
- },
- "r0987": {
-  "region_id": "r0987"
- },
- "r0927": {
-  "region_id": "r0927"
- },
- "r0506": {
-  "region_id": "r0506"
- },
- "r3108": {
-  "region_id": "r3108"
- },
- "r2900": {
-  "region_id": "r2900"
- },
- "r3575": {
-  "region_id": "r3575"
- },
- "r2676": {
-  "region_id": "r2676"
- },
- "r3922": {
-  "region_id": "r3922"
- },
- "r1310": {
-  "region_id": "r1310"
- },
- "r0363": {
-  "region_id": "r0363"
- },
- "r0943": {
-  "region_id": "r0943"
- },
- "r3926": {
-  "region_id": "r3926"
- },
- "r3138": {
-  "region_id": "r3138"
- },
- "r1714": {
-  "region_id": "r1714"
- },
- "r4099": {
-  "region_id": "r4099"
- },
- "r4112": {
-  "region_id": "r4112"
- },
- "r3184": {
-  "region_id": "r3184"
- },
- "r2746": {
-  "region_id": "r2746"
- },
- "r2516": {
-  "region_id": "r2516"
- },
- "r0390": {
-  "region_id": "r0390"
- },
- "r2827": {
-  "region_id": "r2827"
- },
- "r1433": {
-  "region_id": "r1433"
- },
- "r0036": {
-  "region_id": "r0036"
- },
- "r3149": {
-  "region_id": "r3149"
- },
- "r2708": {
-  "region_id": "r2708"
- },
- "r0482": {
-  "region_id": "r0482"
- },
- "r0186": {
-  "region_id": "r0186"
- },
- "r2848": {
-  "region_id": "r2848"
- },
- "r0297": {
-  "region_id": "r0297"
- },
- "r2212": {
-  "region_id": "r2212",
-  "legacy": {
-   "id": "barbera-serra",
-   "name": "Serra de Barberà",
-   "notes": "North faces above the Conca hold the dew and rovellons appear within a week of the first good storms.",
-   "access": "From Barberà de la Conca take the track that climbs the serra north of the village; park at the water tank.",
-   "popularity": 3
-  }
- },
- "r3437": {
-  "region_id": "r3437"
- },
- "r1989": {
-  "region_id": "r1989"
- },
- "r1049": {
-  "region_id": "r1049"
- },
- "r4135": {
-  "region_id": "r4135"
- },
- "r2977": {
-  "region_id": "r2977"
- },
- "r2562": {
-  "region_id": "r2562"
- },
- "r0342": {
-  "region_id": "r0342"
- },
- "r1436": {
-  "region_id": "r1436"
- },
- "r1210": {
-  "region_id": "r1210"
- },
- "r3387": {
-  "region_id": "r3387"
- },
- "r1325": {
-  "region_id": "r1325"
- },
- "r0746": {
-  "region_id": "r0746"
- },
- "r3609": {
-  "region_id": "r3609"
- },
- "r2636": {
-  "region_id": "r2636"
- },
- "r0233": {
-  "region_id": "r0233"
- },
- "r0345": {
-  "region_id": "r0345"
- },
- "r4055": {
-  "region_id": "r4055"
- },
- "r0739": {
-  "region_id": "r0739"
- },
- "r0530": {
-  "region_id": "r0530"
- },
- "r4141": {
-  "region_id": "r4141"
- },
- "r2756": {
-  "region_id": "r2756"
- },
- "r2696": {
-  "region_id": "r2696"
- },
- "r0219": {
-  "region_id": "r0219"
- },
- "r1859": {
-  "region_id": "r1859"
- },
- "r1709": {
-  "region_id": "r1709"
- },
- "r3204": {
-  "region_id": "r3204"
- },
- "r3039": {
-  "region_id": "r3039"
- },
- "r3812": {
-  "region_id": "r3812"
- },
- "r2263": {
-  "region_id": "r2263"
- },
- "r0512": {
-  "region_id": "r0512"
- },
- "r3462": {
-  "region_id": "r3462"
- },
- "r4062": {
-  "region_id": "r4062"
- },
- "r0416": {
-  "region_id": "r0416"
- },
- "r3245": {
-  "region_id": "r3245"
- },
- "r1125": {
-  "region_id": "r1125"
- },
- "r0241": {
-  "region_id": "r0241"
- },
- "r0161": {
-  "region_id": "r0161"
- },
- "r2056": {
-  "region_id": "r2056"
- },
- "r1999": {
-  "region_id": "r1999"
- },
- "r1180": {
-  "region_id": "r1180"
- },
- "r0272": {
-  "region_id": "r0272"
- },
- "r1490": {
-  "region_id": "r1490"
- },
- "r0845": {
-  "region_id": "r0845"
- },
- "r2355": {
-  "region_id": "r2355"
- },
- "r3878": {
-  "region_id": "r3878"
- },
- "r0913": {
-  "region_id": "r0913"
- },
- "r1118": {
-  "region_id": "r1118"
- },
- "r0783": {
-  "region_id": "r0783"
- },
- "r2229": {
-  "region_id": "r2229"
- },
- "r3271": {
-  "region_id": "r3271"
- },
- "r0117": {
-  "region_id": "r0117"
- },
- "r0759": {
-  "region_id": "r0759"
- },
- "r2767": {
-  "region_id": "r2767"
- },
- "r3689": {
-  "region_id": "r3689"
- },
- "r2866": {
-  "region_id": "r2866"
- },
- "r1561": {
-  "region_id": "r1561"
- },
- "r0521": {
-  "region_id": "r0521"
- },
- "r2646": {
-  "region_id": "r2646"
- },
- "r0835": {
-  "region_id": "r0835"
- },
- "r4010": {
-  "region_id": "r4010"
- },
- "r1407": {
-  "region_id": "r1407"
- },
- "r0483": {
-  "region_id": "r0483"
- },
- "r1342": {
-  "region_id": "r1342"
- },
- "r2651": {
-  "region_id": "r2651"
- },
- "r2097": {
-  "region_id": "r2097"
- },
- "r0199": {
-  "region_id": "r0199"
- },
- "r3198": {
-  "region_id": "r3198"
- },
- "r2579": {
-  "region_id": "r2579"
- },
- "r1873": {
-  "region_id": "r1873",
-  "legacy": {
-   "id": "guardiola-serrat",
-   "name": "Serrat de Catllaràs (llevant)",
-   "notes": "East benches below the Catllaràs antenna; a good second lap after the obaga.",
-   "access": "From Guardiola follow the La Pobla road to the Sant Jaume turn; park at the second bend and take the east track.",
-   "popularity": 4
-  }
- },
- "r3282": {
-  "region_id": "r3282"
  }
 }

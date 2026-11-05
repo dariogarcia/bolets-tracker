@@ -46,10 +46,10 @@ sys.path.insert(0, str(ROOT))
 
 from app.habitat import GROUPS, pine_composition
 
-GIS_DIR = Path("/tmp/opencode/gis")
+GIS_DIR = ROOT / ".work" / "gis"
 PROVINCES = ("08", "17", "25", "43")
 MFE_CRS = 25830
-WORK_DIR = Path("/tmp/opencode/regions-tmp")
+WORK_DIR = ROOT / ".work" / "regions"
 OUT_FILE = WORK_DIR / "forest_regions.geojson"
 BRIDGE_M = 10.0
 DOMINANT_SHARE = 0.60

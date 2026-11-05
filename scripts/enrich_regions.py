@@ -41,7 +41,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 
-WORK_DIR = Path("/tmp/opencode/regions-tmp")
+WORK_DIR = ROOT / ".work" / "regions"
 REGIONS_FILE = WORK_DIR / "forest_regions.geojson"
 ATTRS_FILE = ROOT / "data" / "forest_regions_attrs.json"
 
@@ -166,6 +166,14 @@ def utm_to_wgs(x: float, y: float) -> tuple[float, float]:
     return round(lat, 6), round(lon, 6)
 
 
+def region_point_utm(feature: dict):
+    """A point guaranteed inside the region (largest part). Centroids of coastal
+    lace polygons can fall in the sea and miss every comarca/geology polygon."""
+    poly = region_polygon_utm(feature)
+    p = poly.representative_point()
+    return p.x, p.y
+
+
 def stage_geology(args) -> None:
     regions = load_regions()
     attrs = load_attrs()
@@ -178,7 +186,7 @@ def stage_geology(args) -> None:
 
     def work(item):
         rid, feature = item
-        cx, cy = region_centroid_utm(feature)
+        cx, cy = region_point_utm(feature)
         params = {
             "f": "json",
             "where": "1=1",
@@ -245,7 +253,7 @@ def stage_comarca(args) -> None:
     misses = 0
     for f in todo:
         rid = f["properties"]["region_id"]
-        cx, cy = region_centroid_utm(f)
+        cx, cy = region_point_utm(f)
         pt = Point(cx, cy)
         for name, poly, prepared in comarques:
             if prepared.contains(pt) or poly.contains(pt):
@@ -336,7 +344,7 @@ def stage_roads(args) -> None:
 
     def work(item):
         rid, feature = item
-        cx, cy = region_centroid_utm(feature)
+        cx, cy = region_point_utm(feature)
         poly = region_polygon_utm(feature)
         feats = fetch_roads_intersecting(poly)
         partial = False
@@ -403,7 +411,7 @@ def stage_terrain(args) -> None:
 
     jobs = []
     for rid, feature in todo:
-        cx, cy = region_centroid_utm(feature)
+        cx, cy = region_point_utm(feature)
         pts = []
         for dx in (-1, 0, 1):
             for dy in (-1, 0, 1):
@@ -469,7 +477,7 @@ def stage_names(args) -> None:
 
     def work(item):
         rid, feature = item
-        cx, cy = region_centroid_utm(feature)
+        cx, cy = region_point_utm(feature)
         params = {
             "f": "json",
             "where": "1=1",

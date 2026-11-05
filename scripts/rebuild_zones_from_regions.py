@@ -47,7 +47,7 @@ from app.habitat import (
     derive_habitat_quality,
 )
 
-WORK_DIR = Path("/tmp/opencode/regions-tmp")
+WORK_DIR = ROOT / ".work" / "regions"
 REGIONS_FILE = WORK_DIR / "forest_regions.geojson"
 SELECTED_FILE = WORK_DIR / "selected.txt"
 ATTRS_FILE = ROOT / "data" / "forest_regions_attrs.json"
