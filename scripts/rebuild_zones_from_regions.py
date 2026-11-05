@@ -11,7 +11,8 @@ Selection (--stage select):
     --target (default 2000). Regions containing the staging point of a
     legacy curated zone (data/legacy_zones.json) inherit its name,
     notes, access text and popularity — the picker lore survives the
-    regeneration. Writes data/region_selection.json.
+    regeneration. Non-legacy zones get a computed crowd pressure
+    (see the crowd-pressure model below). Writes data/region_selection.json.
 
 Build (--stage build):
     needs terrain and names for every selected region (run
@@ -34,6 +35,7 @@ import json
 import math
 import re
 import sys
+from bisect import bisect_left
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -58,7 +60,57 @@ ZONES_FILE = ROOT / "app" / "zones.py"
 
 MAX_ROAD_DIST_M = 1000.0
 WALK_M_PER_MIN = 50.0
-DEFAULT_POPULARITY = 5
+CITIES_FILE = ROOT / "data" / "cities_cat.json"
+FAME_FILE = ROOT / "data" / "toponym_fame.json"
+
+# Crowd-pressure model weights: day-trip demand, internet salience,
+# ease of walking in. Legacy zones keep their curated popularity.
+W_PULL, W_FAME, W_ACCESS = 0.40, 0.35, 0.25
+MAX_CITY_KM = 60.0
+
+
+def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+    r = 6371.0
+    p1, p2 = math.radians(lat1), math.radians(lat2)
+    dp = p2 - p1
+    dl = math.radians(lon2 - lon1)
+    h = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
+    return 2 * r * math.asin(math.sqrt(h))
+
+
+def city_pull_log(lat: float, lon: float, cities: list[dict]) -> float:
+    """log of the day-trip demand: sum of population/(distance+5km)."""
+    pull = sum(
+        c["pop_k"] / (haversine_km(lat, lon, c["lat"], c["lon"]) + 5.0)
+        for c in cities
+        if haversine_km(lat, lon, c["lat"], c["lon"]) <= MAX_CITY_KM
+    )
+    return math.log1p(pull)
+
+
+def fame_log(a: dict, fame: dict) -> float:
+    """log of internet salience: Wikipedia pageviews (ca+es, 12 months)
+    of the nearest toponym, with a 25% comarca floor."""
+    ns = a.get("names") or []
+    top = fame.get((ns[0] or {}).get("t", ""), {}) if ns else {}
+    com = fame.get(a.get("comarca") or "", {})
+    views = max(
+        top.get("ca", 0) + top.get("es", 0),
+        0.25 * (com.get("ca", 0) + com.get("es", 0)),
+    )
+    return math.log1p(views)
+
+
+def pct_ranks(values: dict[str, float]) -> dict[str, float]:
+    """Percentile rank of each value within the dict (0..1)."""
+    ordered = sorted(values.values())
+    n = len(ordered)
+    if n < 2:
+        return {k: 1.0 for k in values}
+    pos = {}
+    for k, v in values.items():
+        pos[k] = bisect_left(ordered, v) / (n - 1)
+    return pos
 
 CLASS_LABEL = {
     "scots": "Scots pine",
@@ -170,6 +222,13 @@ def stage_build(args) -> None:
     used_names: dict[str, int] = {}
     polygons: dict[str, list[list[float]]] = {}
     records = []
+    crowd_signals: dict[str, tuple[float, float, float]] = {}
+    cities = json.loads(CITIES_FILE.read_text(encoding="utf-8"))["cities"]
+    if FAME_FILE.exists():
+        fame = json.loads(FAME_FILE.read_text(encoding="utf-8"))
+    else:
+        print(f"warning: {FAME_FILE} missing — run scripts/fetch_fame.py; fame term will be flat")
+        fame = {}
 
     for rid, sel in selection.items():
         feature = regions[rid]
@@ -230,12 +289,19 @@ def stage_build(args) -> None:
                     + (f" ({road_nom})" if road_nom else "")
                     + " — park at the marked access point and walk in."
                 )
-            popularity = DEFAULT_POPULARITY
+            popularity = None  # computed after the loop from crowd signals
 
         staging = roads.get("staging")
         if not staging:
             ring = region_exterior(feature)
             staging = [sum(q[1] for q in ring) / len(ring), sum(q[0] for q in ring) / len(ring)]
+
+        if popularity is None:
+            crowd_signals[zone_id] = (
+                city_pull_log(staging[0], staging[1], cities),
+                fame_log(a, fame),
+                1.0 - walk_min / 90.0,
+            )
 
         ring = region_exterior(feature)
         poly_utm = shp_transform(lambda x, y, z=None: to_utm.transform(x, y), Polygon([(q[1], q[0]) for q in ring]))
@@ -273,6 +339,25 @@ def stage_build(args) -> None:
             }
         )
 
+    # Crowd-pressure model: percentile-rank the three signals, blend with
+    # fixed weights, then map the blended score onto the 1-10 popularity
+    # scale (again by percentile, so the crowded decile of zones gets 10).
+    if crowd_signals:
+        pull_pct = pct_ranks({k: s[0] for k, s in crowd_signals.items()})
+        fame_pct = pct_ranks({k: s[1] for k, s in crowd_signals.items()})
+        blended = {
+            k: W_PULL * pull_pct[k] + W_FAME * fame_pct[k] + W_ACCESS * s[2]
+            for k, s in crowd_signals.items()
+        }
+        crowd_pct = pct_ranks(blended)
+        for r in records:
+            if r["id"] in crowd_pct:
+                r["popularity"] = 1 + round(9 * crowd_pct[r["id"]])
+        hist: dict[int, int] = {}
+        for r in records:
+            hist[r["popularity"]] = hist.get(r["popularity"], 0) + 1
+        print("popularity histogram:", dict(sorted(hist.items())))
+
     POLYGONS_FILE.write_text(json.dumps(polygons, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"wrote {POLYGONS_FILE} ({POLYGONS_FILE.stat().st_size / 1024:.0f} KiB)")
 
@@ -307,6 +392,11 @@ composition (MITECO, 1:50.000) with:
 - toponym names (ICGC nomenclàtor), comarca boundaries (ICGC)
 - picker lore inherited from the legacy curated sectors where a region
   contains one of their staging points (data/legacy_zones.json)
+- crowd pressure for non-legacy zones, computed from: day-trip demand
+  (population of nearby cities, data/cities_cat.json, IDESCAT),
+  internet salience (Wikipedia pageviews of the toponym/comarca,
+  data/toponym_fame.json via scripts/fetch_fame.py) and walking effort
+  (walk_min); blended 40/35/25 and percentile-mapped onto 1-10
 
 Region outlines live in data/zone_polygons.json and are attached to the
 zones at import time.

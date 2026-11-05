@@ -204,6 +204,10 @@ class TestCrowdingAndAccess:
         assert score_crowding(1) == 100
         assert score_crowding(10) == 0
 
+    def test_crowding_formula(self):
+        assert score_crowding(5) == 55.6
+        assert score_crowding(3) == 77.8
+
     def test_accessibility_bounds(self):
         assert score_accessibility(10) == 100
         assert score_accessibility(1) == 10

@@ -40,6 +40,17 @@ def test_rating_fields_in_range():
         assert 1 <= z.accessibility <= 10, z.id
 
 
+def test_popularity_varies():
+    """Crowd pressure is computed, not a constant: the full 1-10 range
+    is present and no single value dominates the dataset."""
+    counts: dict[int, int] = {}
+    for z in ZONES:
+        counts[z.popularity] = counts.get(z.popularity, 0) + 1
+    assert set(range(1, 11)) <= set(counts), counts
+    top_share = max(counts.values()) / len(ZONES)
+    assert top_share < 0.25, f"most common popularity covers {top_share:.0%} of zones"
+
+
 def test_walk_min_plausible():
     for z in ZONES:
         assert 0 <= z.walk_min <= 180, z.id
