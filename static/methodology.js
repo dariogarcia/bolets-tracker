@@ -35,7 +35,7 @@ const METHODOLOGY_HTML = {
   <tr><td>Ombra</td><td>Orientació + coberta (fitxer de sectors)</td><td>N 95 → S 25 segons exposició al sol; coberta densa +8, oberta −10.</td></tr>
   <tr><td>Hàbitat</td><td>Bosc mesurat (MFE50) + sòl (ICGC)</td><td>45% qualitat d'hàbitat (capçada mesurada, 1–5) + 35% afinitat de la barreja d'espècies amb l'espècie de bolet (ponderada per les proporcions mesurades de pi roig, pi negre, pi blanc, pins litorals i frondoses) + 20% química del substrat (àcid / neutre / bàsic segons la litologia). Per al rovelló: pi roig 1,00, pi negre 0,85, pi blanc 0,80, frondoses 0,50; sòl àcid 1,00, neutre 0,70, bàsic 0,40.</td></tr>
   <tr><td>Temporada</td><td>Data + elevació + finestres de l'espècie</td><td>Finestra gaussiana en dia de l'any; el centre depèn de la franja d'elevació (&gt;1.100 m, 700–1.100 m, &lt;700 m). La disponibilitat és el millor valor de l'escala 400–1.800 m.</td></tr>
-  <tr><td>Solitud</td><td>Pressió de recol·lectors (fitxer)</td><td>100 − (pressió − 1) × 100 ⁄ 9 → de 100 (molt tranquil) a ~56 (molt concorregut).</td></tr>
+  <tr><td>Solitud</td><td>Pressió de recol·lectors: demanda d'excursió (població dels municipis propers, IDESCAT) + saliencia a internet (visites a Wikipedia del topònim i la comarca, 12 mesos) + esforç a peu (40/35/25), assignada per percentil; els sectors curats històrics mantenen la pressió curada</td><td>100 − (pressió − 1) × 100 ⁄ 9 → de 100 (molt tranquil) a 0 (molt concorregut).</td></tr>
   <tr><td>Accessibilitat</td><td>Esforç d'accés a peu (fitxer)</td><td>Escala 1–10 × 10.</td></tr>
   <tr><td>Distància</td><td>Temps de conducció (OSRM)</td><td>≤30 min → 100; 90 min → 60; 3 h → 25; ≥5 h → 0.</td></tr>
 </table>
@@ -95,7 +95,7 @@ const METHODOLOGY_HTML = {
   <tr><td>Sombra</td><td>Orientación + cubierta (fichero de sectores)</td><td>N 95 → S 25 según exposición al sol; cubierta densa +8, abierta −10.</td></tr>
   <tr><td>Hábitat</td><td>Bosque medido (MFE50) + suelo (ICGC)</td><td>45% calidad de hábitat (copa medida, 1–5) + 35% afinidad de la mezcla de especies con la especie de seta (ponderada por las proporciones medidas de pino rojo, pino negro, pino carrasco, pinos litorales y frondosas) + 20% química del sustrato (ácido / neutro / básico según la litología). Para el níscalo: pino rojo 1,00, pino negro 0,85, pino carrasco 0,80, frondosas 0,50; suelo ácido 1,00, neutro 0,70, básico 0,40.</td></tr>
   <tr><td>Temporada</td><td>Fecha + elevación + ventanas de la especie</td><td>Ventana gaussiana en día del año; el centro depende de la franja de elevación (&gt;1.100 m, 700–1.100 m, &lt;700 m). La disponibilidad es el mejor valor de la escala 400–1.800 m.</td></tr>
-  <tr><td>Soledad</td><td>Presión de recolectores (fichero)</td><td>100 − (presión − 1) × 100 ⁄ 9 → de 100 (muy tranquilo) a ~56 (muy concurrido).</td></tr>
+  <tr><td>Soledad</td><td>Presión de recolectores: demanda de excursión (población de los municipios cercanos, IDESCAT) + saliencia en internet (visitas a Wikipedia del topónimo y la comarca, 12 meses) + esfuerzo a pie (40/35/25), asignada por percentil; los sectores curados históricos mantienen la presión curada</td><td>100 − (presión − 1) × 100 ⁄ 9 → de 100 (muy tranquilo) a 0 (muy concurrido).</td></tr>
   <tr><td>Accesibilidad</td><td>Esfuerzo de acceso a pie (fichero)</td><td>Escala 1–10 × 10.</td></tr>
   <tr><td>Distancia</td><td>Tiempo de conducción (OSRM)</td><td>≤30 min → 100; 90 min → 60; 3 h → 25; ≥5 h → 0.</td></tr>
 </table>
@@ -155,7 +155,7 @@ const METHODOLOGY_HTML = {
   <tr><td>Shade</td><td>Aspect + cover (sector dataset)</td><td>N 95 → S 25 by sun exposure; dense cover +8, open −10.</td></tr>
   <tr><td>Habitat</td><td>Measured forest (MFE50) + soil (ICGC)</td><td>45% habitat quality (measured canopy, 1–5) + 35% species-mixture match, weighted by the measured shares of Scots pine, black pine, Aleppo pine, coastal pines and broadleaf + 20% bedrock chemistry (acidic / neutral / basic from the lithology). For the saffron milk cap: Scots pine 1.00, black pine 0.85, Aleppo pine 0.80, broadleaf 0.50; acidic soil 1.00, neutral 0.70, basic 0.40.</td></tr>
   <tr><td>Season</td><td>Date + elevation + species windows</td><td>Gaussian window in day-of-year; the centre depends on the elevation band (&gt;1,100 m, 700–1,100 m, &lt;700 m). Availability is the best value across the 400–1,800 m ladder.</td></tr>
-  <tr><td>Solitude</td><td>Picker pressure (dataset)</td><td>100 − (pressure − 1) × 100 ⁄ 9 → from 100 (very quiet) to ~56 (very busy).</td></tr>
+  <tr><td>Solitude</td><td>Picker pressure: day-trip demand (population of nearby municipalities, IDESCAT) + internet salience (Wikipedia pageviews of the toponym and comarca, 12 months) + walking effort (40/35/25), assigned by percentile; legacy curated sectors keep their curated pressure</td><td>100 − (pressure − 1) × 100 ⁄ 9 → from 100 (very quiet) to 0 (very busy).</td></tr>
   <tr><td>Accessibility</td><td>Walk-in effort (dataset)</td><td>1–10 scale × 10.</td></tr>
   <tr><td>Distance</td><td>Driving time (OSRM)</td><td>≤30 min → 100; 90 min → 60; 3 h → 25; ≥5 h → 0.</td></tr>
 </table>
