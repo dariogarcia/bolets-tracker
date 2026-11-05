@@ -27,21 +27,40 @@ _cache: dict[tuple, tuple[float, ZoneWeather]] = {}
 _forecast_sem = asyncio.Semaphore(8)
 
 
+# Epoch seconds until the Open-Meteo daily quota resets; while dead we
+# return unavailable weather immediately instead of hammering a 429ing
+# endpoint (324 cells x 3 attempts would burn ~1k pointless requests/h).
+_quota_dead_until = 0.0
+
+
 async def _get_with_retries(
     client: httpx.AsyncClient, url: str, params: dict, attempts: int = 3
 ) -> dict:
+    global _quota_dead_until
     delay = 0.5
     for attempt in range(attempts):
+        if time.time() < _quota_dead_until:
+            raise QuotaExhausted()
         try:
             resp = await client.get(url, params=params)
+            if resp.status_code == 429 and "daily api request limit" in resp.text.lower():
+                reset = float(resp.headers.get("x-ratelimit-reset") or 0)
+                _quota_dead_until = max(_quota_dead_until, reset or time.time() + 3600)
+                raise QuotaExhausted()
             resp.raise_for_status()
             return resp.json()
+        except QuotaExhausted:
+            raise
         except (httpx.HTTPError, ValueError):
             if attempt == attempts - 1:
                 raise
-            await asyncio.sleep(delay)
+            await asyncio.sleep(min(delay, 5.0))
             delay *= 2
     raise RuntimeError("unreachable")
+
+
+class QuotaExhausted(Exception):
+    """Open-Meteo daily request quota is exhausted (per-IP, 10k/day)."""
 
 
 class DateTooFarAhead(Exception):
@@ -183,7 +202,7 @@ async def fetch_zone_weather(
             payload = await _get_with_retries(client, url, params)
             weather = _parse_daily(payload, target, hist_start, hist_end)
             weather.source = mode
-        except (httpx.HTTPError, ValueError, KeyError):
+        except (httpx.HTTPError, ValueError, KeyError, QuotaExhausted):
             return ZoneWeather(source="unavailable")
 
     _cache_put(key, weather)

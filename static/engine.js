@@ -69,28 +69,46 @@ const BoletsEngine = (() => {
     return Math.round((Date.UTC(y, m - 1, d) - Date.UTC(y, 0, 1)) / 86400000) + 1;
   }
 
+  // Open-Meteo free tier: 10k requests/day per IP. When the daily quota
+  // is exhausted the API answers 429 "try again tomorrow" with a huge
+  // Retry-After — honouring it would freeze the UI for hours. Instead
+  // we mark the quota dead and degrade to weather-free scoring.
+  let weatherQuotaDeadUntil = 0;
+
   async function getJSON(url, attempts = 3) {
     let delay = 500;
     for (let i = 0; i < attempts; i++) {
+      const isWeather = /open-meteo\.com/.test(url);
+      if (isWeather && weatherQuotaDeadUntil > Date.now()) {
+        const err = new Error("weather quota exhausted");
+        err.fatal = true;
+        throw err;
+      }
       try {
         const resp = await fetch(url);
         if (!resp.ok) {
           const err = new Error(`HTTP ${resp.status}`);
           err.status = resp.status;
           err.retryAfter = Number(resp.headers.get("retry-after")) || null;
+          if (isWeather && resp.status === 429) {
+            const body = await resp.text().catch(() => "");
+            if (/daily api request limit/i.test(body)) {
+              const reset = Number(resp.headers.get("x-ratelimit-reset")) || 0;
+              weatherQuotaDeadUntil = reset
+                ? Math.max(weatherQuotaDeadUntil, reset * 1000)
+                : Math.max(weatherQuotaDeadUntil, Date.now() + 60000);
+              err.fatal = true;
+              throw err;
+            }
+          }
           throw err;
         }
         return await resp.json();
       } catch (e) {
-        if (i === attempts - 1) throw e;
-        // Rate-limited: back off hard ( honour Retry-After ) so a burst of
-        // searches from shared IPs does not cascade into per-zone failures.
-        delay =
-          e.status === 429
-            ? e.retryAfter
-              ? e.retryAfter * 1000
-              : Math.max(3000, delay * 2)
-            : delay * 2;
+        if (e.fatal || i === attempts - 1) throw e;
+        // Back off, but never sleep for more than a few seconds —
+        // a long Retry-After must not freeze the search.
+        delay = Math.min(e.status === 429 ? Math.max(3000, delay * 2) : delay * 2, 8000);
         await new Promise((r) => setTimeout(r, delay));
       }
     }
@@ -525,13 +543,15 @@ const BoletsEngine = (() => {
       const arr = Array.isArray(payload) ? payload : [payload];
       if (arr.length !== coords.length) throw new Error("unexpected multi-location response");
       return arr;
-    } catch {
+    } catch (e) {
+      if (e && e.fatal) return coords.map(() => null); // quota dead: no fallback storm
       const out = [];
       for (const c of coords) {
         try {
           const p = await getJSON(weatherUrl(String(c[0]), String(c[1]), target, histStart, mode));
           out.push(Array.isArray(p) ? p[0] : p);
-        } catch {
+        } catch (e2) {
+          if (e2 && e2.fatal) return coords.map(() => null);
           out.push(null);
         }
       }

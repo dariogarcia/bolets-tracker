@@ -99,6 +99,7 @@ const I18N = {
       out: "quiet",
     },
     inViewCount: "Top {n} sectors in the current map view (of {total} ranked) — pan or zoom to re-rank.",
+    weatherDown: "Live weather is unavailable (API rate limit) — ranked on habitat, season and access only.",
     viewRankTip: "Rank among the sectors in view — #{rank} in the full ranking",
     overallRank: "overall",
     fitAll: "Show all",
@@ -169,6 +170,7 @@ const I18N = {
       out: "flojo",
     },
     inViewCount: "Los {n} mejores sectores en la vista actual del mapa (de {total} clasificados) — desplaza o acerca el mapa para reordenar.",
+    weatherDown: "El tiempo en vivo no está disponible (límite de la API) — clasificación por hábitat, temporada y acceso solamente.",
     viewRankTip: "Puesto entre los sectores en vista — #{rank} en la clasificación completa",
     overallRank: "global",
     fitAll: "Ver todo",
@@ -239,6 +241,7 @@ const I18N = {
       out: "fluix",
     },
     inViewCount: "Els {n} millors sectors a la vista actual del mapa (de {total} d'ordenats) — mou o acosta el mapa per reordenar.",
+    weatherDown: "El temps en viu no està disponible (límit de l'API) — ordenació per hàbitat, temporada i accés només.",
     viewRankTip: "Posició entre els sectors a la vista — #{rank} en l'ordenació completa",
     overallRank: "global",
     fitAll: "Veure-ho tot",
@@ -588,6 +591,15 @@ function renderResults(data, opts = {}) {
   head.className = "results-count";
   head.textContent = t("inViewCount").replace("{n}", visible.length).replace("{total}", data.results.length);
   results.appendChild(head);
+  const weatherDown = data.results.some(
+    (rec) => rec.weather && rec.weather.source === "unavailable"
+  );
+  if (weatherDown) {
+    const notice = document.createElement("p");
+    notice.className = "weather-down";
+    notice.textContent = t("weatherDown");
+    results.appendChild(notice);
+  }
   visible.forEach((rec) => results.appendChild(renderCard(rec)));
   if (opts.scroll !== false && visible.length) results.scrollIntoView({ behavior: "smooth", block: "start" });
   paintMap(data, visible);
